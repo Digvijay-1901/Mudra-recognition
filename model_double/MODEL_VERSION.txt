@@ -1,0 +1,6 @@
+trained: 2026-09-21 00:41:30.247282
+feature_dim: 162
+n_classes: 10
+classes: ['Anjali', 'Chakra', 'Garuda', 'Kapotham', 'Karkatta', 'Kurma', 'Nagabandha', 'Pushpaputa', 'Shanka', 'Shivalinga']
+held_out_val_accuracy: 0.9801
+held_out_val_macro_f1: 0.9796

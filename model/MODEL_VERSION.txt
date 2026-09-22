@@ -1,0 +1,6 @@
+trained: 2026-09-21 01:32:02.822517
+feature_dim: 77
+n_classes: 25
+classes: ['Alapadmam', 'Aralam', 'Ardhachandra', 'Ardhapathaka', 'Bramaram', 'Chandrakala', 'Chaturam', 'Hamsapaksha', 'Hamsasyam', 'Kangulam', 'Kapith', 'Katakamukha', 'Katrimukha', 'Mayura', 'Mrigasirsha', 'Mukulam', 'Mushti', 'Pathaka', 'Shukatundam', 'Sikharam', 'Simhamukham', 'Suchi', 'Tamarachudam', 'Tripathaka', 'Trishulam']
+held_out_val_accuracy: 0.9694
+held_out_val_macro_f1: 0.9537
