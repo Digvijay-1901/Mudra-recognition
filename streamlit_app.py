@@ -217,6 +217,19 @@ html, body, [class*="css"] {
     padding-top: .8rem;
     border-top: 1px solid #dcd6e4;
 }
+
+[data-testid="stFileUploaderDropzoneInstructions"] p,
+[data-testid="stFileUploaderDropzoneInstructions"] span {
+    color: #291d40 !important;
+}
+
+[data-testid="stProgress"] p {
+    color: #291d40 !important;
+}
+
+[data-testid="stExpander"] summary p {
+    color: #291d40 !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -379,7 +392,7 @@ def process(image):
     single_model, single_scaler, single_encoder = load_single_model()
     double_model, double_scaler, double_encoder = load_double_model()
 
-    results = detect_hands(image)
+    results, _ = detect_hands_robust(image)
     n_hands = len(results.multi_hand_landmarks) if results.multi_hand_landmarks else 0
 
     def show_landmarks():
@@ -387,7 +400,6 @@ def process(image):
             st.markdown('<div class="section-title">Detected landmarks</div>', unsafe_allow_html=True)
             st.image(draw_landmarks(image, results), channels="BGR", width=340)
 
-    # Clearly 2 hands -> trust the double-hand model directly
     if n_hands == 2:
         feats2 = extract_double_hand_features(image_rgb, static=True)
         if feats2 is not None and len(feats2) == double_model.n_features_in_:
@@ -397,24 +409,19 @@ def process(image):
             show_result(double_encoder.inverse_transform([idx])[0], float(probs[idx]), "Double-hand", probs, double_encoder)
             return
 
-    # 1 hand (or 2-hand extraction failed) -> try single-hand first
     feats1 = extract_single_hand_features(image_rgb, static=True)
-    single_confidence = 0.0
     single_result = None
     if feats1 is not None and len(feats1) == single_model.n_features_in_:
         probs1 = single_model.predict_proba(single_scaler.transform([feats1]))[0]
         idx1 = int(np.argmax(probs1))
-        single_confidence = float(probs1[idx1])
-        single_result = (single_encoder.inverse_transform([idx1])[0], single_confidence, probs1)
+        single_result = (single_encoder.inverse_transform([idx1])[0], float(probs1[idx1]), probs1)
 
-    # If single-hand is reasonably confident, trust it
-    if single_result and single_confidence >= 0.5:
+    if single_result and single_result[1] >= 0.6:
         show_landmarks()
         label, conf, probs = single_result
         show_result(label, conf, "Single-hand", probs, single_encoder)
         return
 
-    # Otherwise, this might be an occluded double-hand mudra -> try that
     feats2 = extract_double_hand_features(image_rgb, static=True)
     if feats2 is not None and len(feats2) == double_model.n_features_in_:
         show_landmarks()
@@ -423,7 +430,6 @@ def process(image):
         show_result(double_encoder.inverse_transform([idx2])[0], float(probs2[idx2]), "Double-hand", probs2, double_encoder)
         return
 
-    # Last resort: fall back to whatever single-hand said, even if unsure
     if single_result:
         show_landmarks()
         label, conf, probs = single_result
