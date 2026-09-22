@@ -161,3 +161,5 @@ MediaPipe · scikit-learn · Streamlit · OpenCV · NumPy · pandas
 ## Acknowledgements
 
 Built on top of Google's MediaPipe Hands for landmark detection.
+
+Training data: the Bharatanatyam Mudra Dataset by Jisha Raj R, collected as part of PhD research under Dr. Sunil T.T, College of Engineering, Attingal, Thiruvananthapuram, Kerala, India — 28,431 images from 15 volunteers, licensed under CC BY-SA 4.0. Original dataset contains 29 single-hand and 21 double-hand gesture classes; this project trained on a subset (25 single-hand, 10 double-hand).
