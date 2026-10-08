@@ -129,7 +129,7 @@ venv\Scripts\activate        # Windows / source venv/bin/activate on macOS-Linux
 pip install -r requirements.txt
 ```
 Tested on Python 3.10. Dependency versions are pinned in `requirements.txt`, so the app runs with the included trained models and needs no retraining.
-
+The Dataset i used is from jisharajr (https://github.com/jisharajr/Bharatanatyam-Mudra-Dataset) link to thrir work
 ## Usage
 
 ```bash
