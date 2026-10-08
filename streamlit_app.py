@@ -392,13 +392,13 @@ def process(image):
     single_model, single_scaler, single_encoder = load_single_model()
     double_model, double_scaler, double_encoder = load_double_model()
 
-    results, _ = detect_hands_robust(image)
+    results, used_image = detect_hands_robust(image)
     n_hands = len(results.multi_hand_landmarks) if results.multi_hand_landmarks else 0
 
     def show_landmarks():
         if results.multi_hand_landmarks:
             st.markdown('<div class="section-title">Detected landmarks</div>', unsafe_allow_html=True)
-            st.image(draw_landmarks(image, results), channels="BGR", width=340)
+            st.image(draw_landmarks(used_image, results), channels="BGR", width=340)
 
     if n_hands == 2:
         feats2 = extract_double_hand_features(image_rgb, static=True)
