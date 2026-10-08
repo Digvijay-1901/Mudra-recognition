@@ -38,8 +38,8 @@ Single-hand and double-hand images are routed to different models, but **the rou
 
 1. MediaPipe detects exactly 2 hands → **double-hand model** (trusted directly)
 2. Otherwise → **try the single-hand model first**
-   - If single-hand confidence ≥ 0.50 → use that result
-   - If single-hand confidence < 0.50 → try the double-hand model instead
+   - If single-hand confidence ≥ 0.60 → use that result
+   - If single-hand confidence < 0.60 → try the double-hand model instead
      (this catches double-hand mudras where MediaPipe only found 1 hand due to occlusion — e.g. Shanka, Kurma)
 3. If nothing above produced a usable result → fall back to whatever single-hand result is available, even at low confidence
 
