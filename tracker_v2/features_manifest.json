@@ -1,0 +1,16 @@
+{
+  "complete": true,
+  "source_sha256": "a994667e3183771ba6eca36840339f2fde935812820027432abdf5ffb7dd07d0",
+  "fingerprint": "a851f1c324122623bbb040369e46214f6f15abdfb95560435c8a743be286e071",
+  "rows": 22950,
+  "invalid_geometry": [],
+  "input_hashes": {
+    "landmarks_v2.joblib": "e0ac273439222cdfa1447a0a688fcae7272921cc0cf1eb432a86fea301406753",
+    "split_v2.joblib": "e8e379efe52fbe30fc59d0961b1dd8daa88e648d6bd073f2be9ce66aebab633e",
+    "geometry.py": "52a054a491700b73ba9abfb0df7a7b5eff0a517a20cef7f89fdb1ce4bb7a8dee"
+  },
+  "feature_sha256": "1cb12622c4317455e95ea1c3f0ba6564c80c3f687051c3b9f486e275deedc5e5",
+  "format": "77 raw single / 77 canonical single / 162 canonical double; zero Z, unknown handedness",
+  "train": 18485,
+  "validation": 4465
+}

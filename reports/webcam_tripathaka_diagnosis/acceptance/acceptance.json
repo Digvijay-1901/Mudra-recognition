@@ -1,0 +1,145 @@
+{
+  "status": "CONFIRMED PASS",
+  "method": "production brain.predict; cached detector outputs on all validation records; fresh pixels separately",
+  "metrics": {
+    "n": 4465,
+    "correct": 4043,
+    "accuracy": 0.9054871220604703,
+    "coverage": 0.9323628219484883,
+    "wrong95": 39
+  },
+  "split_fingerprint": "a851f1c324122623bbb040369e46214f6f15abdfb95560435c8a743be286e071",
+  "gate_input": "MediaPipe only",
+  "gate_calls": 3866,
+  "rtmpose_single_calls": 2877,
+  "fresh_checks": [
+    {
+      "source_index": 14204,
+      "label": "Simhamukham",
+      "route": "single",
+      "rtmpose_called": true
+    },
+    {
+      "source_index": 13483,
+      "label": "Sikharam",
+      "route": "single",
+      "rtmpose_called": true
+    },
+    {
+      "source_index": 10884,
+      "label": "Mayura",
+      "route": "single",
+      "rtmpose_called": true
+    },
+    {
+      "source_index": 8767,
+      "label": "Kangulam",
+      "route": "single",
+      "rtmpose_called": true
+    },
+    {
+      "source_index": 4949,
+      "label": "Bramaram",
+      "route": "single",
+      "rtmpose_called": true
+    },
+    {
+      "source_index": 555,
+      "label": "Aralam",
+      "route": "single",
+      "rtmpose_called": true
+    },
+    {
+      "source_index": 237,
+      "label": "Alapadmam",
+      "route": "single",
+      "rtmpose_called": true
+    },
+    {
+      "source_index": 5404,
+      "label": "Chandrakala",
+      "route": "single",
+      "rtmpose_called": true
+    },
+    {
+      "source_index": 3070,
+      "label": "Pathaka",
+      "route": "single",
+      "rtmpose_called": true
+    },
+    {
+      "source_index": 1282,
+      "label": "Aralam",
+      "route": "single",
+      "rtmpose_called": true
+    },
+    {
+      "source_index": 16841,
+      "label": "Anjali",
+      "route": "double",
+      "rtmpose_called": false
+    },
+    {
+      "source_index": 20890,
+      "label": "Pushpaputa",
+      "route": "double",
+      "rtmpose_called": false
+    },
+    {
+      "source_index": 16612,
+      "label": "Anjali",
+      "route": "double",
+      "rtmpose_called": false
+    },
+    {
+      "source_index": 21753,
+      "label": "Shanka",
+      "route": "double",
+      "rtmpose_called": false
+    },
+    {
+      "source_index": 22022,
+      "label": "Shanka",
+      "route": "double",
+      "rtmpose_called": false
+    },
+    {
+      "source_index": 19172,
+      "label": "Karkatta",
+      "route": "double",
+      "rtmpose_called": false
+    },
+    {
+      "source_index": 22446,
+      "label": "Shanka",
+      "route": "double",
+      "rtmpose_called": false
+    },
+    {
+      "source_index": 18433,
+      "label": "Kapotham",
+      "route": "double",
+      "rtmpose_called": false
+    },
+    {
+      "source_index": 21543,
+      "label": "Pushpaputa",
+      "route": "double",
+      "rtmpose_called": false
+    },
+    {
+      "source_index": 20185,
+      "label": "Pushpaputa",
+      "route": "double",
+      "rtmpose_called": false
+    }
+  ],
+  "protected_inputs_unchanged": 15,
+  "validator_entrypoint": "brain.predict",
+  "runtime_sources": {
+    "brain.py": "aff97e506bd230e1c2092eb20d473dbef0a1721d7ae928ef5ade37018ce24301",
+    "hybrid_single.py": "96f3f19337c9591c1a38d2bd2c8c6abc6cb563734958ada75afb40aca1b1de39",
+    "streamlit_app.py": "1f14eed4496551a0059bd7a8fcf912df0d13ea572ecfddbad86c4dfa7ac1ab63",
+    "validate_hybrid_live.py": "77f1e9d77394bda4b87699f54343a768fc71fb6b7b94a42edd9a0c1bc279f412"
+  }
+}

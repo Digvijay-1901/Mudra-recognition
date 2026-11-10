@@ -1,0 +1,3425 @@
+{
+  "status": "CONFIRMED read-only inference diagnosis; no training or pipeline edits",
+  "variants": [
+    {
+      "variant": "original",
+      "hybrid": {
+        "correct": 1,
+        "labels": {
+          "Tripathaka": 1,
+          "Ardhapathaka": 2,
+          "Pathaka": 17
+        },
+        "confident_wrong90": 19
+      },
+      "mediapipe": {
+        "correct": 1,
+        "labels": {
+          "Pathaka": 18,
+          "Ardhachandra": 1,
+          "Tripathaka": 1
+        },
+        "confident_wrong90": 18
+      }
+    },
+    {
+      "variant": "horizontal_flip",
+      "hybrid": {
+        "correct": 0,
+        "labels": {
+          "Pathaka": 20
+        },
+        "confident_wrong90": 19
+      },
+      "mediapipe": {
+        "correct": 4,
+        "labels": {
+          "Pathaka": 15,
+          "Tripathaka": 4,
+          "ABSTAIN": 1
+        },
+        "confident_wrong90": 15
+      }
+    },
+    {
+      "variant": "wrong_BGR",
+      "hybrid": {
+        "correct": 0,
+        "labels": {
+          "NO_HAND": 12,
+          "Ardhapathaka": 1,
+          "Pathaka": 7
+        },
+        "confident_wrong90": 6
+      },
+      "mediapipe": {
+        "correct": 1,
+        "labels": {
+          "NO_HAND": 12,
+          "Tripathaka": 1,
+          "Pathaka": 7
+        },
+        "confident_wrong90": 7
+      }
+    },
+    {
+      "variant": "highres_resize",
+      "hybrid": {
+        "correct": 0,
+        "labels": {
+          "Pathaka": 18,
+          "Ardhapathaka": 2
+        },
+        "confident_wrong90": 17
+      },
+      "mediapipe": {
+        "correct": 3,
+        "labels": {
+          "Pathaka": 16,
+          "Tripathaka": 3,
+          "Ardhachandra": 1
+        },
+        "confident_wrong90": 16
+      }
+    },
+    {
+      "variant": "highres_fit",
+      "hybrid": {
+        "correct": 0,
+        "labels": {
+          "Pathaka": 17,
+          "Chaturam": 1,
+          "Simhamukham": 1,
+          "Hamsapaksha": 1
+        },
+        "confident_wrong90": 17
+      },
+      "mediapipe": {
+        "correct": 1,
+        "labels": {
+          "Pathaka": 19,
+          "Tripathaka": 1
+        },
+        "confident_wrong90": 18
+      }
+    },
+    {
+      "variant": "typical_resize",
+      "hybrid": {
+        "correct": 0,
+        "labels": {
+          "ABSTAIN": 6,
+          "Pathaka": 12,
+          "Shanka": 2
+        },
+        "confident_wrong90": 5
+      },
+      "mediapipe": {
+        "correct": 0,
+        "labels": {
+          "ABSTAIN": 6,
+          "Pathaka": 12,
+          "Shanka": 2
+        },
+        "confident_wrong90": 12
+      }
+    },
+    {
+      "variant": "typical_fit",
+      "hybrid": {
+        "correct": 0,
+        "labels": {
+          "Pathaka": 17,
+          "ABSTAIN": 3
+        },
+        "confident_wrong90": 15
+      },
+      "mediapipe": {
+        "correct": 0,
+        "labels": {
+          "Pathaka": 17,
+          "ABSTAIN": 3
+        },
+        "confident_wrong90": 16
+      }
+    }
+  ],
+  "pathaka_original": {
+    "hybrid": 10,
+    "mediapipe": 10
+  },
+  "pixel_layout_exact_matches": 30,
+  "sizes": {
+    "live": {
+      "(613, 344)": 1,
+      "(613, 459)": 29
+    },
+    "outside_all": {
+      "(1792, 2400)": 3,
+      "(210, 213)": 1,
+      "(210, 211)": 1,
+      "(216, 206)": 1,
+      "(322, 215)": 1,
+      "(317, 210)": 1,
+      "(215, 211)": 1,
+      "(208, 206)": 1,
+      "(211, 213)": 1,
+      "(316, 217)": 1,
+      "(318, 210)": 1,
+      "(1024, 746)": 1,
+      "(1278, 1230)": 4,
+      "(236, 307)": 1,
+      "(230, 300)": 1,
+      "(230, 307)": 2,
+      "(162, 210)": 1,
+      "(151, 207)": 1,
+      "(160, 212)": 1,
+      "(152, 207)": 1,
+      "(156, 213)": 1,
+      "(160, 206)": 1,
+      "(156, 212)": 1,
+      "(158, 215)": 1,
+      "(1536, 1024)": 1,
+      "(218, 212)": 1,
+      "(213, 217)": 1,
+      "(317, 207)": 1,
+      "(318, 207)": 1,
+      "(207, 222)": 1,
+      "(212, 217)": 1,
+      "(211, 221)": 1,
+      "(317, 202)": 1,
+      "(317, 197)": 1
+    },
+    "outside_tripathaka": {
+      "(1536, 1024)": 1,
+      "(218, 212)": 1,
+      "(213, 217)": 1,
+      "(317, 207)": 1,
+      "(318, 207)": 1,
+      "(207, 222)": 1,
+      "(212, 217)": 1,
+      "(211, 221)": 1,
+      "(317, 202)": 1,
+      "(317, 197)": 1
+    },
+    "target": [
+      1536,
+      1024
+    ],
+    "representative_target": [
+      218,
+      212
+    ]
+  },
+  "training_ring_ranges": [
+    {
+      "tracker": "rtmpose",
+      "cls": "Tripathaka",
+      "n": 438,
+      "min": 0.13084518909454346,
+      "p05": 0.40468499064445496,
+      "p25": 0.5340062081813812,
+      "median": 0.7708441019058228,
+      "p75": 0.8694675117731094,
+      "p95": 0.9570086598396301,
+      "max": 1.0,
+      "ring_DIP_median": 140.58282470703125
+    },
+    {
+      "tracker": "mediapipe",
+      "cls": "Tripathaka",
+      "n": 396,
+      "min": 0.37418168783187866,
+      "p05": 0.4722219184041023,
+      "p25": 0.6082624793052673,
+      "median": 0.6842479109764099,
+      "p75": 0.8100462257862091,
+      "p95": 0.9005122780799866,
+      "max": 1.0,
+      "ring_DIP_median": 163.36002494540446
+    },
+    {
+      "tracker": "rtmpose",
+      "cls": "Pathaka",
+      "n": 543,
+      "min": 0.8463266491889954,
+      "p05": 0.912089729309082,
+      "p25": 0.9269088208675385,
+      "median": 0.9399495124816895,
+      "p75": 0.9558830857276917,
+      "p95": 0.9796975374221801,
+      "max": 0.9925968647003174,
+      "ring_DIP_median": 175.10498046875
+    },
+    {
+      "tracker": "mediapipe",
+      "cls": "Pathaka",
+      "n": 466,
+      "min": 0.7061899304389954,
+      "p05": 0.8398814648389816,
+      "p25": 0.8898440003395081,
+      "median": 0.9103778302669525,
+      "p75": 0.9314428567886353,
+      "p95": 0.9503343552350998,
+      "max": 0.9911717176437378,
+      "ring_DIP_median": 174.05201673252077
+    }
+  ],
+  "live_ring_comparisons": {
+    "rtmpose": {
+      "live_min": 0.6869974136352539,
+      "live_median": 0.9500169456005096,
+      "live_max": 0.9672448039054871,
+      "central90_categories": {
+        "Tripathaka": 4,
+        "Pathaka": 7,
+        "overlap": 9
+      },
+      "full_range_categories": {
+        "Tripathaka": 2,
+        "overlap": 18
+      }
+    },
+    "mediapipe": {
+      "live_min": 0.7866175770759583,
+      "live_median": 0.9488558769226074,
+      "live_max": 0.9667023420333862,
+      "central90_categories": {
+        "Pathaka": 8,
+        "outside_both_central_ranges": 9,
+        "overlap": 2,
+        "Tripathaka": 1
+      },
+      "full_range_categories": {
+        "overlap": 20
+      }
+    }
+  },
+  "live_mediapipe_handedness": {
+    "Right": 20
+  },
+  "training_mediapipe_handedness": {
+    "Tripathaka": {
+      "Left": 304,
+      "Right": 92
+    },
+    "Pathaka": {
+      "Left": 319,
+      "Right": 147
+    }
+  },
+  "keypoints": [
+    {
+      "frame": 1,
+      "file": "20261109T193830000000+0530.png",
+      "rtmpose": {
+        "thumb": 0.6522396206855774,
+        "index": 0.9659674167633057,
+        "middle": 1.0,
+        "ring": 0.6869974136352539,
+        "little": 0.8151805996894836
+      },
+      "rtmpose_ring_DIP_degrees": 128.45520379588973,
+      "mediapipe": {
+        "thumb": 0.6442518830299377,
+        "index": 0.9516645669937134,
+        "middle": 0.9999999403953552,
+        "ring": 0.9134507775306702,
+        "little": 0.842265248298645
+      },
+      "mediapipe_ring_DIP_degrees": 177.04302487196105,
+      "rtmpose_range": "Tripathaka",
+      "mediapipe_range": "Pathaka"
+    },
+    {
+      "frame": 2,
+      "file": "20261109T193837000000+0530.png",
+      "rtmpose": {
+        "thumb": 0.6527306437492371,
+        "index": 0.9584283232688904,
+        "middle": 1.0,
+        "ring": 0.8457254767417908,
+        "little": 0.7466578483581543
+      },
+      "rtmpose_ring_DIP_degrees": 170.53759753660407,
+      "mediapipe": {
+        "thumb": 0.6499727964401245,
+        "index": 0.9652122259140015,
+        "middle": 1.0,
+        "ring": 0.9579599499702454,
+        "little": 0.8519895672798157
+      },
+      "mediapipe_ring_DIP_degrees": 178.0446584533651,
+      "rtmpose_range": "Tripathaka",
+      "mediapipe_range": "outside_both_central_ranges"
+    },
+    {
+      "frame": 3,
+      "file": "20261109T193841000000+0530.png",
+      "rtmpose": {
+        "thumb": 0.6753285527229309,
+        "index": 0.9575200080871582,
+        "middle": 1.0,
+        "ring": 0.9617058038711548,
+        "little": 0.8244195580482483
+      },
+      "rtmpose_ring_DIP_degrees": 180.00000500895632,
+      "mediapipe": {
+        "thumb": 0.7042506337165833,
+        "index": 0.9372124671936035,
+        "middle": 0.9999999403953552,
+        "ring": 0.9573025703430176,
+        "little": 0.8358247876167297
+      },
+      "mediapipe_ring_DIP_degrees": 173.61181104051346,
+      "rtmpose_range": "Pathaka",
+      "mediapipe_range": "outside_both_central_ranges"
+    },
+    {
+      "frame": 4,
+      "file": "20261109T193844000000+0530.png",
+      "rtmpose": {
+        "thumb": 0.6500000357627869,
+        "index": 0.9621819257736206,
+        "middle": 0.9999999403953552,
+        "ring": 0.9481948018074036,
+        "little": 0.8202089071273804
+      },
+      "rtmpose_ring_DIP_degrees": 175.1246023190229,
+      "mediapipe": {
+        "thumb": 0.6580712795257568,
+        "index": 0.9567922353744507,
+        "middle": 0.9999999403953552,
+        "ring": 0.9329150915145874,
+        "little": 0.829224169254303
+      },
+      "mediapipe_ring_DIP_degrees": 177.25247945304866,
+      "rtmpose_range": "overlap",
+      "mediapipe_range": "Pathaka"
+    },
+    {
+      "frame": 5,
+      "file": "20261109T193846000000+0530.png",
+      "rtmpose": {
+        "thumb": 0.6456326246261597,
+        "index": 0.9593825936317444,
+        "middle": 1.0,
+        "ring": 0.9631527662277222,
+        "little": 0.8244257569313049
+      },
+      "rtmpose_ring_DIP_degrees": 173.14428459182608,
+      "mediapipe": {
+        "thumb": 0.6596190333366394,
+        "index": 0.9516055583953857,
+        "middle": 0.9999999403953552,
+        "ring": 0.9274999499320984,
+        "little": 0.8349762558937073
+      },
+      "mediapipe_ring_DIP_degrees": 176.25372821147437,
+      "rtmpose_range": "Pathaka",
+      "mediapipe_range": "Pathaka"
+    },
+    {
+      "frame": 6,
+      "file": "20261109T193849000000+0530.png",
+      "rtmpose": {
+        "thumb": 0.6489917039871216,
+        "index": 0.9574460387229919,
+        "middle": 0.9999999403953552,
+        "ring": 0.9547507166862488,
+        "little": 0.8206477165222168
+      },
+      "rtmpose_ring_DIP_degrees": 175.45153615383472,
+      "mediapipe": {
+        "thumb": 0.6468826532363892,
+        "index": 0.9526493549346924,
+        "middle": 1.0,
+        "ring": 0.9278846979141235,
+        "little": 0.8270564079284668
+      },
+      "mediapipe_ring_DIP_degrees": 176.3229863296583,
+      "rtmpose_range": "overlap",
+      "mediapipe_range": "Pathaka"
+    },
+    {
+      "frame": 7,
+      "file": "20261109T193853000000+0530.png",
+      "rtmpose": {
+        "thumb": 0.6443948149681091,
+        "index": 0.9586783647537231,
+        "middle": 1.0,
+        "ring": 0.8757785558700562,
+        "little": 0.7774254083633423
+      },
+      "rtmpose_ring_DIP_degrees": 171.7045899978141,
+      "mediapipe": {
+        "thumb": 0.6639849543571472,
+        "index": 0.9511604309082031,
+        "middle": 1.0,
+        "ring": 0.8730241656303406,
+        "little": 0.8138307332992554
+      },
+      "mediapipe_ring_DIP_degrees": 173.17114089564257,
+      "rtmpose_range": "Tripathaka",
+      "mediapipe_range": "overlap"
+    },
+    {
+      "frame": 8,
+      "file": "20261109T193856000000+0530.png",
+      "rtmpose": {
+        "thumb": 0.6447516083717346,
+        "index": 0.9553883671760559,
+        "middle": 1.0,
+        "ring": 0.9268947243690491,
+        "little": 0.799011766910553
+      },
+      "rtmpose_ring_DIP_degrees": 176.8900696156878,
+      "mediapipe": {
+        "thumb": 0.6513118147850037,
+        "index": 0.967187762260437,
+        "middle": 1.0,
+        "ring": 0.869044303894043,
+        "little": 0.798111081123352
+      },
+      "mediapipe_ring_DIP_degrees": 174.08324435740607,
+      "rtmpose_range": "overlap",
+      "mediapipe_range": "overlap"
+    },
+    {
+      "frame": 9,
+      "file": "20261109T193859000000+0530.png",
+      "rtmpose": {
+        "thumb": 0.6460322737693787,
+        "index": 0.9698107838630676,
+        "middle": 1.0,
+        "ring": 0.8980022072792053,
+        "little": 0.7797741889953613
+      },
+      "rtmpose_ring_DIP_degrees": 177.52732626524997,
+      "mediapipe": {
+        "thumb": 0.6650132536888123,
+        "index": 0.9715420603752136,
+        "middle": 1.0,
+        "ring": 0.9244454503059387,
+        "little": 0.8175956606864929
+      },
+      "mediapipe_ring_DIP_degrees": 175.83905376658456,
+      "rtmpose_range": "Tripathaka",
+      "mediapipe_range": "Pathaka"
+    },
+    {
+      "frame": 10,
+      "file": "20261109T193904000000+0530.png",
+      "rtmpose": {
+        "thumb": 0.6426080465316772,
+        "index": 0.964756965637207,
+        "middle": 0.9999999403953552,
+        "ring": 0.9650724530220032,
+        "little": 0.814629852771759
+      },
+      "rtmpose_ring_DIP_degrees": 178.01919550813926,
+      "mediapipe": {
+        "thumb": 0.6816238760948181,
+        "index": 0.9489527940750122,
+        "middle": 0.9999999403953552,
+        "ring": 0.9489522576332092,
+        "little": 0.8128581047058105
+      },
+      "mediapipe_ring_DIP_degrees": 174.80627452256527,
+      "rtmpose_range": "Pathaka",
+      "mediapipe_range": "Pathaka"
+    },
+    {
+      "frame": 11,
+      "file": "20261109T193908000000+0530.png",
+      "rtmpose": {
+        "thumb": 0.6535430550575256,
+        "index": 0.9709493517875671,
+        "middle": 1.0,
+        "ring": 0.9200296998023987,
+        "little": 0.7997162342071533
+      },
+      "rtmpose_ring_DIP_degrees": 178.73004061581918,
+      "mediapipe": {
+        "thumb": 0.6640622615814209,
+        "index": 0.9602348804473877,
+        "middle": 1.0,
+        "ring": 0.7866175770759583,
+        "little": 0.8108434081077576
+      },
+      "mediapipe_ring_DIP_degrees": 166.20501730076822,
+      "rtmpose_range": "overlap",
+      "mediapipe_range": "Tripathaka"
+    },
+    {
+      "frame": 12,
+      "file": "20261109T193912000000+0530.png",
+      "rtmpose": {
+        "thumb": 0.6360288858413696,
+        "index": 0.9598761796951294,
+        "middle": 1.0,
+        "ring": 0.9491263031959534,
+        "little": 0.8151969909667969
+      },
+      "rtmpose_ring_DIP_degrees": 172.76974433849927,
+      "mediapipe": {
+        "thumb": 0.6570205092430115,
+        "index": 0.9512122273445129,
+        "middle": 1.0,
+        "ring": 0.9667023420333862,
+        "little": 0.8345866799354553
+      },
+      "mediapipe_ring_DIP_degrees": 177.2241341679931,
+      "rtmpose_range": "overlap",
+      "mediapipe_range": "outside_both_central_ranges"
+    },
+    {
+      "frame": 13,
+      "file": "20261109T193915000000+0530.png",
+      "rtmpose": {
+        "thumb": 0.6415756940841675,
+        "index": 0.9571387767791748,
+        "middle": 0.9999998807907104,
+        "ring": 0.9576735496520996,
+        "little": 0.8135115504264832
+      },
+      "rtmpose_ring_DIP_degrees": 174.94991340081066,
+      "mediapipe": {
+        "thumb": 0.6348943710327148,
+        "index": 0.9551546573638916,
+        "middle": 1.0,
+        "ring": 0.9575991034507751,
+        "little": 0.823199450969696
+      },
+      "mediapipe_ring_DIP_degrees": 179.50663312444962,
+      "rtmpose_range": "Pathaka",
+      "mediapipe_range": "outside_both_central_ranges"
+    },
+    {
+      "frame": 14,
+      "file": "20261109T193918000000+0530.png",
+      "rtmpose": {
+        "thumb": 0.6433476209640503,
+        "index": 0.9589363932609558,
+        "middle": 1.0,
+        "ring": 0.959347665309906,
+        "little": 0.8152531981468201
+      },
+      "rtmpose_ring_DIP_degrees": 177.64673163232015,
+      "mediapipe": {
+        "thumb": 0.6544532179832458,
+        "index": 0.9503161907196045,
+        "middle": 1.0,
+        "ring": 0.9425362348556519,
+        "little": 0.8248185515403748
+      },
+      "mediapipe_ring_DIP_degrees": 177.34442745965538,
+      "rtmpose_range": "Pathaka",
+      "mediapipe_range": "Pathaka"
+    },
+    {
+      "frame": 15,
+      "file": "20261109T193921000000+0530.png",
+      "rtmpose": {
+        "thumb": 0.6309152841567993,
+        "index": 0.9598198533058167,
+        "middle": 0.9999999403953552,
+        "ring": 0.9672448039054871,
+        "little": 0.8195607662200928
+      },
+      "rtmpose_ring_DIP_degrees": 177.47966520522164,
+      "mediapipe": {
+        "thumb": 0.645516574382782,
+        "index": 0.963494062423706,
+        "middle": 0.9999999403953552,
+        "ring": 0.9565314650535583,
+        "little": 0.8180629014968872
+      },
+      "mediapipe_ring_DIP_degrees": 178.1399532526651,
+      "rtmpose_range": "Pathaka",
+      "mediapipe_range": "outside_both_central_ranges"
+    },
+    {
+      "frame": 16,
+      "file": "20261109T193924000000+0530.png",
+      "rtmpose": {
+        "thumb": 0.6192577481269836,
+        "index": 0.9552326798439026,
+        "middle": 1.0,
+        "ring": 0.9125986099243164,
+        "little": 0.7963185906410217
+      },
+      "rtmpose_ring_DIP_degrees": 177.2435182448576,
+      "mediapipe": {
+        "thumb": 0.6484771966934204,
+        "index": 0.9330096244812012,
+        "middle": 1.0,
+        "ring": 0.9647940397262573,
+        "little": 0.8032394051551819
+      },
+      "mediapipe_ring_DIP_degrees": 177.84932870348106,
+      "rtmpose_range": "overlap",
+      "mediapipe_range": "outside_both_central_ranges"
+    },
+    {
+      "frame": 17,
+      "file": "20261109T193927000000+0530.png",
+      "rtmpose": {
+        "thumb": 0.6507444381713867,
+        "index": 0.958325207233429,
+        "middle": 1.0,
+        "ring": 0.9445744156837463,
+        "little": 0.8146413564682007
+      },
+      "rtmpose_ring_DIP_degrees": 178.33058383240015,
+      "mediapipe": {
+        "thumb": 0.6625013947486877,
+        "index": 0.9536741375923157,
+        "middle": 1.0,
+        "ring": 0.9487594962120056,
+        "little": 0.8219574093818665
+      },
+      "mediapipe_ring_DIP_degrees": 177.72764205322812,
+      "rtmpose_range": "overlap",
+      "mediapipe_range": "Pathaka"
+    },
+    {
+      "frame": 18,
+      "file": "20261109T193930000000+0530.png",
+      "rtmpose": {
+        "thumb": 0.652786910533905,
+        "index": 0.9565614461898804,
+        "middle": 0.9999999403953552,
+        "ring": 0.9509075880050659,
+        "little": 0.8063756823539734
+      },
+      "rtmpose_ring_DIP_degrees": 172.43965495629087,
+      "mediapipe": {
+        "thumb": 0.6426495909690857,
+        "index": 0.9430360794067383,
+        "middle": 0.9999999403953552,
+        "ring": 0.9519465565681458,
+        "little": 0.8085662722587585
+      },
+      "mediapipe_ring_DIP_degrees": 178.44744836909908,
+      "rtmpose_range": "overlap",
+      "mediapipe_range": "outside_both_central_ranges"
+    },
+    {
+      "frame": 19,
+      "file": "20261109T193934000000+0530.png",
+      "rtmpose": {
+        "thumb": 0.6591508388519287,
+        "index": 0.9612969756126404,
+        "middle": 1.0,
+        "ring": 0.951887309551239,
+        "little": 0.8061233162879944
+      },
+      "rtmpose_ring_DIP_degrees": 175.4213193969466,
+      "mediapipe": {
+        "thumb": 0.63853919506073,
+        "index": 0.9495581984519958,
+        "middle": 1.0,
+        "ring": 0.953763484954834,
+        "little": 0.8148054480552673
+      },
+      "mediapipe_ring_DIP_degrees": 177.52749018979006,
+      "rtmpose_range": "overlap",
+      "mediapipe_range": "outside_both_central_ranges"
+    },
+    {
+      "frame": 20,
+      "file": "20261109T193938000000+0530.png",
+      "rtmpose": {
+        "thumb": 0.6458336114883423,
+        "index": 0.9626766443252563,
+        "middle": 0.9999999403953552,
+        "ring": 0.9587235450744629,
+        "little": 0.8231383562088013
+      },
+      "rtmpose_ring_DIP_degrees": 175.4884601564878,
+      "mediapipe": {
+        "thumb": 0.6461699604988098,
+        "index": 0.9362055063247681,
+        "middle": 0.9999999403953552,
+        "ring": 0.9629942774772644,
+        "little": 0.8196611404418945
+      },
+      "mediapipe_ring_DIP_degrees": 178.6299783444785,
+      "rtmpose_range": "Pathaka",
+      "mediapipe_range": "outside_both_central_ranges"
+    }
+  ],
+  "predictions": [
+    {
+      "frame": 1,
+      "file": "20261109T193830000000+0530.png",
+      "true": "Tripathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Tripathaka",
+            "confidence": 0.9996630133521002,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9974808854989874,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "horizontal_flip": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9800309902651091,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.995473693497869,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "wrong_BGR": {
+          "hybrid": {
+            "label": "NO_HAND",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 0,
+            "message": "No hand detected \u2014 try a clearer, well-lit image."
+          },
+          "mediapipe": {
+            "label": "NO_HAND",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 0,
+            "message": "No hand detected \u2014 try a clearer, well-lit image."
+          }
+        },
+        "photo_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.7682385366648166,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.992755273009365,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9823150694497005,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9989032937187821,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_resize": {
+          "hybrid": {
+            "label": "ABSTAIN",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 1,
+            "message": "Only one hand detected. Show both hands for a two-hand mudra, or choose Single-hand mode if appropriate."
+          },
+          "mediapipe": {
+            "label": "ABSTAIN",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 1,
+            "message": "Only one hand detected. Show both hands for a two-hand mudra, or choose Single-hand mode if appropriate."
+          }
+        },
+        "typical_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9771295369205929,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9975536863991442,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        }
+      }
+    },
+    {
+      "frame": 2,
+      "file": "20261109T193837000000+0530.png",
+      "true": "Tripathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Ardhapathaka",
+            "confidence": 0.9641565231277746,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9993252953344278,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "horizontal_flip": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9999494128626911,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Tripathaka",
+            "confidence": 0.9443864401282414,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "wrong_BGR": {
+          "hybrid": {
+            "label": "Ardhapathaka",
+            "confidence": 0.77895017558355,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Tripathaka",
+            "confidence": 0.9311616093322987,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9716722399715156,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Tripathaka",
+            "confidence": 0.993769682360723,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.6733406782677853,
+            "mode": "Single",
+            "hands": 2,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9976091617068583,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_resize": {
+          "hybrid": {
+            "label": "ABSTAIN",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 1,
+            "message": "Only one hand detected. Show both hands for a two-hand mudra, or choose Single-hand mode if appropriate."
+          },
+          "mediapipe": {
+            "label": "ABSTAIN",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 1,
+            "message": "Only one hand detected. Show both hands for a two-hand mudra, or choose Single-hand mode if appropriate."
+          }
+        },
+        "typical_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.873050573145753,
+            "mode": "Single",
+            "hands": 2,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9983535137499282,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        }
+      }
+    },
+    {
+      "frame": 3,
+      "file": "20261109T193841000000+0530.png",
+      "true": "Tripathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9901476258647068,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Ardhachandra",
+            "confidence": 0.5216761977541561,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "horizontal_flip": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9921285042160899,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9596441468757667,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "wrong_BGR": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9682791634180477,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9190930646243827,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.97097100832726,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Ardhachandra",
+            "confidence": 0.4557573266662759,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9846237184679574,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9020876619032888,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.8434942156143672,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9458933593164125,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9854104549449935,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.7962495837881074,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        }
+      }
+    },
+    {
+      "frame": 4,
+      "file": "20261109T193844000000+0530.png",
+      "true": "Tripathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9876822303553301,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9973452542917026,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "horizontal_flip": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9951451933954031,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Tripathaka",
+            "confidence": 0.9322225508936208,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "wrong_BGR": {
+          "hybrid": {
+            "label": "NO_HAND",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 0,
+            "message": "No hand detected \u2014 try a clearer, well-lit image."
+          },
+          "mediapipe": {
+            "label": "NO_HAND",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 0,
+            "message": "No hand detected \u2014 try a clearer, well-lit image."
+          }
+        },
+        "photo_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9936074297447284,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9983715435738884,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9820751037815604,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9955832933528049,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.7695514046548795,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9964203244589858,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9433897142530225,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9970597778040606,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        }
+      }
+    },
+    {
+      "frame": 5,
+      "file": "20261109T193846000000+0530.png",
+      "true": "Tripathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9573290739503979,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9973350864530149,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "horizontal_flip": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9992103123989312,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9145139613467249,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "wrong_BGR": {
+          "hybrid": {
+            "label": "NO_HAND",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 0,
+            "message": "No hand detected \u2014 try a clearer, well-lit image."
+          },
+          "mediapipe": {
+            "label": "NO_HAND",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 0,
+            "message": "No hand detected \u2014 try a clearer, well-lit image."
+          }
+        },
+        "photo_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9910599998690387,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9718171271790326,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9527098545609104,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9222576088938157,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.8700976462410412,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9891766027759246,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9667951534583505,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9613977462295684,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        }
+      }
+    },
+    {
+      "frame": 6,
+      "file": "20261109T193849000000+0530.png",
+      "true": "Tripathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9774492365818604,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9985102754799997,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "horizontal_flip": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9996179750379686,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9985539632016887,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "wrong_BGR": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9954678471220637,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9973357325204524,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9968169441971798,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9990879254759116,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9873606172045765,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9965805019772231,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.6896525369422123,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9974800393643188,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9852915924909204,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9994470711678853,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        }
+      }
+    },
+    {
+      "frame": 7,
+      "file": "20261109T193853000000+0530.png",
+      "true": "Tripathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Ardhapathaka",
+            "confidence": 0.9206460321144802,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9719575098490095,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "horizontal_flip": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.8593677028905033,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "ABSTAIN",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 1,
+            "message": "Unsure at the selected confidence threshold. Try a clearer photo."
+          }
+        },
+        "wrong_BGR": {
+          "hybrid": {
+            "label": "NO_HAND",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 0,
+            "message": "No hand detected \u2014 try a clearer, well-lit image."
+          },
+          "mediapipe": {
+            "label": "NO_HAND",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 0,
+            "message": "No hand detected \u2014 try a clearer, well-lit image."
+          }
+        },
+        "photo_resize": {
+          "hybrid": {
+            "label": "Ardhapathaka",
+            "confidence": 0.6986906180617216,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Tripathaka",
+            "confidence": 0.9199595434063399,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.6577457842149989,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Tripathaka",
+            "confidence": 0.8691149612572565,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.8654993751800466,
+            "mode": "Single",
+            "hands": 2,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9730684941284014,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9119811282576037,
+            "mode": "Single",
+            "hands": 2,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9754213051495799,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        }
+      }
+    },
+    {
+      "frame": 8,
+      "file": "20261109T193856000000+0530.png",
+      "true": "Tripathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9609846281055748,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9794063339778583,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "horizontal_flip": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9908962537133542,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Tripathaka",
+            "confidence": 0.9538165470552643,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "wrong_BGR": {
+          "hybrid": {
+            "label": "NO_HAND",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 0,
+            "message": "No hand detected \u2014 try a clearer, well-lit image."
+          },
+          "mediapipe": {
+            "label": "NO_HAND",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 0,
+            "message": "No hand detected \u2014 try a clearer, well-lit image."
+          }
+        },
+        "photo_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9925284975692322,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9918674129605956,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9800213442250219,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9900968356746169,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.923153862599283,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9964381085490784,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9801879492707196,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9894734649363267,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        }
+      }
+    },
+    {
+      "frame": 9,
+      "file": "20261109T193859000000+0530.png",
+      "true": "Tripathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.932068895342666,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9997143505024256,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "horizontal_flip": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9862451043750987,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Tripathaka",
+            "confidence": 0.5480772120673365,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "wrong_BGR": {
+          "hybrid": {
+            "label": "NO_HAND",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 0,
+            "message": "No hand detected \u2014 try a clearer, well-lit image."
+          },
+          "mediapipe": {
+            "label": "NO_HAND",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 0,
+            "message": "No hand detected \u2014 try a clearer, well-lit image."
+          }
+        },
+        "photo_resize": {
+          "hybrid": {
+            "label": "Ardhapathaka",
+            "confidence": 0.6681450545576503,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9961089235213878,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_fit": {
+          "hybrid": {
+            "label": "Chaturam",
+            "confidence": 0.9999999988690453,
+            "mode": "Single",
+            "hands": 2,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9991463695531504,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.6408669733238329,
+            "mode": "Single",
+            "hands": 2,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9988142677687228,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.8943880482620442,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9995715443098302,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        }
+      }
+    },
+    {
+      "frame": 10,
+      "file": "20261109T193904000000+0530.png",
+      "true": "Tripathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9984827095559071,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9915240620703701,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "horizontal_flip": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9991738440151098,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.998560001615089,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "wrong_BGR": {
+          "hybrid": {
+            "label": "NO_HAND",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 0,
+            "message": "No hand detected \u2014 try a clearer, well-lit image."
+          },
+          "mediapipe": {
+            "label": "NO_HAND",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 0,
+            "message": "No hand detected \u2014 try a clearer, well-lit image."
+          }
+        },
+        "photo_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9992132489443327,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9899528998902484,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9043541592730698,
+            "mode": "Single",
+            "hands": 2,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9909342676996895,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9695307930882922,
+            "mode": "Single",
+            "hands": 2,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9766956420881179,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9956068788500642,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9838396802139894,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        }
+      }
+    },
+    {
+      "frame": 11,
+      "file": "20261109T193908000000+0530.png",
+      "true": "Tripathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9967410531163586,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Tripathaka",
+            "confidence": 0.7537484193829123,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "horizontal_flip": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9914558283269906,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9994120334860378,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "wrong_BGR": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.999179837701562,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9072097422856816,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9970829060842012,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Tripathaka",
+            "confidence": 0.9309676021508233,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9971066475728535,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.6926238954243282,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.927883781679631,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9976378011764631,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.997483879297096,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.998165049703669,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        }
+      }
+    },
+    {
+      "frame": 12,
+      "file": "20261109T193912000000+0530.png",
+      "true": "Tripathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9823742730338135,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9984275550507478,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "horizontal_flip": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9991624055386887,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9977292434337689,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "wrong_BGR": {
+          "hybrid": {
+            "label": "NO_HAND",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 0,
+            "message": "No hand detected \u2014 try a clearer, well-lit image."
+          },
+          "mediapipe": {
+            "label": "NO_HAND",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 0,
+            "message": "No hand detected \u2014 try a clearer, well-lit image."
+          }
+        },
+        "photo_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9978633922518837,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9990223376084884,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9735038369188556,
+            "mode": "Single",
+            "hands": 2,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9976353160346197,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_resize": {
+          "hybrid": {
+            "label": "ABSTAIN",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 1,
+            "message": "Only one hand detected. Show both hands for a two-hand mudra, or choose Single-hand mode if appropriate."
+          },
+          "mediapipe": {
+            "label": "ABSTAIN",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 1,
+            "message": "Only one hand detected. Show both hands for a two-hand mudra, or choose Single-hand mode if appropriate."
+          }
+        },
+        "typical_fit": {
+          "hybrid": {
+            "label": "ABSTAIN",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 1,
+            "message": "Only one hand detected. Show both hands for a two-hand mudra, or choose Single-hand mode if appropriate."
+          },
+          "mediapipe": {
+            "label": "ABSTAIN",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 1,
+            "message": "Only one hand detected. Show both hands for a two-hand mudra, or choose Single-hand mode if appropriate."
+          }
+        }
+      }
+    },
+    {
+      "frame": 13,
+      "file": "20261109T193915000000+0530.png",
+      "true": "Tripathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9508185719067425,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9988498714316796,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "horizontal_flip": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9978398337903768,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9969118395135277,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "wrong_BGR": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.7800454792265954,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9987569819423534,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9993531025683519,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9987478604204854,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.984672820157858,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.998088646866622,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_resize": {
+          "hybrid": {
+            "label": "ABSTAIN",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 1,
+            "message": "Only one hand detected. Show both hands for a two-hand mudra, or choose Single-hand mode if appropriate."
+          },
+          "mediapipe": {
+            "label": "ABSTAIN",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 1,
+            "message": "Only one hand detected. Show both hands for a two-hand mudra, or choose Single-hand mode if appropriate."
+          }
+        },
+        "typical_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9412490434104426,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9983151407391044,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        }
+      }
+    },
+    {
+      "frame": 14,
+      "file": "20261109T193918000000+0530.png",
+      "true": "Tripathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9836038289650388,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9987506886412842,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "horizontal_flip": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9884004837385623,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9977933958655572,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "wrong_BGR": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9921027821870869,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9993676161886171,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9921586277460684,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9990922030411161,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9794896351639096,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9974718977729237,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_resize": {
+          "hybrid": {
+            "label": "ABSTAIN",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 1,
+            "message": "Only one hand detected. Show both hands for a two-hand mudra, or choose Single-hand mode if appropriate."
+          },
+          "mediapipe": {
+            "label": "ABSTAIN",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 1,
+            "message": "Only one hand detected. Show both hands for a two-hand mudra, or choose Single-hand mode if appropriate."
+          }
+        },
+        "typical_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9858068767180675,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.998153788897283,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        }
+      }
+    },
+    {
+      "frame": 15,
+      "file": "20261109T193921000000+0530.png",
+      "true": "Tripathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9950175936362947,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9993133341861109,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "horizontal_flip": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9999559045639341,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9990382380124629,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "wrong_BGR": {
+          "hybrid": {
+            "label": "NO_HAND",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 0,
+            "message": "No hand detected \u2014 try a clearer, well-lit image."
+          },
+          "mediapipe": {
+            "label": "NO_HAND",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 0,
+            "message": "No hand detected \u2014 try a clearer, well-lit image."
+          }
+        },
+        "photo_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9987655890656414,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9994664414492832,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9944308416952032,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9990975721495763,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.8957417413169806,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9958003252824592,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9937936104012014,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9994746456396356,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        }
+      }
+    },
+    {
+      "frame": 16,
+      "file": "20261109T193924000000+0530.png",
+      "true": "Tripathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9711655373619289,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9991062971686797,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "horizontal_flip": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9175645204627152,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9383148909108967,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "wrong_BGR": {
+          "hybrid": {
+            "label": "NO_HAND",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 0,
+            "message": "No hand detected \u2014 try a clearer, well-lit image."
+          },
+          "mediapipe": {
+            "label": "NO_HAND",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 0,
+            "message": "No hand detected \u2014 try a clearer, well-lit image."
+          }
+        },
+        "photo_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9888738126575003,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9995762921393695,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_fit": {
+          "hybrid": {
+            "label": "Simhamukham",
+            "confidence": 0.9488707512571347,
+            "mode": "Single",
+            "hands": 2,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9989377137356715,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9362336733132066,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9990838058317685,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9356905475506564,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9975437871469599,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        }
+      }
+    },
+    {
+      "frame": 17,
+      "file": "20261109T193927000000+0530.png",
+      "true": "Tripathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9506621950885344,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9926885838858127,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "horizontal_flip": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.999450316490241,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9971752887508688,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "wrong_BGR": {
+          "hybrid": {
+            "label": "NO_HAND",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 0,
+            "message": "No hand detected \u2014 try a clearer, well-lit image."
+          },
+          "mediapipe": {
+            "label": "NO_HAND",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 0,
+            "message": "No hand detected \u2014 try a clearer, well-lit image."
+          }
+        },
+        "photo_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9913748590956698,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9978305567014166,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.980329155923418,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9958541685932931,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_resize": {
+          "hybrid": {
+            "label": "ABSTAIN",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 1,
+            "message": "Only one hand detected. Show both hands for a two-hand mudra, or choose Single-hand mode if appropriate."
+          },
+          "mediapipe": {
+            "label": "ABSTAIN",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 1,
+            "message": "Only one hand detected. Show both hands for a two-hand mudra, or choose Single-hand mode if appropriate."
+          }
+        },
+        "typical_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9811867971948822,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9926371563142021,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        }
+      }
+    },
+    {
+      "frame": 18,
+      "file": "20261109T193930000000+0530.png",
+      "true": "Tripathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9079758401055098,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.996620974669048,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "horizontal_flip": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9963688900560818,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9956350619466561,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "wrong_BGR": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.992415774286639,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9753970596265659,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9858403306098577,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.995689608138601,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.8845700859959036,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.990422845785451,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_resize": {
+          "hybrid": {
+            "label": "Shanka",
+            "confidence": 0.7572361865317941,
+            "mode": "Double",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Shanka",
+            "confidence": 0.7572361865317941,
+            "mode": "Double",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_fit": {
+          "hybrid": {
+            "label": "ABSTAIN",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 1,
+            "message": "Only one hand detected. Show both hands for a two-hand mudra, or choose Single-hand mode if appropriate."
+          },
+          "mediapipe": {
+            "label": "ABSTAIN",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 1,
+            "message": "Only one hand detected. Show both hands for a two-hand mudra, or choose Single-hand mode if appropriate."
+          }
+        }
+      }
+    },
+    {
+      "frame": 19,
+      "file": "20261109T193934000000+0530.png",
+      "true": "Tripathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.947131349663025,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9982745706762266,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "horizontal_flip": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9953971084544914,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.999358713782243,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "wrong_BGR": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9849446090246208,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9972217051532216,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.993097761345538,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9993651718144225,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9469163447911932,
+            "mode": "Single",
+            "hands": 2,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9981429981610775,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_resize": {
+          "hybrid": {
+            "label": "Shanka",
+            "confidence": 0.6066250464039578,
+            "mode": "Double",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Shanka",
+            "confidence": 0.6066250464039578,
+            "mode": "Double",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_fit": {
+          "hybrid": {
+            "label": "ABSTAIN",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 1,
+            "message": "Only one hand detected. Show both hands for a two-hand mudra, or choose Single-hand mode if appropriate."
+          },
+          "mediapipe": {
+            "label": "ABSTAIN",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 1,
+            "message": "Only one hand detected. Show both hands for a two-hand mudra, or choose Single-hand mode if appropriate."
+          }
+        }
+      }
+    },
+    {
+      "frame": 20,
+      "file": "20261109T193938000000+0530.png",
+      "true": "Tripathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9677887324132256,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9991789135801885,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "horizontal_flip": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9999084486371097,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9991343391413188,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "wrong_BGR": {
+          "hybrid": {
+            "label": "NO_HAND",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 0,
+            "message": "No hand detected \u2014 try a clearer, well-lit image."
+          },
+          "mediapipe": {
+            "label": "NO_HAND",
+            "confidence": "",
+            "mode": "Unknown",
+            "hands": 0,
+            "message": "No hand detected \u2014 try a clearer, well-lit image."
+          }
+        },
+        "photo_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9962872526955981,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9971917406239124,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "photo_fit": {
+          "hybrid": {
+            "label": "Hamsapaksha",
+            "confidence": 0.9999849541158745,
+            "mode": "Single",
+            "hands": 2,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9960235425408442,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_resize": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.933998482617606,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9888107861907038,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        },
+        "typical_fit": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9857851123219222,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9986536625703303,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        }
+      }
+    },
+    {
+      "frame": 21,
+      "file": "20261109T193943000000+0530.png",
+      "true": "Pathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9749017308353699,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.699670782295048,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        }
+      }
+    },
+    {
+      "frame": 22,
+      "file": "20261109T193954000000+0530.png",
+      "true": "Pathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.8505970602080778,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9973028682098497,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        }
+      }
+    },
+    {
+      "frame": 23,
+      "file": "20261109T193958000000+0530.png",
+      "true": "Pathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9231542667916197,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.999052604043455,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        }
+      }
+    },
+    {
+      "frame": 24,
+      "file": "20261109T194001000000+0530.png",
+      "true": "Pathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9148681690362511,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.998540534360523,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        }
+      }
+    },
+    {
+      "frame": 25,
+      "file": "20261109T194004000000+0530.png",
+      "true": "Pathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9498089669977929,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9986357448121173,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        }
+      }
+    },
+    {
+      "frame": 26,
+      "file": "20261109T194006000000+0530.png",
+      "true": "Pathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9869569093361749,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9935590550140462,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        }
+      }
+    },
+    {
+      "frame": 27,
+      "file": "20261109T194009000000+0530.png",
+      "true": "Pathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.996821388028828,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9988907978792835,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        }
+      }
+    },
+    {
+      "frame": 28,
+      "file": "20261109T194011000000+0530.png",
+      "true": "Pathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9787999787049239,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9902676418590812,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        }
+      }
+    },
+    {
+      "frame": 29,
+      "file": "20261109T194015000000+0530.png",
+      "true": "Pathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.9954293161512789,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.9961584701524093,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        }
+      }
+    },
+    {
+      "frame": 30,
+      "file": "20261109T194017000000+0530.png",
+      "true": "Pathaka",
+      "predictions": {
+        "original": {
+          "hybrid": {
+            "label": "Pathaka",
+            "confidence": 0.956075738178213,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          },
+          "mediapipe": {
+            "label": "Pathaka",
+            "confidence": 0.998631675515198,
+            "mode": "Single",
+            "hands": 1,
+            "message": ""
+          }
+        }
+      }
+    }
+  ],
+  "protected_hashes": {
+    "D:\\Mudra_Project_V3\\brain.py": "aff97e506bd230e1c2092eb20d473dbef0a1721d7ae928ef5ade37018ce24301",
+    "D:\\Mudra_Project_V3\\detector.py": "7283cda879a4319dca6258ae4521c5644a5d45dd2d39d7268c98f27fcd88d9b2",
+    "D:\\Mudra_Project_V3\\gate.py": "49026746065820aa0aedcf03ff11afdf36691d0c7b8da695d99e9412aa2e7b6c",
+    "D:\\Mudra_Project_V3\\feature_extraction.py": "61b4081a6fcb45e14b2870196b624383d09b117b34fa8f879757ea3e7fa711b3",
+    "D:\\Mudra_Project_V3\\feature_extraction_double.py": "b24eda16dd577b911ce60c4feeb034a61615629e9b1241bd8e2c070d2da6be06",
+    "D:\\Mudra_Project_V3\\gate\\gate.joblib": "892e8c7dcc027d4e7cb57372adb829a4685665e4478dfe4ba428ab0058aa1788",
+    "D:\\Mudra_Project_V3\\model_trials_20261107\\capped_thresholds\\cutoffs.json": "deb8da9a30d44b14ab0289f61d4023fcb9209d1fba0ee8f91a4bcd72c6cd41b6",
+    "D:\\Mudra_Project_V3\\tracker_v2\\adapter.py": "54a26bc58983590470aed788434ffdfc2038355b542362a617da96e7b93240ad",
+    "D:\\Mudra_Project_V3\\tracker_v2\\geometry.py": "52a054a491700b73ba9abfb0df7a7b5eff0a517a20cef7f89fdb1ce4bb7a8dee",
+    "D:\\Mudra_Project_V3\\tracker_v2\\assets\\rtmdet_hand.onnx": "568d3ea97a5b142488366b67e036b6a5cb0a1fef9087a710cb8e66b6979fbac2",
+    "D:\\Mudra_Project_V3\\tracker_v2\\assets\\rtmpose_hand5.onnx": "39e858936bca0f94c09847d4e70b68a51d6c0adac61f36b457fcadb54621cd29",
+    "D:\\Mudra_Project_V3\\tracker_v2\\model_single\\raw\\bundle.joblib": "c2e4852fbc50946a82ccd128124cd886d19a3dfef49d6762a736c4479c4af3bf",
+    "D:\\Mudra_Project_V3\\tracker_v2\\model_single\\bundle.joblib": "459c31486eae6dfeb905d4a032bfb8462ed2592e520b8f99f642956983bb3876",
+    "D:\\Mudra_Project_V3\\model_double_v3_norm\\mlp_mudra_classifier.joblib": "20069dd6cc16ba50eaeff96e256b8c25df46065cb6ad4767fb8e33974c7afb8c",
+    "D:\\Mudra_Project_V3\\model_double_v3_norm\\feature_scaler.joblib": "510196b20869bad6917fbcec8465fb1bb1d33df10284936e7ebd66c5097f6518",
+    "D:\\Mudra_Project_V3\\model_double_v3_norm\\label_encoder.joblib": "2cc5211eacbe361f8053fe65a78b8837a96dcdef8e10765d2b2e6c6dcff827cd",
+    "D:\\Mudra_Project_V3\\streamlit_app.py": "1f14eed4496551a0059bd7a8fcf912df0d13ea572ecfddbad86c4dfa7ac1ab63",
+    "D:\\Mudra_Project_V3\\hybrid_single.py": "96f3f19337c9591c1a38d2bd2c8c6abc6cb563734958ada75afb40aca1b1de39",
+    "D:\\Mudra_Project_V3\\validate_hybrid_live.py": "77f1e9d77394bda4b87699f54343a768fc71fb6b7b94a42edd9a0c1bc279f412"
+  },
+  "handedness_note": "MediaPipe labels assume mirrored/selfie images. Physical left/right requires knowing whether saved pixels were mirrored; RTMPose adapter has no handedness output. Training and live labels compared under the same MP convention.",
+  "limitations": [
+    "Normalized tip-wrist distance is a flexion proxy, not a direct physical finger angle. Central 90% ranges and full ranges are both reported; overlapping ranges do not identify a class.",
+    "Wrong_BGR deliberately violates the RGB API; it is a diagnostic control, not a deployment candidate.",
+    "Resize/flip improvements alone do not establish a live-vs-file mismatch, since the two paths supply identical arrays."
+  ],
+  "conclusion": {
+    "decision": "No runtime/model change; no preprocessing mismatch found.",
+    "a_flip": "CONFIRMED: hybrid 1/20 -> 0/20; MediaPipe 1/20 -> 4/20; does not rescue the hybrid.",
+    "b_channels": "CONFIRMED: actual Streamlit infer_image and validate_hybrid_live file loop produced identical RGB arrays 30/30. BGR control deliberately breaks the RGB contract.",
+    "c_size": "CONFIRMED: 613x344 once, 613x459 29 times. Representative outside Tripathaka size is 218x212; stretch and aspect-preserving fit both yield hybrid/MP 0/20. High-resolution control also does not rescue hybrid.",
+    "d_features": "CONFIRMED: live normalized ring median RT=0.9500, MP=0.9489. Original training medians Tripathaka/Pathaka RT=.7708/.9399, MP=.6842/.9104. Full ranges overlap for 18/20 RT and 20/20 MP live values; no scalar proves the class. INFERRED: the ring is represented too extended in many live frames. Tracker/visual ambiguity versus model boundary weakness remains UNVERIFIED without ground-truth landmarks.",
+    "e_handedness": "CONFIRMED: live MP Right 20/20; original detected training Tripathaka Left 304, Right 92 (76.8% opposite MP orientation). INFERRED physical Left under stock Streamlit unmirrored capture: local CameraInput default mirrored=false and MP docs assume mirrored inputs. Camera-driver mirroring and absolute physical handedness are UNVERIFIED. Flip failure argues against a simple handedness preprocessing fix.",
+    "acceptance": "CONFIRMED: all requested no-regression checks pass; live failures remain unresolved. No tuning/training performed.",
+    "source_files_changed": false
+  },
+  "acceptance": {
+    "clean_validation": {
+      "n": 4465,
+      "correct": 4043,
+      "accuracy": 0.9054871220604703,
+      "coverage": 0.9323628219484883,
+      "wrong95": 39
+    },
+    "clean_method": "production brain.predict; cached detector outputs on all validation records; fresh pixels separately",
+    "fresh_pixels_matched": 20,
+    "outside_correct": 38,
+    "outside_n": 40,
+    "live_before": {
+      "Tripathaka": 1,
+      "Pathaka": 10
+    },
+    "live_after": {
+      "Tripathaka": 1,
+      "Pathaka": 10
+    },
+    "existing_tests": "CONFIRMED ACCEPTANCE PASS",
+    "protected_unchanged": true
+  }
+}

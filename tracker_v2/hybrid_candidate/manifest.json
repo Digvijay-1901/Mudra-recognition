@@ -1,0 +1,28 @@
+{
+  "candidate": "one fixed MP-router / RTMPose-single / MP-double hybrid",
+  "promoted": false,
+  "trained": false,
+  "single_detection": "RTMPose only after MP single route; original image and own >=75 degree canonical selection",
+  "double_detection": "unchanged MediaPipe",
+  "routing": "unchanged MP n_hands / MP raw gate; canonical retry only for ambiguous tilted MP hand; no RTMPose rescue of MP no-hand/gate abstain",
+  "cutoffs": "unchanged production per-class values with .30 floor; no new search",
+  "split_fingerprint": "a851f1c324122623bbb040369e46214f6f15abdfb95560435c8a743be286e071",
+  "runtime_inputs": {
+    "brain.py": "088340d029f58a23ef11df880969346c57507b9f45489378c5cff1694ea300f6",
+    "detector.py": "7283cda879a4319dca6258ae4521c5644a5d45dd2d39d7268c98f27fcd88d9b2",
+    "gate.py": "49026746065820aa0aedcf03ff11afdf36691d0c7b8da695d99e9412aa2e7b6c",
+    "feature_extraction.py": "61b4081a6fcb45e14b2870196b624383d09b117b34fa8f879757ea3e7fa711b3",
+    "feature_extraction_double.py": "b24eda16dd577b911ce60c4feeb034a61615629e9b1241bd8e2c070d2da6be06",
+    "gate/gate.joblib": "892e8c7dcc027d4e7cb57372adb829a4685665e4478dfe4ba428ab0058aa1788",
+    "model_trials_20261107/capped_thresholds/cutoffs.json": "deb8da9a30d44b14ab0289f61d4023fcb9209d1fba0ee8f91a4bcd72c6cd41b6",
+    "tracker_v2/adapter.py": "54a26bc58983590470aed788434ffdfc2038355b542362a617da96e7b93240ad",
+    "tracker_v2/geometry.py": "52a054a491700b73ba9abfb0df7a7b5eff0a517a20cef7f89fdb1ce4bb7a8dee",
+    "tracker_v2/assets/rtmdet_hand.onnx": "568d3ea97a5b142488366b67e036b6a5cb0a1fef9087a710cb8e66b6979fbac2",
+    "tracker_v2/assets/rtmpose_hand5.onnx": "39e858936bca0f94c09847d4e70b68a51d6c0adac61f36b457fcadb54621cd29",
+    "tracker_v2/model_single/raw/bundle.joblib": "c2e4852fbc50946a82ccd128124cd886d19a3dfef49d6762a736c4479c4af3bf",
+    "tracker_v2/model_single/bundle.joblib": "459c31486eae6dfeb905d4a032bfb8462ed2592e520b8f99f642956983bb3876",
+    "model_double_v3_norm/mlp_mudra_classifier.joblib": "20069dd6cc16ba50eaeff96e256b8c25df46065cb6ad4767fb8e33974c7afb8c",
+    "model_double_v3_norm/feature_scaler.joblib": "510196b20869bad6917fbcec8465fb1bb1d33df10284936e7ebd66c5097f6518",
+    "model_double_v3_norm/label_encoder.joblib": "2cc5211eacbe361f8053fe65a78b8837a96dcdef8e10765d2b2e6c6dcff827cd"
+  }
+}

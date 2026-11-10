@@ -1,0 +1,1534 @@
+{
+  "cohort": "fixed training-only probe, 10 per double class and 50 single controls",
+  "default_detector_threshold": 0.3,
+  "probe_detector_threshold": 0.15,
+  "landmark_thresholds": "unchanged mean .3 and wrist/middle-base .3",
+  "summary": {
+    "double": {
+      "n": 100,
+      "baseline": 18,
+      "low": 33,
+      "retry": 51,
+      "mp_count": 23
+    },
+    "single": {
+      "n": 50,
+      "baseline": 0,
+      "low": 1,
+      "retry": 23,
+      "mp_count": 0
+    }
+  },
+  "seconds": 66.38295360002667,
+  "mean_ms": {
+    "baseline_ms": 105.94446200043119,
+    "tuned_ms": 273.99259600012255
+  },
+  "limitations": [
+    "Two accepted landmark sets do not prove two distinct correct hands.",
+    "Padding may generate reflected duplicate hands.",
+    "Training-only probe is not the full 6355-photo rate or Auto accuracy."
+  ],
+  "rows": [
+    {
+      "mp_count": 1,
+      "source_index": 16830,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 61.25989998690784,
+      "tuned_ms": 183.62260001595132
+    },
+    {
+      "mp_count": 1,
+      "source_index": 17153,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 55.93020000378601,
+      "tuned_ms": 189.00839998968877
+    },
+    {
+      "mp_count": 1,
+      "source_index": 16886,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 71.19389998842962,
+      "tuned_ms": 236.70300000230782
+    },
+    {
+      "mp_count": 2,
+      "source_index": 16763,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 60.328699997626245,
+      "tuned_ms": 364.25430001690984
+    },
+    {
+      "mp_count": 1,
+      "source_index": 16656,
+      "mode": "double",
+      "baseline": 1,
+      "low": 0,
+      "retry": 2,
+      "baseline_ms": 121.51629998697899,
+      "tuned_ms": 451.794599997811
+    },
+    {
+      "mp_count": 1,
+      "source_index": 16916,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 63.24519999907352,
+      "tuned_ms": 199.34580000699498
+    },
+    {
+      "mp_count": 1,
+      "source_index": 16616,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 65.77700001071207,
+      "tuned_ms": 300.36950000794604
+    },
+    {
+      "mp_count": 2,
+      "source_index": 16698,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 149.33949999976903,
+      "tuned_ms": 345.0887000071816
+    },
+    {
+      "mp_count": 2,
+      "source_index": 16876,
+      "mode": "double",
+      "baseline": 0,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 140.7216000079643,
+      "tuned_ms": 256.3961999840103
+    },
+    {
+      "mp_count": 1,
+      "source_index": 16692,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 65.85139999515377,
+      "tuned_ms": 269.2700999905355
+    },
+    {
+      "mp_count": 1,
+      "source_index": 17481,
+      "mode": "double",
+      "baseline": 0,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 238.5401999927126,
+      "tuned_ms": 651.7549999989569
+    },
+    {
+      "mp_count": 1,
+      "source_index": 17422,
+      "mode": "double",
+      "baseline": 0,
+      "low": 0,
+      "retry": 0,
+      "baseline_ms": 173.01310002221726,
+      "tuned_ms": 218.6173000081908
+    },
+    {
+      "mp_count": 1,
+      "source_index": 17606,
+      "mode": "double",
+      "baseline": 1,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 66.0564000136219,
+      "tuned_ms": 232.17319999821484
+    },
+    {
+      "mp_count": 1,
+      "source_index": 17368,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 59.012999990954995,
+      "tuned_ms": 417.74370000348426
+    },
+    {
+      "mp_count": 1,
+      "source_index": 17347,
+      "mode": "double",
+      "baseline": 1,
+      "low": 0,
+      "retry": 1,
+      "baseline_ms": 174.73769999924116,
+      "tuned_ms": 294.64330000337213
+    },
+    {
+      "mp_count": 1,
+      "source_index": 17608,
+      "mode": "double",
+      "baseline": 0,
+      "low": 0,
+      "retry": 0,
+      "baseline_ms": 181.9785999832675,
+      "tuned_ms": 187.4021000112407
+    },
+    {
+      "mp_count": 1,
+      "source_index": 17371,
+      "mode": "double",
+      "baseline": 0,
+      "low": 0,
+      "retry": 2,
+      "baseline_ms": 179.17409999063239,
+      "tuned_ms": 462.341699982062
+    },
+    {
+      "mp_count": 1,
+      "source_index": 17378,
+      "mode": "double",
+      "baseline": 1,
+      "low": 0,
+      "retry": 2,
+      "baseline_ms": 119.06999998609535,
+      "tuned_ms": 582.5475000019651
+    },
+    {
+      "mp_count": 1,
+      "source_index": 17531,
+      "mode": "double",
+      "baseline": 0,
+      "low": 0,
+      "retry": 0,
+      "baseline_ms": 173.65369998151436,
+      "tuned_ms": 329.8472999886144
+    },
+    {
+      "mp_count": 1,
+      "source_index": 17480,
+      "mode": "double",
+      "baseline": 0,
+      "low": 0,
+      "retry": 1,
+      "baseline_ms": 180.78399999649264,
+      "tuned_ms": 487.7858000108972
+    },
+    {
+      "mp_count": 1,
+      "source_index": 18108,
+      "mode": "double",
+      "baseline": 2,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 97.73159999167547,
+      "tuned_ms": 260.9660000016447
+    },
+    {
+      "mp_count": 1,
+      "source_index": 18110,
+      "mode": "double",
+      "baseline": 2,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 100.96120001981035,
+      "tuned_ms": 353.83370000636205
+    },
+    {
+      "mp_count": 1,
+      "source_index": 17666,
+      "mode": "double",
+      "baseline": 1,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 60.539099999004975,
+      "tuned_ms": 188.5785000049509
+    },
+    {
+      "mp_count": 1,
+      "source_index": 17855,
+      "mode": "double",
+      "baseline": 1,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 59.22120000468567,
+      "tuned_ms": 298.59349998878315
+    },
+    {
+      "mp_count": 1,
+      "source_index": 17768,
+      "mode": "double",
+      "baseline": 2,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 101.660999993328,
+      "tuned_ms": 286.8859999871347
+    },
+    {
+      "mp_count": 1,
+      "source_index": 18179,
+      "mode": "double",
+      "baseline": 1,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 95.86810000473633,
+      "tuned_ms": 315.46349998097867
+    },
+    {
+      "mp_count": 2,
+      "source_index": 17792,
+      "mode": "double",
+      "baseline": 2,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 87.98499999102205,
+      "tuned_ms": 246.05180000071414
+    },
+    {
+      "mp_count": 2,
+      "source_index": 18026,
+      "mode": "double",
+      "baseline": 1,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 87.02199999243021,
+      "tuned_ms": 276.9288999843411
+    },
+    {
+      "mp_count": 2,
+      "source_index": 18094,
+      "mode": "double",
+      "baseline": 2,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 99.02819999842905,
+      "tuned_ms": 321.7877999995835
+    },
+    {
+      "mp_count": 1,
+      "source_index": 17752,
+      "mode": "double",
+      "baseline": 1,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 60.40089999441989,
+      "tuned_ms": 286.1742000095546
+    },
+    {
+      "mp_count": 1,
+      "source_index": 18391,
+      "mode": "double",
+      "baseline": 0,
+      "low": 0,
+      "retry": 1,
+      "baseline_ms": 257.53650002297945,
+      "tuned_ms": 434.2223000130616
+    },
+    {
+      "mp_count": 1,
+      "source_index": 18843,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 59.29239999386482,
+      "tuned_ms": 443.4299000131432
+    },
+    {
+      "mp_count": 2,
+      "source_index": 18381,
+      "mode": "double",
+      "baseline": 0,
+      "low": 0,
+      "retry": 0,
+      "baseline_ms": 229.08399999141693,
+      "tuned_ms": 293.2231999875512
+    },
+    {
+      "mp_count": 2,
+      "source_index": 18655,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 63.20370000321418,
+      "tuned_ms": 216.01129998452961
+    },
+    {
+      "mp_count": 2,
+      "source_index": 18725,
+      "mode": "double",
+      "baseline": 0,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 269.447400001809,
+      "tuned_ms": 597.7431999926921
+    },
+    {
+      "mp_count": 1,
+      "source_index": 18435,
+      "mode": "double",
+      "baseline": 0,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 266.37460000347346,
+      "tuned_ms": 377.3984999861568
+    },
+    {
+      "mp_count": 1,
+      "source_index": 18786,
+      "mode": "double",
+      "baseline": 1,
+      "low": 0,
+      "retry": 1,
+      "baseline_ms": 207.07709999987856,
+      "tuned_ms": 388.853200012818
+    },
+    {
+      "mp_count": 2,
+      "source_index": 18259,
+      "mode": "double",
+      "baseline": 0,
+      "low": 0,
+      "retry": 1,
+      "baseline_ms": 237.669599999208,
+      "tuned_ms": 422.22429998219013
+    },
+    {
+      "mp_count": 1,
+      "source_index": 18414,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 62.35459999879822,
+      "tuned_ms": 197.99790001707152
+    },
+    {
+      "mp_count": 1,
+      "source_index": 18248,
+      "mode": "double",
+      "baseline": 0,
+      "low": 0,
+      "retry": 0,
+      "baseline_ms": 180.4227999818977,
+      "tuned_ms": 379.14350000210106
+    },
+    {
+      "mp_count": 2,
+      "source_index": 19588,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 63.54309999733232,
+      "tuned_ms": 212.38059998722747
+    },
+    {
+      "mp_count": 2,
+      "source_index": 19105,
+      "mode": "double",
+      "baseline": 1,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 64.61380000109784,
+      "tuned_ms": 118.67870000423864
+    },
+    {
+      "mp_count": 2,
+      "source_index": 19482,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 60.48479999299161,
+      "tuned_ms": 162.7849999931641
+    },
+    {
+      "mp_count": 2,
+      "source_index": 19076,
+      "mode": "double",
+      "baseline": 1,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 57.275099999969825,
+      "tuned_ms": 97.80960000352934
+    },
+    {
+      "mp_count": 2,
+      "source_index": 19602,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 62.874200026271865,
+      "tuned_ms": 252.09500000346452
+    },
+    {
+      "mp_count": 2,
+      "source_index": 19337,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 63.84679998154752,
+      "tuned_ms": 271.28499999525957
+    },
+    {
+      "mp_count": 1,
+      "source_index": 19390,
+      "mode": "double",
+      "baseline": 2,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 95.8262000058312,
+      "tuned_ms": 182.6316999795381
+    },
+    {
+      "mp_count": 2,
+      "source_index": 19079,
+      "mode": "double",
+      "baseline": 2,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 104.9887000117451,
+      "tuned_ms": 103.57680000015534
+    },
+    {
+      "mp_count": 1,
+      "source_index": 19584,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 178.08300000615418,
+      "tuned_ms": 431.2253999814857
+    },
+    {
+      "mp_count": 1,
+      "source_index": 19413,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 57.562399975722656,
+      "tuned_ms": 305.8053000131622
+    },
+    {
+      "mp_count": 1,
+      "source_index": 19801,
+      "mode": "double",
+      "baseline": 0,
+      "low": 0,
+      "retry": 0,
+      "baseline_ms": 178.48989999038167,
+      "tuned_ms": 233.28449999098666
+    },
+    {
+      "mp_count": 1,
+      "source_index": 19764,
+      "mode": "double",
+      "baseline": 0,
+      "low": 0,
+      "retry": 0,
+      "baseline_ms": 171.79930000565946,
+      "tuned_ms": 207.24069999414496
+    },
+    {
+      "mp_count": 1,
+      "source_index": 19971,
+      "mode": "double",
+      "baseline": 0,
+      "low": 0,
+      "retry": 1,
+      "baseline_ms": 175.08140002610162,
+      "tuned_ms": 615.6990999879781
+    },
+    {
+      "mp_count": 1,
+      "source_index": 20019,
+      "mode": "double",
+      "baseline": 0,
+      "low": 0,
+      "retry": 0,
+      "baseline_ms": 180.08440002449788,
+      "tuned_ms": 297.39570000674576
+    },
+    {
+      "mp_count": 1,
+      "source_index": 20083,
+      "mode": "double",
+      "baseline": 0,
+      "low": 0,
+      "retry": 0,
+      "baseline_ms": 192.3256999871228,
+      "tuned_ms": 336.34239999810234
+    },
+    {
+      "mp_count": 1,
+      "source_index": 20104,
+      "mode": "double",
+      "baseline": 0,
+      "low": 0,
+      "retry": 0,
+      "baseline_ms": 187.31589999515563,
+      "tuned_ms": 175.7350999978371
+    },
+    {
+      "mp_count": 0,
+      "source_index": 19733,
+      "mode": "double",
+      "baseline": 0,
+      "low": 0,
+      "retry": 0,
+      "baseline_ms": 173.4920000017155,
+      "tuned_ms": 179.03590001515113
+    },
+    {
+      "mp_count": 1,
+      "source_index": 19781,
+      "mode": "double",
+      "baseline": 0,
+      "low": 0,
+      "retry": 0,
+      "baseline_ms": 171.26409997581504,
+      "tuned_ms": 251.71929999487475
+    },
+    {
+      "mp_count": 1,
+      "source_index": 20069,
+      "mode": "double",
+      "baseline": 0,
+      "low": 0,
+      "retry": 0,
+      "baseline_ms": 180.67039997549728,
+      "tuned_ms": 353.6136000184342
+    },
+    {
+      "mp_count": 1,
+      "source_index": 20049,
+      "mode": "double",
+      "baseline": 0,
+      "low": 0,
+      "retry": 0,
+      "baseline_ms": 177.06810001982376,
+      "tuned_ms": 184.21240002498962
+    },
+    {
+      "mp_count": 1,
+      "source_index": 20307,
+      "mode": "double",
+      "baseline": 2,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 126.6689000185579,
+      "tuned_ms": 138.7094000237994
+    },
+    {
+      "mp_count": 1,
+      "source_index": 20684,
+      "mode": "double",
+      "baseline": 2,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 101.2672999931965,
+      "tuned_ms": 219.47380001074634
+    },
+    {
+      "mp_count": 1,
+      "source_index": 20666,
+      "mode": "double",
+      "baseline": 2,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 89.46940000168979,
+      "tuned_ms": 135.55860001360998
+    },
+    {
+      "mp_count": 1,
+      "source_index": 20378,
+      "mode": "double",
+      "baseline": 2,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 194.42819998948835,
+      "tuned_ms": 138.22930000605993
+    },
+    {
+      "mp_count": 1,
+      "source_index": 20493,
+      "mode": "double",
+      "baseline": 2,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 141.3178999791853,
+      "tuned_ms": 217.65219999360852
+    },
+    {
+      "mp_count": 2,
+      "source_index": 20635,
+      "mode": "double",
+      "baseline": 1,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 101.50750001776032,
+      "tuned_ms": 167.5826999999117
+    },
+    {
+      "mp_count": 1,
+      "source_index": 20584,
+      "mode": "double",
+      "baseline": 2,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 202.01489998726174,
+      "tuned_ms": 253.52999998722225
+    },
+    {
+      "mp_count": 1,
+      "source_index": 20354,
+      "mode": "double",
+      "baseline": 2,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 102.08400001283735,
+      "tuned_ms": 171.17529999813996
+    },
+    {
+      "mp_count": 1,
+      "source_index": 20661,
+      "mode": "double",
+      "baseline": 2,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 141.5706000116188,
+      "tuned_ms": 267.87149999290705
+    },
+    {
+      "mp_count": 1,
+      "source_index": 20765,
+      "mode": "double",
+      "baseline": 2,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 100.6725000042934,
+      "tuned_ms": 182.83659999724478
+    },
+    {
+      "mp_count": 1,
+      "source_index": 20820,
+      "mode": "double",
+      "baseline": 1,
+      "low": 0,
+      "retry": 1,
+      "baseline_ms": 180.2529999986291,
+      "tuned_ms": 684.9505999998655
+    },
+    {
+      "mp_count": 1,
+      "source_index": 21707,
+      "mode": "double",
+      "baseline": 0,
+      "low": 0,
+      "retry": 1,
+      "baseline_ms": 250.55820000125095,
+      "tuned_ms": 684.8771000222769
+    },
+    {
+      "mp_count": 1,
+      "source_index": 21286,
+      "mode": "double",
+      "baseline": 0,
+      "low": 0,
+      "retry": 0,
+      "baseline_ms": 340.3031000052579,
+      "tuned_ms": 539.5771999901626
+    },
+    {
+      "mp_count": 1,
+      "source_index": 21683,
+      "mode": "double",
+      "baseline": 0,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 327.18980000936426,
+      "tuned_ms": 503.2491000019945
+    },
+    {
+      "mp_count": 1,
+      "source_index": 21603,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 103.31730000325479,
+      "tuned_ms": 701.7317000136245
+    },
+    {
+      "mp_count": 2,
+      "source_index": 21154,
+      "mode": "double",
+      "baseline": 0,
+      "low": 0,
+      "retry": 0,
+      "baseline_ms": 254.74820000818,
+      "tuned_ms": 469.87619998981245
+    },
+    {
+      "mp_count": 1,
+      "source_index": 20919,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 97.4733000039123,
+      "tuned_ms": 364.3375000101514
+    },
+    {
+      "mp_count": 2,
+      "source_index": 21642,
+      "mode": "double",
+      "baseline": 0,
+      "low": 0,
+      "retry": 0,
+      "baseline_ms": 244.22220000997186,
+      "tuned_ms": 576.3328999746591
+    },
+    {
+      "mp_count": 2,
+      "source_index": 21418,
+      "mode": "double",
+      "baseline": 0,
+      "low": 0,
+      "retry": 1,
+      "baseline_ms": 266.394299978856,
+      "tuned_ms": 382.2539999964647
+    },
+    {
+      "mp_count": 2,
+      "source_index": 21465,
+      "mode": "double",
+      "baseline": 0,
+      "low": 0,
+      "retry": 0,
+      "baseline_ms": 98.09700000914745,
+      "tuned_ms": 886.6654000012204
+    },
+    {
+      "mp_count": 1,
+      "source_index": 21842,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 104.72760000266135,
+      "tuned_ms": 385.29669999843463
+    },
+    {
+      "mp_count": 1,
+      "source_index": 21868,
+      "mode": "double",
+      "baseline": 2,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 116.22980001266114,
+      "tuned_ms": 106.18639999302104
+    },
+    {
+      "mp_count": 1,
+      "source_index": 22225,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 99.02590001001954,
+      "tuned_ms": 246.27840000903234
+    },
+    {
+      "mp_count": 1,
+      "source_index": 21748,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 96.7473000055179,
+      "tuned_ms": 231.6743000119459
+    },
+    {
+      "mp_count": 1,
+      "source_index": 21737,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 59.66620001709089,
+      "tuned_ms": 157.74460000102408
+    },
+    {
+      "mp_count": 2,
+      "source_index": 22180,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 118.7723999901209,
+      "tuned_ms": 474.2634000140242
+    },
+    {
+      "mp_count": 1,
+      "source_index": 22258,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 60.47949998173863,
+      "tuned_ms": 201.39210001798347
+    },
+    {
+      "mp_count": 1,
+      "source_index": 21827,
+      "mode": "double",
+      "baseline": 2,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 95.57309999945574,
+      "tuned_ms": 97.54360001534224
+    },
+    {
+      "mp_count": 1,
+      "source_index": 22051,
+      "mode": "double",
+      "baseline": 1,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 100.12960000312887,
+      "tuned_ms": 126.5201999922283
+    },
+    {
+      "mp_count": 1,
+      "source_index": 22421,
+      "mode": "double",
+      "baseline": 1,
+      "low": 0,
+      "retry": 1,
+      "baseline_ms": 111.6860999900382,
+      "tuned_ms": 413.0058999871835
+    },
+    {
+      "mp_count": 1,
+      "source_index": 22723,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 55.797999986680225,
+      "tuned_ms": 412.7632000017911
+    },
+    {
+      "mp_count": 1,
+      "source_index": 22655,
+      "mode": "double",
+      "baseline": 1,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 59.36509999446571,
+      "tuned_ms": 105.88649997953326
+    },
+    {
+      "mp_count": 1,
+      "source_index": 22731,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 60.86540000978857,
+      "tuned_ms": 183.79760000971146
+    },
+    {
+      "mp_count": 1,
+      "source_index": 22921,
+      "mode": "double",
+      "baseline": 1,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 62.1339000063017,
+      "tuned_ms": 91.79389997734688
+    },
+    {
+      "mp_count": 1,
+      "source_index": 22700,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 54.98089999309741,
+      "tuned_ms": 376.95000000530854
+    },
+    {
+      "mp_count": 1,
+      "source_index": 22916,
+      "mode": "double",
+      "baseline": 1,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 60.946400015382096,
+      "tuned_ms": 152.17289997963235
+    },
+    {
+      "mp_count": 1,
+      "source_index": 22517,
+      "mode": "double",
+      "baseline": 1,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 57.84799999673851,
+      "tuned_ms": 170.04179998184554
+    },
+    {
+      "mp_count": 1,
+      "source_index": 22839,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 58.17929998738691,
+      "tuned_ms": 183.72140001156367
+    },
+    {
+      "mp_count": 1,
+      "source_index": 22733,
+      "mode": "double",
+      "baseline": 1,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 62.88039998617023,
+      "tuned_ms": 97.71289999480359
+    },
+    {
+      "mp_count": 1,
+      "source_index": 22801,
+      "mode": "double",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 58.59780000173487,
+      "tuned_ms": 430.2680999971926
+    },
+    {
+      "mp_count": 1,
+      "source_index": 8194,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 56.208199996035546,
+      "tuned_ms": 213.4086000151001
+    },
+    {
+      "mp_count": 1,
+      "source_index": 2236,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 56.82369999703951,
+      "tuned_ms": 300.7336000155192
+    },
+    {
+      "mp_count": 0,
+      "source_index": 4447,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 66.03020001784898,
+      "tuned_ms": 163.15390000818297
+    },
+    {
+      "mp_count": 1,
+      "source_index": 4821,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 54.57690000184812,
+      "tuned_ms": 180.05990001256578
+    },
+    {
+      "mp_count": 1,
+      "source_index": 6864,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 61.10000002081506,
+      "tuned_ms": 174.1840000031516
+    },
+    {
+      "mp_count": 1,
+      "source_index": 1061,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 55.80580001696944,
+      "tuned_ms": 178.10109999845736
+    },
+    {
+      "mp_count": 1,
+      "source_index": 2883,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 59.411800000816584,
+      "tuned_ms": 215.91139998054132
+    },
+    {
+      "mp_count": 1,
+      "source_index": 10060,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 55.51400000695139,
+      "tuned_ms": 183.39980000746436
+    },
+    {
+      "mp_count": 1,
+      "source_index": 14663,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 57.80529999174178,
+      "tuned_ms": 169.95500001939945
+    },
+    {
+      "mp_count": 1,
+      "source_index": 1362,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 60.22839999059215,
+      "tuned_ms": 247.74659998365678
+    },
+    {
+      "mp_count": 1,
+      "source_index": 8907,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 60.33350000507198,
+      "tuned_ms": 186.39389998861589
+    },
+    {
+      "mp_count": 1,
+      "source_index": 12442,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 59.11120001110248,
+      "tuned_ms": 177.0288999832701
+    },
+    {
+      "mp_count": 0,
+      "source_index": 12275,
+      "mode": "single",
+      "baseline": 0,
+      "low": 0,
+      "retry": 0,
+      "baseline_ms": 184.74470000364818,
+      "tuned_ms": 260.45889998204075
+    },
+    {
+      "mp_count": 1,
+      "source_index": 787,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 61.171599983936176,
+      "tuned_ms": 328.4744000120554
+    },
+    {
+      "mp_count": 1,
+      "source_index": 778,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 59.29549998836592,
+      "tuned_ms": 209.07080001779832
+    },
+    {
+      "mp_count": 1,
+      "source_index": 2313,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 58.584999991580844,
+      "tuned_ms": 158.80669999751262
+    },
+    {
+      "mp_count": 1,
+      "source_index": 4291,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 67.98819999676198,
+      "tuned_ms": 173.21710000396706
+    },
+    {
+      "mp_count": 1,
+      "source_index": 2535,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 56.46650001290254,
+      "tuned_ms": 197.0541000191588
+    },
+    {
+      "mp_count": 1,
+      "source_index": 681,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 57.45620001107454,
+      "tuned_ms": 150.36289999261498
+    },
+    {
+      "mp_count": 1,
+      "source_index": 7041,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 56.30220001330599,
+      "tuned_ms": 225.10299997520633
+    },
+    {
+      "mp_count": 1,
+      "source_index": 8870,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 62.054599984548986,
+      "tuned_ms": 154.80139999999665
+    },
+    {
+      "mp_count": 1,
+      "source_index": 3282,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 57.84620001213625,
+      "tuned_ms": 260.8742999727838
+    },
+    {
+      "mp_count": 1,
+      "source_index": 8121,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 58.141699992120266,
+      "tuned_ms": 224.77770000114106
+    },
+    {
+      "mp_count": 1,
+      "source_index": 11915,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 56.71130001428537,
+      "tuned_ms": 191.1852000048384
+    },
+    {
+      "mp_count": 1,
+      "source_index": 13413,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 62.23730000783689,
+      "tuned_ms": 221.59749999991618
+    },
+    {
+      "mp_count": 1,
+      "source_index": 13015,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 59.42689999938011,
+      "tuned_ms": 266.7612000077497
+    },
+    {
+      "mp_count": 1,
+      "source_index": 13417,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 53.908999980194494,
+      "tuned_ms": 184.18330000713468
+    },
+    {
+      "mp_count": 1,
+      "source_index": 3871,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 58.89699998078868,
+      "tuned_ms": 334.10569999250583
+    },
+    {
+      "mp_count": 1,
+      "source_index": 11062,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 60.542200022609904,
+      "tuned_ms": 183.75579998246394
+    },
+    {
+      "mp_count": 1,
+      "source_index": 12811,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 59.56829999922775,
+      "tuned_ms": 361.3363000040408
+    },
+    {
+      "mp_count": 1,
+      "source_index": 11078,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 50.82930001663044,
+      "tuned_ms": 216.9419999991078
+    },
+    {
+      "mp_count": 0,
+      "source_index": 15358,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 60.77710000681691,
+      "tuned_ms": 259.5779999974184
+    },
+    {
+      "mp_count": 1,
+      "source_index": 4352,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 58.36070000077598,
+      "tuned_ms": 183.03650000598282
+    },
+    {
+      "mp_count": 1,
+      "source_index": 9478,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 65.63610001467168,
+      "tuned_ms": 228.30899999826215
+    },
+    {
+      "mp_count": 1,
+      "source_index": 7910,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 56.16909998934716,
+      "tuned_ms": 165.38439999567345
+    },
+    {
+      "mp_count": 0,
+      "source_index": 7944,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 69.51939998543821,
+      "tuned_ms": 168.26179999043234
+    },
+    {
+      "mp_count": 0,
+      "source_index": 4251,
+      "mode": "single",
+      "baseline": 1,
+      "low": 0,
+      "retry": 1,
+      "baseline_ms": 178.4730000072159,
+      "tuned_ms": 178.25109997647814
+    },
+    {
+      "mp_count": 1,
+      "source_index": 4851,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 60.955499997362494,
+      "tuned_ms": 209.99040000606328
+    },
+    {
+      "mp_count": 1,
+      "source_index": 11300,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 59.00769997970201,
+      "tuned_ms": 177.08769999444485
+    },
+    {
+      "mp_count": 0,
+      "source_index": 8002,
+      "mode": "single",
+      "baseline": 1,
+      "low": 2,
+      "retry": 2,
+      "baseline_ms": 56.74520001048222,
+      "tuned_ms": 94.2102000117302
+    },
+    {
+      "mp_count": 1,
+      "source_index": 1130,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 59.421800018753856,
+      "tuned_ms": 315.88840001495555
+    },
+    {
+      "mp_count": 1,
+      "source_index": 12232,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 55.92480002087541,
+      "tuned_ms": 178.8014000048861
+    },
+    {
+      "mp_count": 1,
+      "source_index": 6421,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 61.99530002777465,
+      "tuned_ms": 287.5623000145424
+    },
+    {
+      "mp_count": 1,
+      "source_index": 9864,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 57.08189998404123,
+      "tuned_ms": 258.8769000140019
+    },
+    {
+      "mp_count": 1,
+      "source_index": 2857,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 54.21669999486767,
+      "tuned_ms": 174.9679000058677
+    },
+    {
+      "mp_count": 1,
+      "source_index": 3310,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 57.99709999701008,
+      "tuned_ms": 224.02940000756644
+    },
+    {
+      "mp_count": 1,
+      "source_index": 14962,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 59.44500002078712,
+      "tuned_ms": 179.38139999751002
+    },
+    {
+      "mp_count": 1,
+      "source_index": 6540,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 2,
+      "baseline_ms": 58.88889997731894,
+      "tuned_ms": 225.4976000112947
+    },
+    {
+      "mp_count": 1,
+      "source_index": 15163,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 61.506400001235306,
+      "tuned_ms": 171.90909999771975
+    },
+    {
+      "mp_count": 1,
+      "source_index": 10203,
+      "mode": "single",
+      "baseline": 1,
+      "low": 1,
+      "retry": 1,
+      "baseline_ms": 55.47980000847019,
+      "tuned_ms": 174.6628000109922
+    }
+  ]
+}

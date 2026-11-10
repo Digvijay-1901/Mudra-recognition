@@ -1,0 +1,46 @@
+{
+  "single": {
+    "mp": {
+      "n": 60,
+      "any": 54,
+      "two": 0
+    },
+    "rtmpose": {
+      "n": 60,
+      "any": 59,
+      "two": 1
+    },
+    "hybrid": {
+      "n": 60,
+      "any": 54,
+      "two": 0
+    },
+    "fused": {
+      "n": 60,
+      "any": 45,
+      "two": 0
+    }
+  },
+  "double": {
+    "mp": {
+      "n": 20,
+      "any": 20,
+      "two": 4
+    },
+    "rtmpose": {
+      "n": 20,
+      "any": 12,
+      "two": 2
+    },
+    "hybrid": {
+      "n": 20,
+      "any": 20,
+      "two": 4
+    },
+    "fused": {
+      "n": 20,
+      "any": 12,
+      "two": 5
+    }
+  }
+}
