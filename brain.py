@@ -1,3 +1,6 @@
+"""Production hybrid inference: MediaPipe routing/double heads and RTMPose single heads.
+
+The frozen per-class policy applies independently of the Streamlit UI."""
 import os
 import json
 from dataclasses import dataclass
@@ -21,6 +24,7 @@ CLASS_THRESHOLD_FLOOR = 0.30
 CLASS_THRESHOLD_POLICY = "model_trials_20261107/capped_thresholds/cutoffs.json"
 
 
+# Cache and validate the frozen class minima so UI floors cannot introduce a new policy.
 @lru_cache(maxsize=1)
 def _class_thresholds():
     """Frozen inner-group policy; model/scaler/encoder files are unchanged."""
@@ -35,6 +39,7 @@ def _class_thresholds():
     return policy
 
 
+# Allow the user to tighten a class cutoff without relaxing its validated minimum.
 def decision_threshold(family, label, floor):
     """The user's score floor can tighten, but never relax, a class minimum."""
     return max(float(floor), float(_class_thresholds()[family].get(label, CONFIDENCE_THRESHOLD)))
@@ -61,6 +66,7 @@ class Abstention:
     tilt_degrees: float | None = None
 
 
+# Reuse each classifier/scaler/encoder bundle across repeated predictions.
 @lru_cache(maxsize=None)
 def _load(folder):
     path = os.path.join(BASE, folder)
@@ -71,6 +77,7 @@ def _load(folder):
     )
 
 
+# Reject incompatible feature widths and keep probabilities in encoder order.
 def _classify(folder, feats):
     model, scaler, encoder = _load(folder)
     if feats is None or len(feats) != model.n_features_in_:
@@ -80,6 +87,7 @@ def _classify(folder, feats):
     return str(encoder.classes_[idx]), float(probs[idx]), probs, list(encoder.classes_)
 
 
+# Read labels from the active heads so UI and validators use the deployed vocabulary.
 def supported_classes():
     """Canonical dataset names in the active single/double label encoders."""
     from hybrid_single import heads
@@ -89,6 +97,7 @@ def supported_classes():
     }
 
 
+# Route with MediaPipe features before swapping only the selected single path to RTMPose.
 def predict(image_rgb, mode="auto", *, threshold=CLASS_THRESHOLD_FLOOR):
     """
     mode = "auto"   -> router decides single vs double (can be wrong on occluded double-hand poses)
@@ -99,7 +108,7 @@ def predict(image_rgb, mode="auto", *, threshold=CLASS_THRESHOLD_FLOOR):
     Uses MediaPipe routing/double inference and RTMPose single inference.
     Threshold is a score floor combined with validated class minima (0.30--0.60).
     A floor of 0.60 restores the previous uniform classifier cutoff.
-    All callers use the production hybrid. None selects the default 0.30 floor.
+    All callers use the production hybrid; threshold=None selects the default 0.30 floor.
     """
     if threshold is None:
         threshold = CLASS_THRESHOLD_FLOOR
@@ -112,6 +121,7 @@ def predict(image_rgb, mode="auto", *, threshold=CLASS_THRESHOLD_FLOOR):
     hand = results.multi_hand_landmarks[0]
     tilt = hand_tilt_degrees(hand, used_image.shape)
 
+    # Pair the answer with its selected tracker coordinates for correct drawing.
     def build(res, label_mode):
         label, conf, probs, names = res
         return Prediction(label, conf, label_mode, probs, names, n_hands, results, used_image, tilt)

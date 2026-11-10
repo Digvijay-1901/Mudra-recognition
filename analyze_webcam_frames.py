@@ -31,6 +31,7 @@ EDGES = [(0, 1), (0, 5), (5, 9), (9, 13), (13, 17), (0, 17)] + [
     (start + offset, start + offset + 1) for start in (1, 5, 9, 13, 17) for offset in range(3)]
 
 
+# Keep the pre-hybrid MP single control paired with the current double head and cutoff policy.
 def mediapipe_only(image_rgb, mode="auto", threshold=.30):
     """Pre-promotion MP policy, including its ambiguous tilted-gate retry."""
     results, n, used = detect(image_rgb)
@@ -69,6 +70,7 @@ def mediapipe_only(image_rgb, mode="auto", threshold=.30):
     return brain.Abstention("Unsure at the selected confidence threshold. Try a clearer photo.", results, used, tilt)
 
 
+# Distinguish missing hands, abstention and accepted answers without inventing hidden scores.
 def prediction_fields(value):
     if value is None:
         return dict(label="NO_HAND", confidence="", mode="Unknown", hands=0,
@@ -80,6 +82,7 @@ def prediction_fields(value):
                 mode=value.mode.replace("-hand", ""), hands=value.n_hands, message="")
 
 
+# Observe raw boxes per retry separately from the adapter's retained landmark sets.
 def rt_detection(bgr):
     """Observe real detector boxes without altering adapter logic or its models."""
     attempts = []
@@ -87,6 +90,7 @@ def rt_detection(bgr):
         tracker = hybrid_single.tracker()
         original = tracker.model.det_model
 
+        # Record the detector output unchanged so observation does not alter the adapter decision.
         def observe(image):
             boxes = original(image)
             attempts.append(dict(shape=list(image.shape), boxes=np.asarray(boxes).tolist()))
@@ -97,6 +101,7 @@ def rt_detection(bgr):
     return hands, scores, used, attempts
 
 
+# Undo symmetric retry padding before comparing landmarks on the original camera frame.
 def original_points(hands, used_shape, original_shape):
     # Both production adapters pad symmetrically and never resize their returned
     # image. Undo that padding before drawing on the original camera pixels.
@@ -106,6 +111,7 @@ def original_points(hands, used_shape, original_shape):
     return [np.asarray(hand)[:, :2] * [w, h] - [left, top] for hand in hands]
 
 
+# Draw indexed joints and boxes on a copy, leaving the saved input pixels untouched.
 def paint(image, hands, color, title, boxes=()):
     panel = image.copy()
     for box in boxes:
@@ -124,6 +130,7 @@ def paint(image, hands, color, title, boxes=()):
     return panel
 
 
+# Compare independent raw predictions and write only derived overlays/reports, never input/model files.
 def run(frames, output, telemetry=None):
     frames, output = Path(frames).resolve(), Path(output).resolve()
     if output == frames or frames in output.parents or output in frames.parents:
@@ -203,6 +210,7 @@ def run(frames, output, telemetry=None):
     print("| Frame | Hybrid label | Score | MP label | Score | RTMDet boxes | RTMPose hands | MP hands |")
     print("| --- | --- | --- | --- | --- | --- | --- | --- |")
     for row in rows[-40:]:
+        # Format available scores while leaving missing or abstained confidence unreported.
         def score(value):
             return f"{value:.1%}" if isinstance(value, (int, float)) else "--"
         print(f"| {Path(row['Frame']).name} | {row['Hybrid_Label'] or 'ERROR'} | {score(row['Hybrid_Confidence'])} | {row['MP_Label']} | {score(row['MP_Confidence'])} | {row['RTMDet_Boxes']} | {row['RTMPose_Hands']} | {row['MediaPipe_Hands']} |")
@@ -214,6 +222,7 @@ def run(frames, output, telemetry=None):
     return rows
 
 
+# Keep command-line defaults separate from the read-only inference comparison.
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--frames", type=Path, default=ROOT / "reports/webcam_frames")

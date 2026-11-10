@@ -2,6 +2,7 @@
 from collections import Counter
 import math
 
+# Vote from recent raw captures only; expected labels partition history and never contribute votes.
 def smooth_capture(state, expected, mode, threshold, timestamp, label, confidence, detected_mode):
     context = (expected, mode, float(threshold))
     if state.get("context") != context:

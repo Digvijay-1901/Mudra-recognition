@@ -1,3 +1,4 @@
+"""Serialize the shared static MediaPipe graph and retain its failure-only padding retries."""
 from threading import Lock
 
 import cv2
@@ -6,6 +7,7 @@ from feature_extraction_double import _get_hands
 _hands_lock = Lock()
 
 
+# Protect native graph initialization and inference from concurrent Streamlit sessions.
 def detect(image_rgb, *, retry_reflect=True):
     # Streamlit sessions share this native graph. Serialize its initialization
     # and processing; static mode keeps tracking out of independent photos.
@@ -13,6 +15,7 @@ def detect(image_rgb, *, retry_reflect=True):
         return _detect(image_rgb, retry_reflect=retry_reflect)
 
 
+# Retry borders only after zero detections and return the image matching the output coordinates.
 def _detect(image_rgb, *, retry_reflect=True):
     hands = _get_hands(static=True)
     results = hands.process(image_rgb)

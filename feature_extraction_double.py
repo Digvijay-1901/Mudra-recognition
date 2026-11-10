@@ -1,3 +1,6 @@
+"""Double-hand geometry with fixed hand slots and missing-partner padding.
+
+Canonical rotation preserves the trained feature layout and handedness ordering."""
 import _quiet
 import cv2
 import numpy as np
@@ -8,6 +11,7 @@ mp_hands = mp.solutions.hands
 _static_hands = None
 _live_hands = None
 
+# Reuse separate photo/tracking graphs with the existing two-hand detector configuration.
 def _get_hands(static=True):
     global _static_hands, _live_hands
     if static:
@@ -31,6 +35,7 @@ def _get_hands(static=True):
             )
         return _live_hands
 
+# Guard degenerate bones and clamp roundoff before computing a joint angle in radians.
 def _angle(a, b, c):
     ba = a - b
     bc = c - b
@@ -40,6 +45,7 @@ def _angle(a, b, c):
     cos = np.dot(ba, bc) / denom
     return float(np.arccos(np.clip(cos, -1.0, 1.0)))
 
+# Normalize one visible hand into its fixed feature slot; absence is handled by the caller.
 def _shape_features(lm_raw):
     if lm_raw is None:
         return None
@@ -60,6 +66,7 @@ def _shape_features(lm_raw):
         feats.append([_angle(lm[a], lm[b], lm[c])])
     return np.concatenate(feats)
 
+# Keep left/right slots, zero-padding and relational flags compatible with the trained double head.
 def double_hand_features_from_results(results, image_shape):
     if not results.multi_hand_landmarks:
         return None
@@ -120,6 +127,7 @@ def double_hand_features_from_results(results, image_shape):
     return np.concatenate([left_shape, right_shape, relational, [both_detected_flag]])
 
 
+# Preserve the standalone padding retry and use the frame dimensions that produced the landmarks.
 def extract_double_hand_features(image_rgb, static=True):
     hands = _get_hands(static=static)
     results = hands.process(image_rgb)
@@ -134,6 +142,7 @@ def extract_double_hand_features(image_rgb, static=True):
     return double_hand_features_from_results(results, image_rgb.shape)
 FEATURE_DIM = (63 + 5 + 4 + 5) * 2 + 2 + 5 + 1
 
+# Rotate both hands together, retaining handedness and the original double feature builder.
 def normalized_double_hand_features(results, image_shape):
     from types import SimpleNamespace
     from feature_extraction import _hand_array, upright_landmark_arrays

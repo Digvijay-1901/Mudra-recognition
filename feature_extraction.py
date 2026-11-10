@@ -1,3 +1,6 @@
+"""Single-hand geometry and standalone MediaPipe extraction helpers.
+
+Coordinate scaling and feature order must stay compatible with the trained heads."""
 import cv2
 import numpy as np
 import mediapipe as mp
@@ -7,6 +10,7 @@ mp_hands = mp.solutions.hands
 _static_hands = None
 _live_hands = None
 
+# Keep static-photo and tracking graphs separate so independent images do not inherit tracking state.
 def _get_hands(static=True):
     global _static_hands, _live_hands
     if static:
@@ -30,6 +34,7 @@ def _get_hands(static=True):
             )
         return _live_hands
 
+# Clamp the cosine and handle zero-length bones to keep the angle finite (radians).
 def _angle(a, b, c):
     ba = a - b
     bc = c - b
@@ -39,6 +44,7 @@ def _angle(a, b, c):
     cos = np.dot(ba, bc) / denom
     return float(np.arccos(np.clip(cos, -1.0, 1.0)))
 
+# Pixel-scale XYZ, normalize at the wrist, then emit features in the trained fixed order.
 def single_hand_features_from_landmarks(hand_lms, image_shape=None):
     lm = np.array([[p.x, p.y, p.z] for p in hand_lms.landmark], dtype=np.float32)
     if image_shape is not None:
@@ -68,6 +74,7 @@ def single_hand_features_from_landmarks(hand_lms, image_shape=None):
     return np.concatenate(feats)
 
 
+# Retain the standalone legacy extractor and its replicated-border retry for direct callers.
 def extract_single_hand_features(image_rgb, static=True):
     hands = _get_hands(static=static)
     results = hands.process(image_rgb)
@@ -83,6 +90,7 @@ def extract_single_hand_features(image_rgb, static=True):
     return single_hand_features_from_landmarks(results.multi_hand_landmarks[0])
 FEATURE_DIM = 63 + 5 + 4 + 5
 
+# Choose a signed wrist/palm axis so canonicalization remains consistent across hand layouts.
 def hand_axis(hands, image_shape, *, two_wrists=False, handedness=()):
     h, w = image_shape[:2]
     scale = np.array([w, h])
@@ -103,12 +111,14 @@ def hand_axis(hands, image_shape, *, two_wrists=False, handedness=()):
     return (hand[9, :2] - hand[0, :2]) * scale, -90.0
 
 
+# Return no angle for a degenerate axis rather than inventing a rotation.
 def axis_angle(axis):
     if np.linalg.norm(axis) < 1e-6:
         return None
     return float(np.degrees(np.arctan2(axis[1], axis[0])))
 
 
+# Rotate XY in pixel space about the mean wrist while leaving depth values unchanged.
 def rotate_landmark_arrays(hands, image_shape, degrees):
     if degrees == 0:
         return hands
@@ -126,6 +136,7 @@ def rotate_landmark_arrays(hands, image_shape, degrees):
     return rotated
 
 
+# Align the chosen axis to its canonical target before feature extraction.
 def upright_landmark_arrays(hands, image_shape, *, two_wrists=False, handedness=(), jitter=0):
     axis, target = hand_axis(hands, image_shape, two_wrists=two_wrists, handedness=handedness)
     angle = axis_angle(axis)
@@ -133,16 +144,19 @@ def upright_landmark_arrays(hands, image_shape, *, two_wrists=False, handedness=
     return rotate_landmark_arrays(hands, image_shape, correction + jitter)
 
 
+# Adapt landmark objects to the array representation used by the rotation helpers.
 def _hand_array(hand_lms):
     return np.asarray([(p.x, p.y, p.z) for p in hand_lms.landmark], dtype=np.float32)
 
 
+# Wrap the deviation from the canonical axis into a signed image-plane tilt.
 def hand_tilt_degrees(hand_lms, image_shape):
     axis, target = hand_axis([_hand_array(hand_lms)], image_shape)
     angle = axis_angle(axis)
     return None if angle is None else (angle - target + 180) % 360 - 180
 
 
+# Rotate a landmark copy and reuse the raw geometry to preserve feature semantics.
 def normalized_single_hand_features(hand_lms, image_shape):
     from types import SimpleNamespace
 

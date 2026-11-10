@@ -26,6 +26,7 @@ EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".bmp"}
 FIELDS = ["File", "Expected", "Timestamp", "Raw_Label", "Raw_Confidence", "Raw_Mode",
           "Label", "Confidence", "Mode", "Hands", "Tilt", "Smoothed", "Inference_ms", "Error"]
 
+# Evaluate production Auto predictions; optional sequence replay never feeds expected labels into votes.
 def run(root, output, sequence=False):
     root = root.resolve()
     if not root.is_dir():
@@ -118,6 +119,7 @@ def run(root, output, sequence=False):
     print(f"CONFIRMED {len(rows)} images; {result['errors']} errors; results {output}")
     return result
 
+# Create a new report directory and surface input/inference errors through the CLI exit status.
 def main():
     parser=argparse.ArgumentParser(description=__doc__,formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("photos",type=Path)

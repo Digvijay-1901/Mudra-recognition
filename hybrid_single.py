@@ -20,6 +20,7 @@ TRACKER = ROOT / "tracker_v2"
 _lock = RLock()
 
 
+# Cache the existing raw/canonical single bundles; neither is retrained or recalibrated here.
 @lru_cache(maxsize=1)
 def heads():
     return {family: joblib.load(TRACKER / folder / "bundle.joblib")
@@ -27,6 +28,7 @@ def heads():
                                    ("single_norm", "model_single"))}
 
 
+# Append optional legacy tracker dependencies so the production environment keeps precedence.
 @lru_cache(maxsize=1)
 def tracker():
     for site in (TRACKER / ".venv/Lib/site-packages",
@@ -37,12 +39,14 @@ def tracker():
     return Tracker()
 
 
+# Warm heads and tracker under the same guard used for shared tracker initialization.
 def initialize():
     with _lock:
         heads()
         tracker()
 
 
+# Use the first retained RTMPose hand and its own tilt, matching the validated single path.
 def classify(image_rgb):
     # RTMLib's detector has mutable inference state. Serialize across sessions,
     # including its temporary ONNX session factory override during initialization.
