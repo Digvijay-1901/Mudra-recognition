@@ -127,59 +127,57 @@ def main():
             writer=csv.writer(handle)
             writer.writerow(["Timestamp","Expected_Class","Predicted_Class","Confidence","Mode_Detected","Hands_Count","Tilt_Degrees"])
             writer.writerow(["2026-11-08T08:00:00+05:30","Pathaka","Pathaka",.99,"Single",1,0])
-        source=(ROOT/"streamlit_app.py").read_text(encoding="utf8")
-        source=source.replace('BASE = Path(__file__).resolve().parent',f'BASE = Path({str(ROOT)!r})')
-        source=source.replace('DIAGNOSTICS_CSV = BASE / "reports" / "webcam_diagnostics.csv"',f'DIAGNOSTICS_CSV = Path({str(telemetry)!r})')
-        source=source.replace('DIAGNOSTIC_FRAMES = BASE / "reports" / "webcam_frames"',f'DIAGNOSTIC_FRAMES = Path({str(frames)!r})')
-        app=AppTest.from_string(source,default_timeout=60).run()
-        assert not app.exception,[e.message for e in app.exception]
-        next(x for x in app.sidebar.checkbox if x.label=="Save frames for debugging").set_value(True).run()
-        assert not app.exception,[e.message for e in app.exception]
-        archived=list(folder.glob("diagnostics.archive-*.csv"))
-        assert len(archived)==1
-        with archived[0].open(newline="",encoding="utf8") as handle:
-            assert len(list(csv.DictReader(handle)))==1
-        next(x for x in app.radio if x.label=="Image source").set_value("Webcam")
-        for i,pred in enumerate([pathaka,pathaka,pathaka,chakra]):
-            app.session_state["diagnostic_sequence"]=i+1
-            app.session_state["diagnostic_context"]=dict(sequence=i+1,expected="Pathaka",mode="auto",threshold=.3,
-                                                        timestamp=f"2026-11-09T10:00:{i*3:02d}+05:30",captured_at=i*3)
-            with patch("streamlit.camera_input",return_value=io.BytesIO(payload)),patch("brain.predict",return_value=pred) as call:
-                app.run();app.run()
-                assert call.call_count==1
+        with patch("app_telemetry.DIAGNOSTICS_CSV",telemetry), patch("app_telemetry.DIAGNOSTIC_FRAMES",frames):
+            source=(ROOT/"streamlit_app.py").read_text(encoding="utf8")
+            app=AppTest.from_string(source,default_timeout=60).run()
             assert not app.exception,[e.message for e in app.exception]
-        record=app.session_state["diagnostic_attempt"]
-        assert record["temporal"]["label"]=="Pathaka" and record["label"]=="Chakra"
-        assert len(app.session_state["diagnostic_temporal"]["history"])==4
-        with telemetry.open(newline="") as f:
-            logged=list(csv.DictReader(f))
-        assert len(logged)==4 and logged[-1]["Predicted_Class"]=="Chakra"
-        assert logged[-1]["Displayed_Label"]=="Pathaka" and logged[-1]["Message"]==""
-        assert len(list(frames.glob("*.png")))==4
-        for row in logged:
-            saved=cv2.imdecode(np.fromfile(row["Frame_Path"],dtype=np.uint8),cv2.IMREAD_COLOR)
-            assert np.array_equal(saved,image), "Saved frame is not the unannotated camera pixels"
-        message="Only one hand detected. Show both hands for a two-hand mudra, or choose Single-hand mode if appropriate."
-        abstain=brain.Abstention(message,actual.results,actual.used_image,actual.tilt_degrees)
-        for i,pred in enumerate([abstain,None],5):
-            app.session_state["diagnostic_sequence"]=i
-            app.session_state["diagnostic_context"]=dict(sequence=i,expected="Pathaka",mode="auto",threshold=.3,
-                                                        timestamp="2026-11-09T10:00:09+05:30",captured_at=i*3)
-            with patch("streamlit.camera_input",return_value=io.BytesIO(payload)),patch("brain.predict",return_value=pred) as call:
-                app.run();app.run()
-                assert call.call_count==1
+            next(x for x in app.sidebar.checkbox if x.label=="Save frames for debugging").set_value(True).run()
             assert not app.exception,[e.message for e in app.exception]
-        with telemetry.open(newline="",encoding="utf8") as handle:
-            extra=list(csv.DictReader(handle))
-        assert len(extra)==6 and len(list(frames.glob("*.png")))==6
-        assert extra[-2]["Message"]==message and extra[-2]["Displayed_Label"]=="ABSTAIN"
-        assert extra[-1]["Predicted_Class"]=="NO_HAND" and "No hand detected" in extra[-1]["Message"]
-        assert len({r["Frame_Path"] for r in extra})==6
-        print("PASS lossless raw PNGs, one save per capture, filename collisions, schema archive, displayed label, abstain/no-hand messages")
-        next(x for x in app.selectbox if x.label=="Expected mudra").set_value("Ardhachandra").run()
-        assert not app.exception
-        assert "diagnostic_temporal" not in app.session_state
-        print("PASS real app startup, four reconstructed captures, duplicate reruns, raw logging, displayed smoothing and selection reset")
+            archived=list(folder.glob("diagnostics.archive-*.csv"))
+            assert len(archived)==1
+            with archived[0].open(newline="",encoding="utf8") as handle:
+                assert len(list(csv.DictReader(handle)))==1
+            next(x for x in app.radio if x.label=="Image source").set_value("Webcam")
+            for i,pred in enumerate([pathaka,pathaka,pathaka,chakra]):
+                app.session_state["diagnostic_sequence"]=i+1
+                app.session_state["diagnostic_context"]=dict(sequence=i+1,expected="Pathaka",mode="auto",threshold=.3,
+                                                            timestamp=f"2026-11-09T10:00:{i*3:02d}+05:30",captured_at=i*3)
+                with patch("streamlit.camera_input",return_value=io.BytesIO(payload)),patch("brain.predict",return_value=pred) as call:
+                    app.run();app.run()
+                    assert call.call_count==1
+                assert not app.exception,[e.message for e in app.exception]
+            record=app.session_state["diagnostic_attempt"]
+            assert record["temporal"]["label"]=="Pathaka" and record["label"]=="Chakra"
+            assert len(app.session_state["diagnostic_temporal"]["history"])==4
+            with telemetry.open(newline="") as f:
+                logged=list(csv.DictReader(f))
+            assert len(logged)==4 and logged[-1]["Predicted_Class"]=="Chakra"
+            assert logged[-1]["Displayed_Label"]=="Pathaka" and logged[-1]["Message"]==""
+            assert len(list(frames.glob("*.png")))==4
+            for row in logged:
+                saved=cv2.imdecode(np.fromfile(row["Frame_Path"],dtype=np.uint8),cv2.IMREAD_COLOR)
+                assert np.array_equal(saved,image), "Saved frame is not the unannotated camera pixels"
+            message="Only one hand detected. Show both hands for a two-hand mudra, or choose Single-hand mode if appropriate."
+            abstain=brain.Abstention(message,actual.results,actual.used_image,actual.tilt_degrees)
+            for i,pred in enumerate([abstain,None],5):
+                app.session_state["diagnostic_sequence"]=i
+                app.session_state["diagnostic_context"]=dict(sequence=i,expected="Pathaka",mode="auto",threshold=.3,
+                                                            timestamp="2026-11-09T10:00:09+05:30",captured_at=i*3)
+                with patch("streamlit.camera_input",return_value=io.BytesIO(payload)),patch("brain.predict",return_value=pred) as call:
+                    app.run();app.run()
+                    assert call.call_count==1
+                assert not app.exception,[e.message for e in app.exception]
+            with telemetry.open(newline="",encoding="utf8") as handle:
+                extra=list(csv.DictReader(handle))
+            assert len(extra)==6 and len(list(frames.glob("*.png")))==6
+            assert extra[-2]["Message"]==message and extra[-2]["Displayed_Label"]=="ABSTAIN"
+            assert extra[-1]["Predicted_Class"]=="NO_HAND" and "No hand detected" in extra[-1]["Message"]
+            assert len({r["Frame_Path"] for r in extra})==6
+            print("PASS lossless raw PNGs, one save per capture, filename collisions, schema archive, displayed label, abstain/no-hand messages")
+            next(x for x in app.selectbox if x.label=="Expected mudra").set_value("Ardhachandra").run()
+            assert not app.exception
+            assert "diagnostic_temporal" not in app.session_state
+            print("PASS real app startup, four reconstructed captures, duplicate reruns, raw logging, displayed smoothing and selection reset")
         photos=folder/"photos"/"Pathaka"
         photos.mkdir(parents=True)
         import os
