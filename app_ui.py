@@ -1,55 +1,52 @@
-"""Prediction and diagnostic presentation, including existing confidence/quality notes."""
-import cv2
-import numpy as np
-import mediapipe as mp
+"""One result card, optional raw diagnostics and model-backed supported-name lists."""
+from html import escape
 import streamlit as st
-from brain import Abstention, NORMALIZE_AT_DEGREES
-from overlay import draw
-
-mp_hands = mp.solutions.hands
-mp_drawing = mp.solutions.drawing_utils
-mp_styles = mp.solutions.drawing_styles
 
 
-def draw_landmarks(image, results):
-    output = image.copy()
+def render_result_card(pred=None, original_shape=None, *, record=None, has_input=False, elapsed_ms=None):
+    with st.container(border=True):
+        if not has_input:
+            st.markdown('<div class="empty-symbol">✧</div>', unsafe_allow_html=True)
+            st.subheader("Your gesture, recognized")
+            st.markdown('<p class="muted">Upload a photo or take a webcam capture. The mudra name, score and hand mode will appear here.</p>', unsafe_allow_html=True)
+            st.caption("Clear lighting · Whole hand visible · Plain background")
+            return
+        from brain import Abstention
+        if record is not None and record["error"]:
+            st.error(record["error"])
+            return
+        if pred is None:
+            st.info("No hand detected — try a clearer, well-lit image.")
+            return
+        if isinstance(pred, Abstention):
+            st.subheader("Take another photo")
+            st.warning(pred.message)
+            return
+        displayed = record["temporal"] if record is not None else dict(label=pred.label, confidence=pred.confidence, mode=pred.mode, changed=False)
+        mode = {"Single-hand": "Single", "Double-hand": "Double"}.get(displayed["mode"], displayed["mode"])
+        st.markdown(f'<span class="mode-pill">{escape(mode)} hand</span>', unsafe_allow_html=True)
+        st.markdown(f'<div class="result-name">{escape(displayed["label"])}</div>', unsafe_allow_html=True)
+        st.progress(float(displayed["confidence"]), text=f'{displayed["confidence"]:.1%} model score')
+        st.caption("Model scores are not calibrated probabilities.")
+        if displayed["changed"]:
+            st.info(f'Recent captures favor {displayed["label"]}. The displayed score is retained from those captures.')
+        for note in quality_notes(pred, original_shape):
+            st.info(note)
+        if pred.tilt_degrees is not None and abs(pred.tilt_degrees) >= 75:
+            st.warning("Extreme image-plane tilt. If the result looks wrong, retake with the hand upright.")
+        if elapsed_ms is not None:
+            st.caption(f"Inference: {elapsed_ms:.0f} ms")
 
-    for hand in results.multi_hand_landmarks:
-        mp_drawing.draw_landmarks(
-            output,
-            hand,
-            mp_hands.HAND_CONNECTIONS,
-            mp_styles.get_default_hand_landmarks_style(),
-            mp_styles.get_default_hand_connections_style()
-        )
 
-    return output
+def render_supported(class_names):
+    single, double = st.tabs(["Single hand", "Double hand"])
+    for tab, family in ((single, "single"), (double, "double")):
+        with tab:
+            st.markdown('<ul class="name-list">' + ''.join(f'<li>{escape(name)}</li>' for name in sorted(class_names[family])) + '</ul>', unsafe_allow_html=True)
 
-def show_result(label, confidence, mode, probabilities, class_names):
-    st.markdown(
-        '<div class="result-card">'
-        f'<div class="result-label">{label}</div>'
-        f'<div class="result-mode">{mode}</div>'
-        f'<div class="result-confidence">{confidence:.1%} model score</div>'
-        '</div>',
-        unsafe_allow_html=True
-    )
-
-    st.markdown(
-        '<div class="section-title">Top predictions</div>',
-        unsafe_allow_html=True
-    )
-
-    top = np.argsort(probabilities)[::-1][:3]
-
-    for i in top:
-        name = class_names[i]
-        st.progress(
-            float(probabilities[i]),
-            text=f"{name} · {probabilities[i]:.1%}"
-        )
 
 def quality_notes(pred, original_shape):
+    import cv2
     notes = []
     if pred.mode == "Double-hand" and pred.n_hands < 2:
         notes.append("Only one hand detected: the two-hand configuration is unverified. Show both hands clearly and retake.")
@@ -69,40 +66,26 @@ def quality_notes(pred, original_shape):
     return notes
 
 def render_prediction(pred, original_shape):
+    """Raw landmark evidence stays in diagnostics, separate from the displayed vote."""
     if pred is None:
-        st.error("No hand detected — try a clearer, well-lit image.")
+        st.info("No hand detected — try a clearer, well-lit image.")
         return
-
-    st.markdown(
-        '<div class="section-title">Detected landmarks</div>',
-        unsafe_allow_html=True
-    )
-
-    st.image(
-        draw(pred.used_image, pred.results),
-        width=340
-    )
-
+    import numpy as np
+    from brain import Abstention
+    from overlay import draw
+    st.image(draw(pred.used_image, pred.results), caption="Raw detected landmarks", width="stretch")
     if pred.tilt_degrees is not None:
         st.caption(f"First detected hand tilt: {pred.tilt_degrees:+.0f}° from upright.")
-        if abs(pred.tilt_degrees) >= NORMALIZE_AT_DEGREES:
-            st.warning("Extreme image-plane tilt. If the result looks wrong, retake with the hand upright.")
-
     if isinstance(pred, Abstention):
         st.warning(pred.message)
         return
+    st.caption(f"Raw frame: {pred.label} · {pred.confidence:.1%} · {pred.mode}")
+    for index in np.argsort(pred.probabilities)[::-1][:3]:
+        st.progress(float(pred.probabilities[index]), text=f"{pred.class_names[index]} · {pred.probabilities[index]:.1%}")
 
-    show_result(
-        pred.label,
-        pred.confidence,
-        pred.mode,
-        pred.probabilities,
-        pred.class_names
-    )
-    for note in quality_notes(pred, original_shape):
-        st.info(note)
 
 def render_diagnostic(record, expected, mode_key, threshold, class_names_by_mode):
+    st.subheader("Capture details")
     left, right = st.columns(2)
     displayed = record.get("temporal", dict(label=record["label"], confidence=record["confidence"],
                                             mode=record["detected_mode"], changed=False))

@@ -1,7 +1,5 @@
 """Cached inference resources and reference images shared by the UI."""
 from pathlib import Path
-import cv2
-import numpy as np
 import streamlit as st
 
 BASE = Path(__file__).resolve().parent
@@ -34,6 +32,8 @@ def load_class_names():
 
 @st.cache_data(show_spinner=False, max_entries=34)
 def load_reference_image(class_name, group):
+    import cv2
+    import numpy as np
     folder = BASE / "data" / group / class_name
     if folder.is_dir():
         for path in sorted(folder.iterdir()):

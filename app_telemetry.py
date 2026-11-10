@@ -3,7 +3,6 @@ import csv
 from datetime import datetime, timezone
 from pathlib import Path
 from threading import Lock
-import cv2
 import streamlit as st
 
 
@@ -57,6 +56,7 @@ def append_diagnostic_row(row=None):
 
 def save_diagnostic_frame(image, timestamp):
     """Write unannotated pixels once, using exclusive names to protect prior captures."""
+    import cv2
     (ok, png) = cv2.imencode('.png', image)
     if not ok:
         raise OSError('PNG encoding failed')

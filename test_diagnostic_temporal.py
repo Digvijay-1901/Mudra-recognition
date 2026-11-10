@@ -137,13 +137,19 @@ def main():
             assert len(archived)==1
             with archived[0].open(newline="",encoding="utf8") as handle:
                 assert len(list(csv.DictReader(handle)))==1
-            next(x for x in app.radio if x.label=="Image source").set_value("Webcam")
+            def run_webcam():
+                # AppTest does not serialize stateful tab/expander blocks yet.
+                # Supply the same state the browser sends with each rerun.
+                app.session_state["image_source"]="Webcam"
+                app.session_state["diagnostic_panel"]=True
+                return app.run()
+            run_webcam()
             for i,pred in enumerate([pathaka,pathaka,pathaka,chakra]):
                 app.session_state["diagnostic_sequence"]=i+1
                 app.session_state["diagnostic_context"]=dict(sequence=i+1,expected="Pathaka",mode="auto",threshold=.3,
                                                             timestamp=f"2026-11-09T10:00:{i*3:02d}+05:30",captured_at=i*3)
                 with patch("streamlit.camera_input",return_value=io.BytesIO(payload)),patch("brain.predict",return_value=pred) as call:
-                    app.run();app.run()
+                    run_webcam();run_webcam()
                     assert call.call_count==1
                 assert not app.exception,[e.message for e in app.exception]
             record=app.session_state["diagnostic_attempt"]
@@ -164,7 +170,7 @@ def main():
                 app.session_state["diagnostic_context"]=dict(sequence=i,expected="Pathaka",mode="auto",threshold=.3,
                                                             timestamp="2026-11-09T10:00:09+05:30",captured_at=i*3)
                 with patch("streamlit.camera_input",return_value=io.BytesIO(payload)),patch("brain.predict",return_value=pred) as call:
-                    app.run();app.run()
+                    run_webcam();run_webcam()
                     assert call.call_count==1
                 assert not app.exception,[e.message for e in app.exception]
             with telemetry.open(newline="",encoding="utf8") as handle:

@@ -3,14 +3,9 @@ import hashlib
 import logging
 from datetime import datetime, timedelta, timezone
 from time import perf_counter
-import cv2
-import numpy as np
 import streamlit as st
-import brain
-from brain import Abstention
 from diagnostic_temporal import smooth_capture
 from app_telemetry import append_diagnostic_row, save_diagnostic_frame
-from app_ui import render_diagnostic
 
 MODE_KEYS = {"Auto": "auto", "Single-hand": "single", "Double-hand": "double"}
 
@@ -34,6 +29,8 @@ def capture_changed():
     }
 
 def infer_image(image, mode, confidence_threshold):
+    import cv2
+    import brain
     image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     started = perf_counter()
     from app_resources import load_mediapipe_graph, load_gate_model
@@ -44,7 +41,10 @@ def infer_image(image, mode, confidence_threshold):
         pred = brain.predict(image_rgb, mode=mode, threshold=confidence_threshold)
     return pred, (perf_counter() - started) * 1000
 
-def diagnostic_capture(camera, expected, mode_key, threshold, save_frames_for_debugging, class_names_by_mode):
+def diagnostic_capture(camera, expected, mode_key, threshold, save_frames_for_debugging, class_names_by_mode, *, render=True):
+    import cv2
+    import numpy as np
+    from brain import Abstention
     payload = camera.getvalue()
     sequence = st.session_state.get("diagnostic_sequence", 0)
     identity = (sequence, getattr(camera, "file_id", None), hashlib.sha256(payload).hexdigest())
@@ -121,4 +121,7 @@ def diagnostic_capture(camera, expected, mode_key, threshold, save_frames_for_de
             logging.exception("Cannot append webcam diagnostic attempt")
             st.error("Could not save diagnostic telemetry. Check the reports folder permissions.")
 
-    render_diagnostic(record, expected, mode_key, threshold, class_names_by_mode)
+    if render:
+        from app_ui import render_diagnostic
+        render_diagnostic(record, expected, mode_key, threshold, class_names_by_mode)
+    return record
