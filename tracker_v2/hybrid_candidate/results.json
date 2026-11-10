@@ -1,0 +1,679 @@
+{
+  "status": "CONFIRMED cached clean validation; fresh runtime comparison separately reported",
+  "split": {
+    "fingerprint": "a851f1c324122623bbb040369e46214f6f15abdfb95560435c8a743be286e071",
+    "train": 18485,
+    "validation": 4465
+  },
+  "baselines": {
+    "historical_mediapipe": {
+      "accuracy": 0.8712,
+      "coverage": 0.9259,
+      "wrong95": 39
+    },
+    "current_mediapipe": {
+      "n": 4465,
+      "correct": 3922,
+      "accuracy": 0.8783874580067189,
+      "coverage": 0.9258678611422172,
+      "wrong95": 39,
+      "wrong95_rate": 0.008734602463605823,
+      "weak": 0.8206024301317778
+    },
+    "pure_rtmpose": {
+      "n": 4465,
+      "correct": 3854,
+      "accuracy": 0.8631578947368421,
+      "coverage": 0.9075027995520717,
+      "wrong95": 108
+    }
+  },
+  "hybrid": {
+    "n": 4465,
+    "correct": 4043,
+    "accuracy": 0.9054871220604703,
+    "coverage": 0.9323628219484883,
+    "wrong95": 39
+  },
+  "per_class": {
+    "Alapadmam": {
+      "n": 122,
+      "accuracy": 0.8114754098360656,
+      "wrong95": 0
+    },
+    "Anjali": {
+      "n": 113,
+      "accuracy": 0.9646017699115044,
+      "wrong95": 1
+    },
+    "Aralam": {
+      "n": 342,
+      "accuracy": 0.8596491228070176,
+      "wrong95": 8
+    },
+    "Ardhachandra": {
+      "n": 221,
+      "accuracy": 0.8914027149321267,
+      "wrong95": 4
+    },
+    "Ardhapathaka": {
+      "n": 59,
+      "accuracy": 0.7627118644067796,
+      "wrong95": 1
+    },
+    "Bramaram": {
+      "n": 116,
+      "accuracy": 0.9396551724137931,
+      "wrong95": 0
+    },
+    "Chakra": {
+      "n": 82,
+      "accuracy": 0.975609756097561,
+      "wrong95": 0
+    },
+    "Chandrakala": {
+      "n": 404,
+      "accuracy": 0.9306930693069307,
+      "wrong95": 10
+    },
+    "Chaturam": {
+      "n": 84,
+      "accuracy": 0.9523809523809523,
+      "wrong95": 0
+    },
+    "Garuda": {
+      "n": 129,
+      "accuracy": 0.9767441860465116,
+      "wrong95": 1
+    },
+    "Hamsapaksha": {
+      "n": 113,
+      "accuracy": 0.7079646017699115,
+      "wrong95": 0
+    },
+    "Hamsasyam": {
+      "n": 96,
+      "accuracy": 0.9583333333333334,
+      "wrong95": 0
+    },
+    "Kangulam": {
+      "n": 101,
+      "accuracy": 0.7623762376237624,
+      "wrong95": 0
+    },
+    "Kapith": {
+      "n": 89,
+      "accuracy": 0.9662921348314607,
+      "wrong95": 0
+    },
+    "Kapotham": {
+      "n": 141,
+      "accuracy": 0.9858156028368794,
+      "wrong95": 1
+    },
+    "Karkatta": {
+      "n": 163,
+      "accuracy": 0.9631901840490797,
+      "wrong95": 1
+    },
+    "Katakamukha": {
+      "n": 108,
+      "accuracy": 0.9166666666666666,
+      "wrong95": 4
+    },
+    "Katrimukha": {
+      "n": 116,
+      "accuracy": 0.8879310344827587,
+      "wrong95": 0
+    },
+    "Kurma": {
+      "n": 112,
+      "accuracy": 0.8125,
+      "wrong95": 2
+    },
+    "Mayura": {
+      "n": 129,
+      "accuracy": 0.9922480620155039,
+      "wrong95": 0
+    },
+    "Mrigasirsha": {
+      "n": 125,
+      "accuracy": 0.736,
+      "wrong95": 0
+    },
+    "Mukulam": {
+      "n": 116,
+      "accuracy": 0.7758620689655172,
+      "wrong95": 0
+    },
+    "Mushti": {
+      "n": 20,
+      "accuracy": 0.8,
+      "wrong95": 0
+    },
+    "Nagabandha": {
+      "n": 121,
+      "accuracy": 1.0,
+      "wrong95": 0
+    },
+    "Pathaka": {
+      "n": 186,
+      "accuracy": 0.8279569892473119,
+      "wrong95": 1
+    },
+    "Pushpaputa": {
+      "n": 208,
+      "accuracy": 0.9615384615384616,
+      "wrong95": 1
+    },
+    "Shanka": {
+      "n": 164,
+      "accuracy": 0.9817073170731707,
+      "wrong95": 0
+    },
+    "Shivalinga": {
+      "n": 91,
+      "accuracy": 0.978021978021978,
+      "wrong95": 0
+    },
+    "Sikharam": {
+      "n": 78,
+      "accuracy": 0.9871794871794872,
+      "wrong95": 0
+    },
+    "Simhamukham": {
+      "n": 54,
+      "accuracy": 0.8703703703703703,
+      "wrong95": 2
+    },
+    "Suchi": {
+      "n": 128,
+      "accuracy": 0.953125,
+      "wrong95": 0
+    },
+    "Tamarachudam": {
+      "n": 98,
+      "accuracy": 0.8877551020408163,
+      "wrong95": 0
+    },
+    "Tripathaka": {
+      "n": 110,
+      "accuracy": 0.8818181818181818,
+      "wrong95": 2
+    },
+    "Trishulam": {
+      "n": 126,
+      "accuracy": 0.9761904761904762,
+      "wrong95": 0
+    }
+  },
+  "pairs": [
+    {
+      "pair": [
+        "Ardhapathaka",
+        "Tripathaka"
+      ],
+      "media_pipe": {
+        "n": 169,
+        "balanced_accuracy": 0.7286594761171032,
+        "pooled_accuracy": 0.7337278106508875
+      },
+      "rtmpose": {
+        "n": 169,
+        "balanced_accuracy": 0.8958397534668721,
+        "pooled_accuracy": 0.9053254437869822
+      },
+      "hybrid": {
+        "n": 169,
+        "balanced_accuracy": 0.8222650231124807,
+        "pooled_accuracy": 0.8402366863905325
+      }
+    },
+    {
+      "pair": [
+        "Bramaram",
+        "Katakamukha"
+      ],
+      "media_pipe": {
+        "n": 224,
+        "balanced_accuracy": 0.7681992337164751,
+        "pooled_accuracy": 0.7678571428571429
+      },
+      "rtmpose": {
+        "n": 224,
+        "balanced_accuracy": 0.9632822477650065,
+        "pooled_accuracy": 0.9642857142857143
+      },
+      "hybrid": {
+        "n": 224,
+        "balanced_accuracy": 0.9281609195402298,
+        "pooled_accuracy": 0.9285714285714286
+      }
+    },
+    {
+      "pair": [
+        "Hamsapaksha",
+        "Mrigasirsha"
+      ],
+      "media_pipe": {
+        "n": 238,
+        "balanced_accuracy": 0.6071858407079647,
+        "pooled_accuracy": 0.6092436974789915
+      },
+      "rtmpose": {
+        "n": 238,
+        "balanced_accuracy": 0.9157522123893805,
+        "pooled_accuracy": 0.9159663865546218
+      },
+      "hybrid": {
+        "n": 238,
+        "balanced_accuracy": 0.7219823008849557,
+        "pooled_accuracy": 0.7226890756302521
+      }
+    },
+    {
+      "pair": [
+        "Kapith",
+        "Mushti"
+      ],
+      "media_pipe": {
+        "n": 109,
+        "balanced_accuracy": 0.8963483146067415,
+        "pooled_accuracy": 0.8623853211009175
+      },
+      "rtmpose": {
+        "n": 109,
+        "balanced_accuracy": 0.9,
+        "pooled_accuracy": 0.963302752293578
+      },
+      "hybrid": {
+        "n": 109,
+        "balanced_accuracy": 0.8831460674157303,
+        "pooled_accuracy": 0.9357798165137615
+      }
+    },
+    {
+      "pair": [
+        "Mrigasirsha",
+        "Simhamukham"
+      ],
+      "media_pipe": {
+        "n": 179,
+        "balanced_accuracy": 0.7221481481481482,
+        "pooled_accuracy": 0.6927374301675978
+      },
+      "rtmpose": {
+        "n": 179,
+        "balanced_accuracy": 0.9322222222222223,
+        "pooled_accuracy": 0.9273743016759777
+      },
+      "hybrid": {
+        "n": 179,
+        "balanced_accuracy": 0.8031851851851852,
+        "pooled_accuracy": 0.776536312849162
+      }
+    }
+  ],
+  "routes": {
+    "double": 1304,
+    "gate_abstain": 7,
+    "no_hand": 277,
+    "single": 2877
+  },
+  "single_route_rtmpose_misses": 14,
+  "wrong95_by_route": {
+    "single": 32,
+    "double": 7
+  },
+  "strong_class_regressions": [
+    "Ardhachandra",
+    "Chandrakala",
+    "Mushti"
+  ],
+  "pair_gain_preservation_rule": "At least 4/5 pairs retain >=50% of positive RTMPose-vs-MP full-Auto balanced-accuracy gain",
+  "offline_admission_passed": false,
+  "recommended_for_promotion": false,
+  "reasons": [
+    "Fewer than four pairs retain at least half the observed RTMPose Auto gain"
+  ],
+  "latency": {
+    "mediapipe": {
+      "mean_ms": 49.03864999796497,
+      "median_ms": 44.21865001495462,
+      "p95_ms": 69.67245999403534
+    },
+    "hybrid": {
+      "mean_ms": 73.07451499946183,
+      "median_ms": 82.87735001067631,
+      "p95_ms": 107.39250000769971
+    }
+  },
+  "initialization_seconds": 1.0354126000020187,
+  "runtime_checks": [
+    {
+      "source_index": 14204,
+      "true": "Simhamukham",
+      "file": "Simhamukham_479.jpg",
+      "cached_label": "Simhamukham",
+      "fresh_label": "Simhamukham",
+      "cached_route": "single",
+      "fresh_route": "single",
+      "matches": true,
+      "confidence": 0.9223891565140355,
+      "mediapipe_hands": 1,
+      "rtmpose_hands": 1
+    },
+    {
+      "source_index": 13483,
+      "true": "Sikharam",
+      "file": "Sikharam_147.jpg",
+      "cached_label": "Sikharam",
+      "fresh_label": "Sikharam",
+      "cached_route": "single",
+      "fresh_route": "single",
+      "matches": true,
+      "confidence": 0.9999997491586391,
+      "mediapipe_hands": 1,
+      "rtmpose_hands": 1
+    },
+    {
+      "source_index": 10884,
+      "true": "Mayura",
+      "file": "Mayura_104.jpg",
+      "cached_label": "Mayura",
+      "fresh_label": "Mayura",
+      "cached_route": "single",
+      "fresh_route": "single",
+      "matches": true,
+      "confidence": 0.9999938481666955,
+      "mediapipe_hands": 1,
+      "rtmpose_hands": 1
+    },
+    {
+      "source_index": 8767,
+      "true": "Kangulam",
+      "file": "Kangulam_279.jpg",
+      "cached_label": "Kangulam",
+      "fresh_label": "Kangulam",
+      "cached_route": "single",
+      "fresh_route": "single",
+      "matches": true,
+      "confidence": 0.9999996034651879,
+      "mediapipe_hands": 1,
+      "rtmpose_hands": 1
+    },
+    {
+      "source_index": 4949,
+      "true": "Bramaram",
+      "file": "Bramaram_452.jpg",
+      "cached_label": "Bramaram",
+      "fresh_label": "Bramaram",
+      "cached_route": "single",
+      "fresh_route": "single",
+      "matches": true,
+      "confidence": 0.9999999999997375,
+      "mediapipe_hands": 1,
+      "rtmpose_hands": 1
+    },
+    {
+      "source_index": 555,
+      "true": "Aralam",
+      "file": "Aralam(1)_Aralam_104_b0.jpg",
+      "cached_label": "Aralam",
+      "fresh_label": "Aralam",
+      "cached_route": "single",
+      "fresh_route": "single",
+      "matches": true,
+      "confidence": 0.9999989502492819,
+      "mediapipe_hands": 1,
+      "rtmpose_hands": 1
+    },
+    {
+      "source_index": 237,
+      "true": "Alapadmam",
+      "file": "Alapadmam_311.jpg",
+      "cached_label": "Alapadmam",
+      "fresh_label": "Alapadmam",
+      "cached_route": "single",
+      "fresh_route": "single",
+      "matches": true,
+      "confidence": 0.9999924162604037,
+      "mediapipe_hands": 1,
+      "rtmpose_hands": 1
+    },
+    {
+      "source_index": 5404,
+      "true": "Chandrakala",
+      "file": "Chandrakala(1)_Chandrakala_271_b0.jpg",
+      "cached_label": "Chandrakala",
+      "fresh_label": "Chandrakala",
+      "cached_route": "single",
+      "fresh_route": "single",
+      "matches": true,
+      "confidence": 0.9999999957157149,
+      "mediapipe_hands": 1,
+      "rtmpose_hands": 1
+    },
+    {
+      "source_index": 3070,
+      "true": "Ardhachandra",
+      "file": "Ardhachandran(1)_Ardhachandran_311_b0.jpg",
+      "cached_label": "Pathaka",
+      "fresh_label": "Pathaka",
+      "cached_route": "single",
+      "fresh_route": "single",
+      "matches": true,
+      "confidence": 0.8386040132297995,
+      "mediapipe_hands": 1,
+      "rtmpose_hands": 1
+    },
+    {
+      "source_index": 1282,
+      "true": "Aralam",
+      "file": "Aralam(1)_Aralam_379_b1.jpg",
+      "cached_label": "Aralam",
+      "fresh_label": "Aralam",
+      "cached_route": "single",
+      "fresh_route": "single",
+      "matches": true,
+      "confidence": 0.9999965333465564,
+      "mediapipe_hands": 1,
+      "rtmpose_hands": 1
+    },
+    {
+      "source_index": 16841,
+      "true": "Anjali",
+      "file": "Anjali_23.jpg",
+      "cached_label": "Anjali",
+      "fresh_label": "Anjali",
+      "cached_route": "double",
+      "fresh_route": "double",
+      "matches": true,
+      "confidence": 0.9772313575325334,
+      "mediapipe_hands": 1,
+      "rtmpose_hands": null
+    },
+    {
+      "source_index": 20890,
+      "true": "Pushpaputa",
+      "file": "Pushpaputa _172.jpg",
+      "cached_label": "Pushpaputa",
+      "fresh_label": "Pushpaputa",
+      "cached_route": "double",
+      "fresh_route": "double",
+      "matches": true,
+      "confidence": 0.9999964025165561,
+      "mediapipe_hands": 2,
+      "rtmpose_hands": null
+    },
+    {
+      "source_index": 16612,
+      "true": "Anjali",
+      "file": "Anjali(1)_Anjali_102_h.jpg",
+      "cached_label": "Anjali",
+      "fresh_label": "Anjali",
+      "cached_route": "double",
+      "fresh_route": "double",
+      "matches": true,
+      "confidence": 0.9985805474739083,
+      "mediapipe_hands": 1,
+      "rtmpose_hands": null
+    },
+    {
+      "source_index": 21753,
+      "true": "Shanka",
+      "file": "Shanka _112.jpg",
+      "cached_label": "Shanka",
+      "fresh_label": "Shanka",
+      "cached_route": "double",
+      "fresh_route": "double",
+      "matches": true,
+      "confidence": 0.9976016763261789,
+      "mediapipe_hands": 1,
+      "rtmpose_hands": null
+    },
+    {
+      "source_index": 22022,
+      "true": "Shanka",
+      "file": "Shanka _355.jpg",
+      "cached_label": "Shanka",
+      "fresh_label": "Shanka",
+      "cached_route": "double",
+      "fresh_route": "double",
+      "matches": true,
+      "confidence": 0.9983204685046199,
+      "mediapipe_hands": 1,
+      "rtmpose_hands": null
+    },
+    {
+      "source_index": 19172,
+      "true": "Karkatta",
+      "file": "Karkatta _331.jpg",
+      "cached_label": "Karkatta",
+      "fresh_label": "Karkatta",
+      "cached_route": "double",
+      "fresh_route": "double",
+      "matches": true,
+      "confidence": 0.9812023255940522,
+      "mediapipe_hands": 1,
+      "rtmpose_hands": null
+    },
+    {
+      "source_index": 22446,
+      "true": "Shanka",
+      "file": "Shanka _86.jpg",
+      "cached_label": "Shanka",
+      "fresh_label": "Shanka",
+      "cached_route": "double",
+      "fresh_route": "double",
+      "matches": true,
+      "confidence": 0.9407360859084396,
+      "mediapipe_hands": 1,
+      "rtmpose_hands": null
+    },
+    {
+      "source_index": 18433,
+      "true": "Kapotham",
+      "file": "Kapotham_269.jpg",
+      "cached_label": "Kapotham",
+      "fresh_label": "Kapotham",
+      "cached_route": "double",
+      "fresh_route": "double",
+      "matches": true,
+      "confidence": 0.9996050111004632,
+      "mediapipe_hands": 2,
+      "rtmpose_hands": null
+    },
+    {
+      "source_index": 21543,
+      "true": "Pushpaputa",
+      "file": "Pushpaputa(1)_Pushpaputa _526.jpg",
+      "cached_label": "Pushpaputa",
+      "fresh_label": "Pushpaputa",
+      "cached_route": "double",
+      "fresh_route": "double",
+      "matches": true,
+      "confidence": 0.9999982983368134,
+      "mediapipe_hands": 2,
+      "rtmpose_hands": null
+    },
+    {
+      "source_index": 20185,
+      "true": "Kurma",
+      "file": "Kurma  _6.jpg",
+      "cached_label": "Pushpaputa",
+      "fresh_label": "Pushpaputa",
+      "cached_route": "double",
+      "fresh_route": "double",
+      "matches": true,
+      "confidence": 0.8266899929256526,
+      "mediapipe_hands": 1,
+      "rtmpose_hands": null
+    }
+  ],
+  "runtime_cache_mismatches": 0,
+  "protected_files": 269,
+  "protected_unchanged": true,
+  "promoted": false,
+  "variants_tested": 1,
+  "limitations": [
+    "Cached clean studio split, not real-camera validation.",
+    "Existing MP routing and detection misses are retained; live gate reliability gap remains unresolved.",
+    "Two inference stacks and two dependency environments; MP always runs, RTMPose only on selected single routes.",
+    "Binary diagnostic ceilings are not comparable to full Auto pair accuracy. Pair table uses full Auto balanced accuracy for all arms."
+  ],
+  "lost_rtmpose_pair_correct_by_route": [
+    {
+      "pair": [
+        "Ardhapathaka",
+        "Tripathaka"
+      ],
+      "rtmpose_correct_hybrid_wrong": 11,
+      "by_route": {
+        "no_hand": 11
+      }
+    },
+    {
+      "pair": [
+        "Bramaram",
+        "Katakamukha"
+      ],
+      "rtmpose_correct_hybrid_wrong": 9,
+      "by_route": {
+        "no_hand": 9
+      }
+    },
+    {
+      "pair": [
+        "Hamsapaksha",
+        "Mrigasirsha"
+      ],
+      "rtmpose_correct_hybrid_wrong": 53,
+      "by_route": {
+        "no_hand": 52,
+        "double": 1
+      }
+    },
+    {
+      "pair": [
+        "Kapith",
+        "Mushti"
+      ],
+      "rtmpose_correct_hybrid_wrong": 3,
+      "by_route": {
+        "no_hand": 3
+      }
+    },
+    {
+      "pair": [
+        "Mrigasirsha",
+        "Simhamukham"
+      ],
+      "rtmpose_correct_hybrid_wrong": 32,
+      "by_route": {
+        "no_hand": 32
+      }
+    }
+  ],
+  "recommendation_details": "Do not promote: overall criteria pass, but only two pairs preserve >=half of RTMPose gains; Kapith/Mushti and three current >=95% classes regress. No further variants."
+}

@@ -1,0 +1,105 @@
+CONFIRMED split {'n_splits': 1, 'test_size': 0.2, 'random_state': 0}; 17212 train / 4273 test; 0 shared filename groups
+CONFIRMED sample: 850 MD5s match manifest; 0 missing keys; 0 mismatches
+CONFIRMED dataset: actual sample test bytes match full manifest train 33/118 (27.97%); match sampled train bytes 3/118 (2.54%)
+CONFIRMED dataset_double: actual sample test bytes match full manifest train 0/48 (0.00%); match sampled train bytes 0/48 (0.00%)
+CONFIRMED 14047 connected groups; 26434 landmark edges at 0.005 RMS; largest component 160; 5 candidate pairs with both real files supplied
+  0.001795  (('dataset', 'Ardhachandra', 'Ardhachandran(1)_Ardhachandran_270.jpg'), ('dataset', 'Ardhachandra', 'Ardhachandran(1)_Ardhachandran_332_b1.jpg'))
+  0.002129  (('dataset', 'Ardhachandra', 'Ardhachandran(1)_Ardhachandran_270.jpg'), ('dataset', 'Ardhachandra', 'Ardhachandran(1)_Ardhachandran_292_b0.jpg'))
+  0.002960  (('dataset', 'Ardhachandra', 'Ardhachandran(1)_Ardhachandran_292_b0.jpg'), ('dataset', 'Ardhachandra', 'Ardhachandran(1)_Ardhachandran_332_b1.jpg'))
+  0.003129  (('dataset', 'Mushti', 'Mushti(1)_Mushti_318.jpg'), ('dataset', 'Mushti', 'Mushti(1)_Mushti_318_b1.jpg'))
+  0.004586  (('dataset', 'Kapith', 'Kapith_481.jpg'), ('dataset', 'Kapith', 'Kapith_83.jpg'))
+UNVERIFIED recording session IDs; filename groups retain identifiable variants.
+CONFIRMED seed 0: 18485 train / 4465 test, 0 groups crossing, 3656 legacy-exposed test rows, 277 zero-hand test rows
+CONFIRMED seed 1: 18250 train / 4700 test, 0 groups crossing, 3857 legacy-exposed test rows, 288 zero-hand test rows
+CONFIRMED seed 2: 18338 train / 4612 test, 0 groups crossing, 3794 legacy-exposed test rows, 289 zero-hand test rows
+CONFIRMED current encoder labels {'single': 24, 'double': 10}
+CONFIRMED current MLP settings {'single': ((128, 64), True, 0), 'double': ((128, 64), True, 0)}
+
+CONFIRMED current / original split (excludes zero detections)
+  single: accuracy 2931/3035 (96.57%); wrong >=95% 44/3035 (1.45%); answered 3035/3035 (100.00%); top confusions [(('Tripathaka', 'Ardhapathaka'), 7), (('Mayura', 'Katrimukha'), 6), (('Ardhapathaka', 'Tripathaka'), 5), (('Hamsapaksha', 'Mrigasirsha'), 5), (('Mayura', 'Trishulam'), 5)]
+  double: accuracy 1216/1238 (98.22%); wrong >=95% 5/1238 (0.40%); answered 1238/1238 (100.00%); top confusions [(('Anjali', 'Shanka'), 3), (('Kurma', 'Pushpaputa'), 3), (('Anjali', 'Kapotham'), 2), (('Chakra', 'Karkatta'), 2), (('Chakra', 'Kurma'), 2)]
+  app: accuracy 3357/4273 (78.56%); wrong >=95% 497/4273 (11.63%); answered 4269/4273 (99.91%); top confusions [(('Garuda', 'Ardhachandra'), 71), (('Chakra', 'Ardhachandra'), 51), (('Shivalinga', 'Sikharam'), 44), (('Anjali', 'Chaturam'), 41), (('Shanka', 'Kapith'), 37)]
+
+CONFIRMED current / original test, legacy-unexposed components only
+  single: accuracy 1676/1779 (94.21%); wrong >=95% 44/1779 (2.47%); answered 1779/1779 (100.00%); top confusions [(('Tripathaka', 'Ardhapathaka'), 7), (('Mayura', 'Katrimukha'), 6), (('Ardhapathaka', 'Tripathaka'), 5), (('Hamsapaksha', 'Mrigasirsha'), 5), (('Mayura', 'Trishulam'), 5)]
+  double: accuracy 1128/1149 (98.17%); wrong >=95% 5/1149 (0.44%); answered 1149/1149 (100.00%); top confusions [(('Anjali', 'Shanka'), 3), (('Kurma', 'Pushpaputa'), 3), (('Chakra', 'Karkatta'), 2), (('Chakra', 'Kurma'), 2), (('Kapotham', 'Anjali'), 2)]
+  app: accuracy 2076/2928 (70.90%); wrong >=95% 461/2928 (15.74%); answered 2924/2928 (99.86%); top confusions [(('Garuda', 'Ardhachandra'), 55), (('Chakra', 'Ardhachandra'), 49), (('Shivalinga', 'Sikharam'), 42), (('Shanka', 'Kapith'), 37), (('Pushpaputa', 'Kangulam'), 35)]
+
+CONFIRMED current / seed 0 full clean split (includes legacy-exposed rows)
+  single: accuracy 2848/2875 (99.06%); wrong >=95% 11/2875 (0.38%); answered 2875/2875 (100.00%); top confusions [(('Tripathaka', 'Ardhapathaka'), 4), (('Ardhapathaka', 'Tripathaka'), 2), (('Alapadmam', 'Chaturam'), 1), (('Ardhapathaka', 'Aralam'), 1), (('Bramaram', 'Hamsapaksha'), 1)]
+  double: accuracy 1309/1313 (99.70%); wrong >=95% 1/1313 (0.08%); answered 1313/1313 (100.00%); top confusions [(('Anjali', 'Kapotham'), 1), (('Chakra', 'Kurma'), 1), (('Karkatta', 'Kurma'), 1), (('Nagabandha', 'Kapotham'), 1)]
+  app: accuracy 3294/4465 (73.77%); wrong >=95% 526/4465 (11.78%); answered 4187/4465 (93.77%); top confusions [(('Garuda', 'Ardhachandra'), 78), (('Chakra', 'Ardhachandra'), 66), (('Karkatta', 'Ardhachandra'), 62), (('Shivalinga', 'Sikharam'), 48), (('Shanka', 'Kapith'), 45)]
+
+CONFIRMED current / seed 0 matched legacy-unexposed subset
+  single: accuracy 308/331 (93.05%); wrong >=95% 11/331 (3.32%); answered 331/331 (100.00%); top confusions [(('Tripathaka', 'Ardhapathaka'), 3), (('Ardhapathaka', 'Tripathaka'), 2), (('Alapadmam', 'Chaturam'), 1), (('Ardhapathaka', 'Aralam'), 1), (('Chandrakala', 'Kangulam'), 1)]
+  double: accuracy 242/244 (99.18%); wrong >=95% 0/244 (0.00%); answered 244/244 (100.00%); top confusions [(('Chakra', 'Kurma'), 1), (('Karkatta', 'Kurma'), 1)]
+  app: accuracy 391/809 (48.33%); wrong >=95% 101/809 (12.48%); answered 575/809 (71.08%); top confusions [(('Mrigasirsha', 'No displayed label'), 32), (('Hamsapaksha', 'No displayed label'), 29), (('Mukulam', 'No displayed label'), 25), (('Alapadmam', 'No displayed label'), 20), (('Pathaka', 'No displayed label'), 19)]
+
+CONFIRMED v3 / seed 0 full clean split
+  single: accuracy 2665/2875 (92.70%); wrong >=95% 30/2875 (1.04%); answered 2875/2875 (100.00%); top confusions [(('Bramaram', 'Katakamukha'), 17), (('Kapith', 'Mushti'), 12), (('Tripathaka', 'Ardhapathaka'), 12), (('Aralam', 'Mayura'), 10), (('Katakamukha', 'Mukulam'), 8)]
+  double: accuracy 1266/1313 (96.42%); wrong >=95% 9/1313 (0.69%); answered 1313/1313 (100.00%); top confusions [(('Anjali', 'Kapotham'), 12), (('Kurma', 'Pushpaputa'), 6), (('Shivalinga', 'Shanka'), 4), (('Chakra', 'Shanka'), 3), (('Chakra', 'Karkatta'), 2)]
+  app: accuracy 3188/4465 (71.40%); wrong >=95% 418/4465 (9.36%); answered 4168/4465 (93.35%); top confusions [(('Garuda', 'Ardhachandra'), 79), (('Chakra', 'Ardhachandra'), 69), (('Karkatta', 'Ardhachandra'), 64), (('Shivalinga', 'Sikharam'), 47), (('Pushpaputa', 'Hamsasyam'), 39)]
+
+CONFIRMED v3 / seed 0 matched legacy-unexposed subset
+  single: accuracy 307/331 (92.75%); wrong >=95% 6/331 (1.81%); answered 331/331 (100.00%); top confusions [(('Tripathaka', 'Ardhapathaka'), 4), (('Kapith', 'Mushti'), 2), (('Alapadmam', 'Chaturam'), 1), (('Ardhapathaka', 'Aralam'), 1), (('Bramaram', 'Katrimukha'), 1)]
+  double: accuracy 239/244 (97.95%); wrong >=95% 1/244 (0.41%); answered 244/244 (100.00%); top confusions [(('Chakra', 'Kurma'), 1), (('Chakra', 'Karkatta'), 1), (('Kurma', 'Pushpaputa'), 1), (('Pushpaputa', 'Kurma'), 1), (('Shanka', 'Nagabandha'), 1)]
+  app: accuracy 415/809 (51.30%); wrong >=95% 73/809 (9.02%); answered 575/809 (71.08%); top confusions [(('Mrigasirsha', 'No displayed label'), 32), (('Hamsapaksha', 'No displayed label'), 29), (('Mukulam', 'No displayed label'), 25), (('Alapadmam', 'No displayed label'), 20), (('Pathaka', 'No displayed label'), 19)]
+
+CONFIRMED outside files: 40; dataset MD5 matches 0; repeated outside MD5s beyond the first 0
+CONFIRMED unreadable images: 0 []
+CONFIRMED cached router replay vs brain.predict: 0/40 mismatches
+CONFIRMED outside label counts {'Mayura': 13, 'Pathaka': 17, 'Tripathaka': 10}
+CONFIRMED outside detector counts {0: 3, 1: 37}
+CONFIRMED outside filename types {'Screenshot': 31, 'Gemini_Generated_Image': 3, 'Other': 6}
+UNVERIFIED provenance and participant independence; MD5 only checks byte identity.
+
+CONFIRMED outside current
+  single: accuracy 34/37 (91.89%); wrong >=95% 0/37 (0.00%); answered 37/37 (100.00%); top confusions [(('Pathaka', 'Hamsapaksha'), 1), (('Pathaka', 'Alapadmam'), 1), (('Tripathaka', 'Trishulam'), 1)]
+  app: accuracy 33/40 (82.50%); wrong >=95% 0/40 (0.00%); answered 37/40 (92.50%); top confusions [(('Pathaka', 'Chakra'), 3), (('Mayura', 'No displayed label'), 2), (('Pathaka', 'No displayed label'), 1), (('Tripathaka', 'Trishulam'), 1)]
+
+CONFIRMED outside current Mayura
+  app: accuracy 11/13 (84.62%); wrong >=95% 0/13 (0.00%); answered 11/13 (84.62%); top confusions [(('Mayura', 'No displayed label'), 2)]
+
+CONFIRMED outside current Pathaka
+  app: accuracy 13/17 (76.47%); wrong >=95% 0/17 (0.00%); answered 16/17 (94.12%); top confusions [(('Pathaka', 'Chakra'), 3), (('Pathaka', 'No displayed label'), 1)]
+
+CONFIRMED outside current Tripathaka
+  app: accuracy 9/10 (90.00%); wrong >=95% 0/10 (0.00%); answered 10/10 (100.00%); top confusions [(('Tripathaka', 'Trishulam'), 1)]
+
+CONFIRMED outside v3 seed 0
+  single: accuracy 33/37 (89.19%); wrong >=95% 0/37 (0.00%); answered 37/37 (100.00%); top confusions [(('Pathaka', 'Simhamukham'), 3), (('Tripathaka', 'Aralam'), 1)]
+  app: accuracy 32/40 (80.00%); wrong >=95% 0/40 (0.00%); answered 36/40 (90.00%); top confusions [(('Mayura', 'No displayed label'), 2), (('Pathaka', 'No displayed label'), 2), (('Pathaka', 'Simhamukham'), 2), (('Pathaka', 'Shanka'), 1), (('Tripathaka', 'Aralam'), 1)]
+
+CONFIRMED outside v3 seed 0 Mayura
+  app: accuracy 11/13 (84.62%); wrong >=95% 0/13 (0.00%); answered 11/13 (84.62%); top confusions [(('Mayura', 'No displayed label'), 2)]
+
+CONFIRMED outside v3 seed 0 Pathaka
+  app: accuracy 12/17 (70.59%); wrong >=95% 0/17 (0.00%); answered 15/17 (88.24%); top confusions [(('Pathaka', 'No displayed label'), 2), (('Pathaka', 'Simhamukham'), 2), (('Pathaka', 'Shanka'), 1)]
+
+CONFIRMED outside v3 seed 0 Tripathaka
+  app: accuracy 9/10 (90.00%); wrong >=95% 0/10 (0.00%); answered 10/10 (100.00%); top confusions [(('Tripathaka', 'Aralam'), 1)]
+CONFIRMED unreadable images: 0 []
+CONFIRMED real sample live/cache parity {'single': {'total': 600, 'same count': 600, 'feature rows compared': 535, 'features within 1e-5': 460}, 'double': {'total': 250, 'same count': 250, 'feature rows compared': 248, 'features within 1e-5': 218}}
+
+CONFIRMED current / seed 0 real sample subset (includes legacy-exposed rows)
+  single: accuracy 89/91 (97.80%); wrong >=95% 2/91 (2.20%); answered 91/91 (100.00%); top confusions [(('Alapadmam', 'Chaturam'), 1), (('Kapith', 'Mushti'), 1)]
+  double: accuracy 52/52 (100.00%); wrong >=95% 0/52 (0.00%); answered 52/52 (100.00%); top confusions []
+  app: accuracy 105/153 (68.63%); wrong >=95% 22/153 (14.38%); answered 143/153 (93.46%); top confusions [(('Chakra', 'Ardhachandra'), 5), (('Nagabandha', 'Chaturam'), 4), (('Pathaka', 'No displayed label'), 3), (('Karkatta', 'Ardhachandra'), 3), (('Hamsapaksha', 'No displayed label'), 2)]
+
+CONFIRMED v3 / seed 0 real sample subset
+  single: accuracy 84/91 (92.31%); wrong >=95% 2/91 (2.20%); answered 91/91 (100.00%); top confusions [(('Kapith', 'Mushti'), 3), (('Alapadmam', 'Chaturam'), 1), (('Aralam', 'Suchi'), 1), (('Kangulam', 'Hamsasyam'), 1), (('Katrimukha', 'Suchi'), 1)]
+  double: accuracy 52/52 (100.00%); wrong >=95% 0/52 (0.00%); answered 52/52 (100.00%); top confusions []
+  app: accuracy 104/153 (67.97%); wrong >=95% 20/153 (13.07%); answered 143/153 (93.46%); top confusions [(('Chakra', 'Ardhachandra'), 5), (('Kapith', 'Mushti'), 3), (('Pathaka', 'No displayed label'), 3), (('Hamsapaksha', 'No displayed label'), 2), (('Mrigasirsha', 'No displayed label'), 2)]
+
+CONFIRMED v3 / seed 1 full clean split
+  single: accuracy 2873/3067 (93.67%); wrong >=95% 103/3067 (3.36%); answered 3067/3067 (100.00%); top confusions [(('Aralam', 'Hamsasyam'), 22), (('Mayura', 'Katrimukha'), 15), (('Alapadmam', 'Mayura'), 8), (('Trishulam', 'Kangulam'), 8), (('Bramaram', 'Mrigasirsha'), 7)]
+  double: accuracy 1306/1345 (97.10%); wrong >=95% 3/1345 (0.22%); answered 1345/1345 (100.00%); top confusions [(('Kapotham', 'Anjali'), 8), (('Kapotham', 'Nagabandha'), 6), (('Garuda', 'Chakra'), 4), (('Karkatta', 'Kurma'), 4), (('Anjali', 'Shanka'), 2)]
+  app: accuracy 3296/4700 (70.13%); wrong >=95% 666/4700 (14.17%); answered 4408/4700 (93.79%); top confusions [(('Pushpaputa', 'Kangulam'), 83), (('Garuda', 'Ardhachandra'), 81), (('Chakra', 'Ardhachandra'), 54), (('Hamsapaksha', 'No displayed label'), 48), (('Anjali', 'Alapadmam'), 40)]
+
+CONFIRMED v3 / seed 2 full clean split
+  single: accuracy 2897/3090 (93.75%); wrong >=95% 60/3090 (1.94%); answered 3090/3090 (100.00%); top confusions [(('Mayura', 'Aralam'), 12), (('Tripathaka', 'Ardhapathaka'), 12), (('Hamsapaksha', 'Mrigasirsha'), 9), (('Katakamukha', 'Mukulam'), 8), (('Mayura', 'Trishulam'), 8)]
+  double: accuracy 1188/1233 (96.35%); wrong >=95% 3/1233 (0.24%); answered 1233/1233 (100.00%); top confusions [(('Kapotham', 'Anjali'), 6), (('Shanka', 'Anjali'), 5), (('Kurma', 'Karkatta'), 4), (('Nagabandha', 'Kapotham'), 4), (('Anjali', 'Kapotham'), 3)]
+  app: accuracy 3418/4612 (74.11%); wrong >=95% 393/4612 (8.52%); answered 4292/4612 (93.06%); top confusions [(('Garuda', 'Ardhachandra'), 70), (('Shivalinga', 'Sikharam'), 53), (('Chakra', 'Ardhachandra'), 49), (('Karkatta', 'Ardhachandra'), 42), (('Aralam', 'No displayed label'), 39)]
+CONFIRMED v3 single: accuracy range 92.70%–93.75%; mean 93.37%; wrong >=95% range 1.04%–3.36%
+CONFIRMED v3 double: accuracy range 96.35%–97.10%; mean 96.62%; wrong >=95% range 0.22%–0.69%
+CONFIRMED v3 app: accuracy range 70.13%–74.11%; mean 71.88%; wrong >=95% range 8.52%–14.17%

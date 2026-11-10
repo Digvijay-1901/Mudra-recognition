@@ -1,166 +1,222 @@
-# Hand Landmark Gesture Recognition — Bharatanatyam Mudras
+# Bharatanatyam Mudra Recognition
 
-A landmark-based machine learning system for recognizing hand gestures from images, built and validated using Bharatanatyam mudras (classical Indian dance hand gestures) as the demonstration domain — 35 classes across single-hand and double-hand poses, built without a CNN or raw pixel classification.
+Recognize Bharatanatyam hand gestures from an uploaded image or a webcam snapshot.
+The current **hybrid** combines MediaPipe's hand finding and routing with RTMPose's
+single-hand landmarks, geometric features and trained MLP classifiers. It runs
+locally in a Streamlit app; no training is needed to use the included models.
 
-## Overview
+## How predictions work
 
-The core system is domain-agnostic: MediaPipe hand landmarks, hand-crafted geometric features, and a lightweight MLP classifier. Bharatanatyam mudras were chosen as the application because they offer real diversity in difficulty — from simple single-hand shapes to heavily occluded double-hand poses — making them a strong stress test for the approach.
+- **MediaPipe** finds hands first. Its landmarks feed the single-vs-double gate;
+  the gate never receives RTMPose features.
+- On a **single-hand route**, RTMDet locates the hand and RTMPose estimates its
+  joints. The trained `single` or tilt-normalized `single_norm` MLP head classifies
+  the geometric features.
+- On a **double-hand route**, the existing MediaPipe landmarks and normalized
+  double-hand MLP remain in use.
+- Missing hands, an ambiguous gate or a score below the class cutoff can produce
+  a retake/abstain message. Confidence is an uncalibrated model score, not a
+  guarantee that an answer is correct.
 
-- **25 single-hand mudras** — 96.94% held-out accuracy, 0.9537 macro F1
-- **10 double-hand mudras** — 98.01% held-out accuracy, 0.9796 macro F1
-- Scaled from 10 → 20 → 35 total classes over the project, with no change to the underlying architecture required at any stage — evidence the feature representation itself was sound, not tuned to a small fixed class set
-- MediaPipe hand landmarks + engineered geometric features + MLP classifier — no CNN, no raw pixels
-- Interactive Streamlit app with live landmark visualization, confidence breakdowns, and example images
+## Recorded results: development machine
 
-## Architecture
+**CONFIRMED:** the headline **90.55% accuracy / 93.24% coverage / 39 wrong-at-95%**
+and historical outside-photo **38/40** were measured on the development machine.
+They are recorded under [reports/webcam_tripathaka_diagnosis/](reports/webcam_tripathaka_diagnosis/),
+not re-run from this minimal release clone. Re-running full acceptance requires
+the original dataset, which is not included, and both original frozen landmark caches.
 
-```
-Image (upload/webcam)
-        ↓
-MediaPipe Hands → 21 landmarks per hand
-        ↓
-Feature engineering → wrist-normalized angles, distances, inter-hand geometry
-        ↓
-MLP classifier (128 → 64 hidden layers) → predicted class + confidence
-```
+| Evidence status | Check | Result |
+| --- | --- | --- |
+| **CONFIRMED** | Hybrid Auto, clean grouped studio validation | **90.55% accuracy / 93.24% coverage / 39 wrong-at-95%** |
+| **CONFIRMED** | Historical outside-photo set (not shipped) | **38/40**: Pathaka **17/17**, Mayura **12/13**, Tripathaka **9/10** |
+| **CONFIRMED** | Historical temporal-smoothing replay | Corrected **1 Pathaka** and **1 Ardhachandra** error; harmed **0** correct predictions |
 
-**Single-hand features (77-dim):** wrist-centered, scale-normalized landmark coordinates, fingertip-to-wrist distances, fingertip-to-fingertip distances, five joint angles.
+**CONFIRMED evaluation scope:** the hybrid check runs the production API over
+**4,465** frozen validation detector records; fresh source-image checks match on
+**20/20** samples. Accuracy includes misses and abstentions as incorrect; coverage
+is the proportion receiving an accepted label. Wrong-at-95% counts incorrect
+accepted answers whose model score is at least **95%**.
+See [acceptance evidence](reports/webcam_tripathaka_diagnosis/acceptance/acceptance.json).
 
-**Double-hand features (162-dim):** the same per-hand shape features for each hand, plus inter-hand relational features (wrist distance, palm distance, fingertip-to-fingertip distances) computed in a shared coordinate frame, plus an explicit flag indicating whether both hands were actually detected or one was reconstructed from partial data.
+**CONFIRMED outside-set scope:** the development check used AI-generated/test images and
+screenshots of single-hand gestures, not an independent new-performer benchmark.
+See [outside-photo results](reports/webcam_tripathaka_diagnosis/outside_test/summary.json).
 
-### Why two separate pipelines (single-hand vs. double-hand)
+The smoothing result is a replay of historical raw predictions, not a fresh live
+accuracy gain. The original camera frames for that replay were not saved, so their
+counterfactual predictions under the current hybrid are **UNVERIFIED**. This is a historical development-machine replay; the private telemetry is not published.
 
-Double-hand mudras need relational math between the two hands — distances and angles that simply don't exist for a single-hand pose. Forcing both cases through one shared feature vector would mean padding single-hand images with meaningless placeholder values for features they don't have, and would tie the two problems together when they benefit from independent tuning. Keeping them as separate feature extractors, training scripts, and models let the double-hand side get more sophisticated (relational features, occlusion-completeness flags) without diluting or complicating the simpler single-hand path.
+## Setup on Windows
 
-## Routing logic — important note for anyone extending this
+**CONFIRMED supported setup:** use **Python 3.10**, as documented in
+[Runtime assets and fresh-clone setup](docs/RUNTIME_ASSETS.md). Run these commands
+from the repository root. Install **both** requirements files; the root file alone
+does not install RTMPose's runtime dependencies.
 
-Single-hand and double-hand images are routed to different models, but **the routing decision is not a simple hand-count check** — an earlier, simpler version of this logic caused two separate real bugs during development (see Challenges), so the exact decision order matters:
-
-1. MediaPipe detects exactly 2 hands → **double-hand model** (trusted directly)
-2. Otherwise → **try the single-hand model first**
-   - If single-hand confidence ≥ 0.60 → use that result
-   - If single-hand confidence < 0.60 → try the double-hand model instead
-     (this catches double-hand mudras where MediaPipe only found 1 hand due to occlusion — e.g. Shanka, Kurma)
-3. If nothing above produced a usable result → fall back to whatever single-hand result is available, even at low confidence
-
-**Why this specific order matters:** the double-hand feature extractor can produce a technically valid feature vector using just *one* detected hand (the missing hand is zero-padded, with an explicit `both_detected_flag = 0`). This means "did feature extraction succeed" is *not* the same thing as "were two hands actually detected" — a naive router that only checks for a successful double-hand feature vector will misroute a large fraction of genuine single-hand images into the double-hand model, because the double-hand extractor doesn't reject single-hand input on its own.
-
-Two specific failure modes were hit and fixed during development:
-- **Routing based on raw MediaPipe hand-count alone** sent genuine double-hand images to the single-hand model when MediaPipe detected only 1 hand on occluded double-hand poses.
-- **Routing based on "did double-hand extraction succeed" alone** (trying double-hand first, always) caused genuine single-hand mudras to be misclassified by the double-hand model, since a single detected hand alone is enough for the double-hand extractor to produce a "valid" (but essentially half-empty) result.
-
-The current confidence-based, single-hand-first ordering resolves both failure modes. **Any diagnostic or test script evaluating routing accuracy must reproduce this exact logic** — a simplified stand-in (e.g. checking `both_detected_flag` alone) will produce misleading numbers that look like a regression but aren't, since it's testing a different rule than what's actually in production.
-
-## Why not a CNN?
-
-A CNN approach was tried directly on cropped hand images early on. Two problems ruled it out: many mudras differ only in subtle finger curl or spacing, and a CNN's pixel-level features are a black box — when it confused visually close classes, there was no way to inspect *why*, or which part of the hand it was even attending to. Switching to explicit landmark-based geometric features solved both problems at once: every feature has a known physical meaning (a specific angle, a specific distance), so when two classes get confused, it's possible to look at the actual numbers and see exactly which measurement isn't separating them — rather than guessing at a black box.
-
-## Does this generalize beyond mudras?
-
-The methodology was validated directly, not just claimed: the class count grew from an initial 10 to 20 to 35 over the project — including several double-hand poses with genuinely difficult occlusion properties — and the pipeline trained every new batch successfully without any architecture changes, maintaining 96–98% held-out accuracy throughout.
-
-The current trained model recognizes exactly 35 specific classes and nothing else — like any multiclass classifier, it cannot detect or flag an unfamiliar gesture as "unknown"; it always outputs its closest guess among the 35 it knows. Extending it to new gesture types is a matter of adding labeled images and retraining, not redesigning the system.
-
-## Results
-
-| Model | Classes | Held-out accuracy | Macro F1 |
-|---|---|---|---|
-| Single-hand | 25 | 96.94% | 0.9537 |
-| Double-hand | 10 | 98.01% | 0.9796 |
-
-Evaluated on a stratified 80/20 train/test split — the model is never trained on the images used to compute these numbers.
-
-**Known confusable pairs:** Shukatundam/Aralam (single-hand's weakest class, 0.78 F1) and Ardhapathaka/Tripathaka show the most classification overlap; Anjali/Kapotham and a few pairs among the newer double-hand classes (Kurma/Pushpaputa, Shanka/Shivalinga) show smaller, expected confusion.
-
-## Challenges and what was actually debugged
-
-This project's engineering value is as much in the debugging as the pipeline itself:
-
-**Limited training data.** No existing labeled dataset covers Bharatanatyam mudras at this scale — every image had to be sourced and labeled from scratch, for all 35 classes. This capped how much data could go toward underrepresented or harder classes and is the main reason held-out accuracy is reported carefully rather than treated as proof of full real-world generalization (see Limitations).
-
-**Raw MediaPipe landmarks weren't enough on their own.** The 21 raw hand keypoints, used directly, produced weak and inconsistent classification — they don't inherently encode which spatial relationships actually distinguish one mudra from another. Getting a usable signal took many rounds of adding one engineered feature at a time (specific distances, specific angles, curl measurements) and testing which ones actually separated confusable mudras versus which just added noise. The real breakthrough was structuring the math so it reliably outputs one consistent, scale-and-position-normalized numeric signature per hand pose — once that structure was solid, adding new mudra classes (10 → 20 → 35) stopped requiring any rework of the feature pipeline itself.
-
-**Silent scaler mismatch.** An earlier version fit a `StandardScaler` during training but trained the classifier on raw (unscaled) features, while inference applied the scaler — a train/inference contract violation that produced ~97% offline accuracy alongside near-random live predictions. Traced with a targeted raw-vs-scaled prediction test on a known training example.
-
-**Stale model vs. stale evidence.** Discovered a deployed model file dated ten days *after* the confusion matrix being used to trust it — the trusted evaluation belonged to a different training run entirely.
-
-**Evaluation methodology bug.** An earlier evaluation script tested the model against the full dataset it trained on, reporting an inflated, meaningless "accuracy." Rebuilt with a proper held-out split.
-
-**MediaPipe detection failures on merged/occluded hands.** Several double-hand poses (crossed, stacked, or pressed-together hands) frequently return fewer than 2 hand detections from MediaPipe's palm detector — a structural detector limitation, not a data quality issue. Solved with graceful degradation (zero-padding the missing hand's features plus an explicit detection-completeness flag) rather than discarding those images.
-
-**Live-app routing.** Deciding which model (single-hand or double-hand) should handle a given image turned out to be its own problem — a naive hand-count check isn't reliable, since MediaPipe sometimes only detects one hand in a genuine double-hand pose, and can occasionally over-detect in a single-hand image. The routing logic settled on a two-stage strategy: trust a clear 2-hand detection outright, otherwise attempt single-hand classification first and only defer to the double-hand model when that single-hand prediction is itself unconfident.
-
-## Live webcam vs. upload
-
-Continuous live-webcam inference was explored and works in principle — the underlying MediaPipe + feature pipeline doesn't care whether a frame comes from an upload or a camera stream. In practice, reliable low-latency continuous webcam capture inside Streamlit depends on extra components (e.g. `streamlit-webrtc`) with real browser/deployment quirks that go beyond this project's scope. The shipped app is built around image upload and single-snapshot capture instead, which is reliable across environments; wiring up true continuous live inference is additional integration work, not a change to the recognition system itself.
-
-## Limitations
-
-- **Evaluation is sample-level, not person-level.** The held-out split separates images, not performers/sessions — the reported accuracy reflects generalization to unseen photos from the same dataset, not confirmed generalization to a new person's hand under new conditions. Dataset composition (distinct performers, sessions, or devices represented) has not been formally characterized. Informal testing on out-of-dataset photos (different background, lighting, hand) suggests reasonable real-world generalization, but this hasn't been rigorously validated.
-- **Confidence scores are model probability estimates**, not calibrated real-world certainty.
-- **No out-of-distribution rejection.** The classifier always predicts one of its known classes; it has no mechanism to flag a genuinely unfamiliar gesture as "unknown."
-- A small number of confusable class pairs (listed above) remain the main source of classification error in each model.
-
-## Project structure
-
-```
-build_keypoints_csv.py           # builds single-hand training CSV from raw images
-build_keypoints_csv_double.py    # builds double-hand training CSV from raw images
-feature_extraction.py            # single-hand landmark → feature vector
-feature_extraction_double.py     # double-hand landmark → feature vector (incl. relational features)
-train_mlp.py                     # trains single-hand MLP classifier
-train_mlp_double.py              # trains double-hand MLP classifier
-evaluate_model.py                # held-out accuracy/F1 for single-hand model
-evaluate_model_double.py         # held-out accuracy/F1 for double-hand model
-confusion_graph.py               # confusion matrix visualization, single-hand
-confusion_graph_double.py        # confusion matrix visualization, double-hand
-predict_image.py                 # CLI single-hand prediction
-predict_image_double.py          # CLI double-hand prediction
-streamlit_app.py                 # interactive web app
-model/ , model_double/           # trained classifier, scaler, label encoder artifacts
-data/                            # training images (not included in repo)
-```
-
-## Setup
-
-```bash
+```powershell
 python -m venv venv
-venv\Scripts\activate        # Windows / source venv/bin/activate on macOS-Linux
-pip install -r requirements.txt
-```
-Tested on Python 3.10. Dependency versions are pinned in `requirements.txt`, so the app runs with the included trained models and needs no retraining.
-The Dataset i used is from jisharajr (https://github.com/jisharajr/Bharatanatyam-Mudra-Dataset) link to thrir work
-## Usage
-
-```bash
-# Build the training data from images in data/dataset and data/dataset_double
-python build_keypoints_csv.py
-python build_keypoints_csv_double.py
-
-# Train
-python train_mlp.py
-python train_mlp_double.py
-
-# Evaluate
-python evaluate_model.py
-python evaluate_model_double.py
-python confusion_graph.py
-python confusion_graph_double.py
-
-# Predict a single image from the command line
-python predict_image.py path/to/image.jpg
-python predict_image_double.py path/to/image.jpg
-
-# Run the interactive app
-streamlit run streamlit_app.py
+.\venv\Scripts\python.exe -m pip install --progress-bar off -r requirements.txt -r tracker_v2/requirements.txt
+.\venv\Scripts\python.exe -m pip check
 ```
 
-## Tech stack
+### One-time RTMPose model download
 
-MediaPipe · scikit-learn · Streamlit · OpenCV · NumPy · pandas
+The small detector model, trained classifier heads and gate are tracked. The large
+RTMPose ONNX file is intentionally excluded; download it before starting the app.
 
-## Acknowledgements
+**CONFIRMED destination:** `tracker_v2/assets/rtmpose_hand5.onnx`.
 
-Built on top of Google's MediaPipe Hands for landmark detection.
+**CONFIRMED SHA-256**, matching [the runtime asset specification](docs/RUNTIME_ASSETS.md):
 
-Training data: the Bharatanatyam Mudra Dataset by Jisha Raj R, collected as part of PhD research under Dr. Sunil T.T, College of Engineering, Attingal, Thiruvananthapuram, Kerala, India — 28,431 images from 15 volunteers, licensed under CC BY-SA 4.0. Original dataset contains 29 single-hand and 21 double-hand gesture classes; this project trained on a subset (25 single-hand, 10 double-hand).
+```text
+39e858936bca0f94c09847d4e70b68a51d6c0adac61f36b457fcadb54621cd29
+```
+
+The command below downloads the official upstream archive, verifies the checksum
+and saves its ONNX member at the exact destination. It is copied from the runtime
+asset instructions:
+
+```powershell
+.\venv\Scripts\python.exe -c "import urllib.request,zipfile,io,pathlib,hashlib; u='https://download.openmmlab.com/mmpose/v1/projects/rtmposev1/onnx_sdk/rtmpose-m_simcc-hand5_pt-aic-coco_210e-256x256-74fb594_20230320.zip'; z=zipfile.ZipFile(io.BytesIO(urllib.request.urlopen(u).read())); n=[n for n in z.namelist() if n.endswith('.onnx')]; assert len(n)==1; b=z.read(n[0]); assert hashlib.sha256(b).hexdigest()=='39e858936bca0f94c09847d4e70b68a51d6c0adac61f36b457fcadb54621cd29'; p=pathlib.Path('tracker_v2/assets/rtmpose_hand5.onnx'); p.parent.mkdir(parents=True,exist_ok=True); p.write_bytes(b)"
+```
+
+A missing model prevents startup; RTMLib may report `unknown url type: c` when it
+mistakes the missing Windows file path for a URL. Download the file rather than
+changing the model or training anything.
+
+### Dataset availability
+
+The **raw studio dataset is not included**. Obtain it from the original dataset
+repository linked under [Dataset source](#dataset-source). For full studio
+validation and reference images, arrange the original class folders under:
+
+```text
+data/dataset/<SingleHandClass>/
+data/dataset_double/<DoubleHandClass>/
+```
+
+The app can run with its bundled examples and your own photos without that dataset;
+reference images will be unavailable. Full studio validation, including fresh
+source-photo parity checks, requires restoring the original dataset. Ignored local
+caches and private camera logs are not automatically supplied by a clone.
+
+## Run the app
+
+```powershell
+.\venv\Scripts\python.exe -m streamlit run streamlit_app.py
+```
+
+Open the local URL printed by Streamlit. Choose **Auto** for the published hybrid
+routing behavior, then upload an image or select **Webcam**.
+
+In **Diagnostic Mode**, select the **Expected mudra**, then use **Capture pose for
+analysis**. Expected labels are for recording/comparison; they do not vote for a
+prediction. The app retains raw predictions and may display a recent consistent
+prediction through temporal smoothing. That smoothing affects Diagnostic Mode's
+live flow only; it does not change the core single-image prediction API.
+
+**Save frames for debugging is OFF by default.** With it off, the CSV row is still
+logged but `Frame_Path` is empty and no raw-frame PNG is written. Opt in using the
+sidebar checkbox to save diagnostic images.
+
+- Telemetry: `reports/webcam_diagnostics.csv` records the raw label, confidence,
+  mode, hands, tilt, displayed label, frame path and any abstain/retake message.
+- Opted-in raw images: `reports/webcam_frames/`.
+- Optional landmark comparison: `analyze_webcam_frames.py` writes overlays under
+  `reports/webcam_overlays/`. Frame and overlay folders are ignored by Git.
+
+## Validate a folder of photos
+
+`validate_hybrid_live.py` runs on the user's own photo folder.
+
+For your own images, use class-named folders:
+
+```text
+my_photos/
+  Pathaka/
+    upright.jpg
+  Mayura/
+    example.jpg
+  Tripathaka/
+    example.jpg
+```
+
+```powershell
+.\venv\Scripts\python.exe validate_hybrid_live.py my_photos
+```
+
+The script uses the production hybrid and prints per-class results. It writes
+`predictions.csv`, `summary.csv` and `summary.json` into a new
+`reports/live-validation-<timestamp>/` folder. Results include raw/displayed labels,
+confidence, mode and detected hands. Flat folders can be processed without an
+accuracy calculation when no true class is supplied.
+
+For genuine consecutive captures with preserved modification times, add
+`--sequence` to replay the Diagnostic Mode smoothing policy. Independent photos
+remain isolated by default; copying files may change their timestamps and make a
+sequence replay misleading.
+
+## Known limitations
+
+- **CONFIRMED live-camera failure:** Tripathaka was **1/20** on the saved webcam
+  sequence, while Pathaka was **10/10**. The MediaPipe-only path also scored
+  **1/20** on Tripathaka. **INFERRED:** both trackers represented the ring finger
+  as nearly straight in many captures. This is evidence of a landmark/generalization
+  weakness, not proof of a preprocessing bug; visual ambiguity versus landmark
+  error remains **UNVERIFIED** without ground-truth joints. See the
+  [final diagnosis](reports/webcam_tripathaka_diagnosis/diagnosis.md).
+- **UNVERIFIED independent real-world two-hand performance:** there has been no
+  dedicated two-hand validation on real-world outside photos or live camera.
+  Studio validation and bundled example checks do not establish that performance.
+- **CONFIRMED experiment scope:** camera captures were diagnostic only; no
+  real-camera training dataset was collected or used in these experiments.
+- **UNVERIFIED generalization:** studio grouping is not a held-out-person test.
+  The included generated images/screenshots do not establish accuracy on new
+  people, devices, lighting, backgrounds or natural hand rotations.
+- Temporal smoothing can help an isolated low/moderate-confidence disagreement
+  after consistent captures. It cannot recover an unseen fold or reliably correct
+  a persistent confidently wrong sequence.
+
+## Rejected experiments
+
+These experiments were rejected; none is enabled in the production hybrid.
+
+- **CONFIRMED — expanded anatomical features:** **80.59% Auto / 319 wrong-at-95%**, versus matched control **80.78% / 316**, on the historical pooled rotated-landmark protocol; this denominator differs from the current hybrid benchmark. The detailed historical record remains in the development backup.
+- **CONFIRMED — RTMPose double-hand fallback:** **89.83% Auto / 74 wrong-at-95%**; rejected for regression. [Archived evaluation](docs/experiments/double_ensemble/evaluation.json).
+- **CONFIRMED — detector fusion:** **75% single-hand detection (45/60)**, versus the hybrid's **90% (54/60)**; detection coverage, not classification accuracy. [Archived smoke comparison](docs/experiments/fused/smoke_comparison.json).
+
+## Release test availability
+
+The included historical fixture is `tests/fixtures/brain.before.py`.
+
+```powershell
+.\venv\Scripts\python.exe test_diagnostic_temporal.py
+```
+
+That suite still runs synthetic smoothing, capture/PNG/CSV behavior, landmark
+comparison and real example inference. Its historical webcam replay prints
+**SKIP** if `reports/webcam_diagnostics.csv` is absent; private telemetry is not
+published. This does not disable the other checks.
+
+`test_hybrid_production.py` is retained unchanged for full development acceptance.
+In a minimal clone, **skip full acceptance** until these original inputs are
+restored: `landmarks.joblib`, `tracker_v2/landmarks_v2.joblib`, `data/dataset/` and
+`data/dataset_double/`. The full suite must not be reported as passed when its
+inputs are absent. No substitute dataset or model is trained by this release.
+
+## Documentation
+
+- [Runtime assets, download, dependencies and fresh-clone requirements](docs/RUNTIME_ASSETS.md)
+- [Repository cleanup inventory and dependency/grep evidence](docs/REPOSITORY_CLEANUP.md)
+- [Archived experiment findings](docs/experiments/)
+
+## Dataset source
+
+Studio data and bundled examples come from the **Bharatanatyam Mudra Dataset by
+Jisha Raj R**, collected during PhD research under Dr. Sunil T.T at the College of
+Engineering, Attingal, Kerala, India. Dataset provenance for the included
+outside-photo set differs from these studio examples.
+
+Source: [Jisha Raj R's original dataset repository](https://github.com/jisharajr/Bharatanatyam-Mudra-Dataset).
+Dataset/examples licence: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).

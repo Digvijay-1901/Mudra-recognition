@@ -1,0 +1,280 @@
+{
+  "status": "CONFIRMED rerun after decision to leave pipeline unchanged",
+  "tripathaka_correct": 1,
+  "tripathaka_n": 20,
+  "pathaka_correct": 10,
+  "pathaka_n": 10,
+  "matches_before": 30,
+  "predictions": [
+    {
+      "frame": 1,
+      "true": "Tripathaka",
+      "label": "Tripathaka",
+      "confidence": 0.9996630133521002,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 2,
+      "true": "Tripathaka",
+      "label": "Ardhapathaka",
+      "confidence": 0.9641565231277746,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 3,
+      "true": "Tripathaka",
+      "label": "Pathaka",
+      "confidence": 0.9901476258647068,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 4,
+      "true": "Tripathaka",
+      "label": "Pathaka",
+      "confidence": 0.9876822303553301,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 5,
+      "true": "Tripathaka",
+      "label": "Pathaka",
+      "confidence": 0.9573290739503979,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 6,
+      "true": "Tripathaka",
+      "label": "Pathaka",
+      "confidence": 0.9774492365818604,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 7,
+      "true": "Tripathaka",
+      "label": "Ardhapathaka",
+      "confidence": 0.9206460321144802,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 8,
+      "true": "Tripathaka",
+      "label": "Pathaka",
+      "confidence": 0.9609846281055748,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 9,
+      "true": "Tripathaka",
+      "label": "Pathaka",
+      "confidence": 0.932068895342666,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 10,
+      "true": "Tripathaka",
+      "label": "Pathaka",
+      "confidence": 0.9984827095559071,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 11,
+      "true": "Tripathaka",
+      "label": "Pathaka",
+      "confidence": 0.9967410531163586,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 12,
+      "true": "Tripathaka",
+      "label": "Pathaka",
+      "confidence": 0.9823742730338135,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 13,
+      "true": "Tripathaka",
+      "label": "Pathaka",
+      "confidence": 0.9508185719067425,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 14,
+      "true": "Tripathaka",
+      "label": "Pathaka",
+      "confidence": 0.9836038289650388,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 15,
+      "true": "Tripathaka",
+      "label": "Pathaka",
+      "confidence": 0.9950175936362947,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 16,
+      "true": "Tripathaka",
+      "label": "Pathaka",
+      "confidence": 0.9711655373619289,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 17,
+      "true": "Tripathaka",
+      "label": "Pathaka",
+      "confidence": 0.9506621950885344,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 18,
+      "true": "Tripathaka",
+      "label": "Pathaka",
+      "confidence": 0.9079758401055098,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 19,
+      "true": "Tripathaka",
+      "label": "Pathaka",
+      "confidence": 0.947131349663025,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 20,
+      "true": "Tripathaka",
+      "label": "Pathaka",
+      "confidence": 0.9677887324132256,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 21,
+      "true": "Pathaka",
+      "label": "Pathaka",
+      "confidence": 0.9749017308353699,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 22,
+      "true": "Pathaka",
+      "label": "Pathaka",
+      "confidence": 0.8505970602080778,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 23,
+      "true": "Pathaka",
+      "label": "Pathaka",
+      "confidence": 0.9231542667916197,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 24,
+      "true": "Pathaka",
+      "label": "Pathaka",
+      "confidence": 0.9148681690362511,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 25,
+      "true": "Pathaka",
+      "label": "Pathaka",
+      "confidence": 0.9498089669977929,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 26,
+      "true": "Pathaka",
+      "label": "Pathaka",
+      "confidence": 0.9869569093361749,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 27,
+      "true": "Pathaka",
+      "label": "Pathaka",
+      "confidence": 0.996821388028828,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 28,
+      "true": "Pathaka",
+      "label": "Pathaka",
+      "confidence": 0.9787999787049239,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 29,
+      "true": "Pathaka",
+      "label": "Pathaka",
+      "confidence": 0.9954293161512789,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    },
+    {
+      "frame": 30,
+      "true": "Pathaka",
+      "label": "Pathaka",
+      "confidence": 0.956075738178213,
+      "mode": "Single",
+      "hands": 1,
+      "message": ""
+    }
+  ]
+}

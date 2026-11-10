@@ -60,22 +60,11 @@ def _shape_features(lm_raw):
         feats.append([_angle(lm[a], lm[b], lm[c])])
     return np.concatenate(feats)
 
-def extract_double_hand_features(image_rgb, static=True):
-    hands = _get_hands(static=static)
-    results = hands.process(image_rgb)
-
-    # fallback: retry with padding if nothing detected
-    if not results.multi_hand_landmarks:
-        h0, w0 = image_rgb.shape[:2]
-        padded = cv2.copyMakeBorder(image_rgb, h0 // 3, h0 // 3, w0 // 3, w0 // 3, cv2.BORDER_REPLICATE)
-        results = hands.process(padded)
-        if results.multi_hand_landmarks:
-            image_rgb = padded
-
+def double_hand_features_from_results(results, image_shape):
     if not results.multi_hand_landmarks:
         return None
 
-    h, w, _ = image_rgb.shape
+    h, w = image_shape[:2]
     n_detected = len(results.multi_hand_landmarks)
 
     raw = []
@@ -130,4 +119,36 @@ def extract_double_hand_features(image_rgb, static=True):
 
     return np.concatenate([left_shape, right_shape, relational, [both_detected_flag]])
 
+
+def extract_double_hand_features(image_rgb, static=True):
+    hands = _get_hands(static=static)
+    results = hands.process(image_rgb)
+
+    if not results.multi_hand_landmarks:
+        h0, w0 = image_rgb.shape[:2]
+        padded = cv2.copyMakeBorder(image_rgb, h0 // 3, h0 // 3, w0 // 3, w0 // 3, cv2.BORDER_REPLICATE)
+        results = hands.process(padded)
+        if results.multi_hand_landmarks:
+            image_rgb = padded
+
+    return double_hand_features_from_results(results, image_rgb.shape)
 FEATURE_DIM = (63 + 5 + 4 + 5) * 2 + 2 + 5 + 1
+
+def normalized_double_hand_features(results, image_shape):
+    from types import SimpleNamespace
+    from feature_extraction import _hand_array, upright_landmark_arrays
+
+    hands = [_hand_array(hand) for hand in results.multi_hand_landmarks or []]
+    if not hands:
+        return None
+    handedness = [entry.classification[0].label for entry in results.multi_handedness or []]
+    hands = upright_landmark_arrays(hands, image_shape, two_wrists=True, handedness=handedness)
+    canonical = SimpleNamespace(
+        multi_hand_landmarks=[
+            SimpleNamespace(landmark=[SimpleNamespace(x=float(x), y=float(y), z=float(z))
+                                      for x, y, z in hand])
+            for hand in hands
+        ],
+        multi_handedness=results.multi_handedness,
+    )
+    return double_hand_features_from_results(canonical, image_shape)

@@ -1,0 +1,36 @@
+{
+  "images": 40,
+  "labelled": 40,
+  "sequence": false,
+  "timestamp_source": "file modification time",
+  "summary": [
+    {
+      "Expected": "Mayura",
+      "Images": 13,
+      "Raw_Correct": 12,
+      "Displayed_Correct": 12,
+      "Smoothed": 0
+    },
+    {
+      "Expected": "Pathaka",
+      "Images": 17,
+      "Raw_Correct": 17,
+      "Displayed_Correct": 17,
+      "Smoothed": 0
+    },
+    {
+      "Expected": "Tripathaka",
+      "Images": 10,
+      "Raw_Correct": 9,
+      "Displayed_Correct": 9,
+      "Smoothed": 0
+    }
+  ],
+  "raw_accuracy": 0.95,
+  "displayed_accuracy": 0.95,
+  "errors": 0,
+  "production_entry_point": "brain.predict(mode='auto', threshold=.30)",
+  "pipeline": "MediaPipe gate + RTMPose single/single_norm + MediaPipe double",
+  "brain_sha256": "aff97e506bd230e1c2092eb20d473dbef0a1721d7ae928ef5ade37018ce24301",
+  "caveat": "Expected labels partition sequences but never vote. Sequence replay uses original file mtimes; it is not directly comparable to independent studio-image accuracy."
+}

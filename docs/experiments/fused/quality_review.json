@@ -1,0 +1,651 @@
+{
+  "method": "Visual inspection of 40 fixed overlays, 20 single and all 20 double; subjective categories, no ground-truth boxes. Overlap alone does not prove incorrect localization. Missing/incomplete includes one missing hand in a double pose.",
+  "counts": {
+    "oversized": 8,
+    "overlapping_two_hand_regions": 6,
+    "missing_or_incomplete": 17,
+    "reasonable": 9
+  },
+  "rows": [
+    {
+      "id": 1,
+      "source_index": 504,
+      "mode": "single",
+      "label": "Alapadmam",
+      "boxes": [],
+      "n": 0,
+      "visual_category": "missing_or_incomplete"
+    },
+    {
+      "id": 2,
+      "source_index": 2359,
+      "mode": "single",
+      "label": "Aralam",
+      "boxes": [
+        [
+          84.4114761352539,
+          -36.47109603881836,
+          524.0944213867188,
+          403.2118225097656
+        ]
+      ],
+      "n": 1,
+      "visual_category": "oversized"
+    },
+    {
+      "id": 3,
+      "source_index": 2649,
+      "mode": "single",
+      "label": "Ardhachandra",
+      "boxes": [
+        [
+          6.204740047454834,
+          51.8219108581543,
+          347.3998718261719,
+          393.01702880859375
+        ]
+      ],
+      "n": 1,
+      "visual_category": "oversized"
+    },
+    {
+      "id": 4,
+      "source_index": 4501,
+      "mode": "single",
+      "label": "Ardhapathaka",
+      "boxes": [
+        [
+          126.8558120727539,
+          -80.70684814453125,
+          678.1812744140625,
+          470.6186218261719
+        ]
+      ],
+      "n": 1,
+      "visual_category": "reasonable"
+    },
+    {
+      "id": 5,
+      "source_index": 4772,
+      "mode": "single",
+      "label": "Bramaram",
+      "boxes": [
+        [
+          -20.46132469177246,
+          -213.8909149169922,
+          794.1254272460938,
+          600.6958618164062
+        ]
+      ],
+      "n": 1,
+      "visual_category": "oversized"
+    },
+    {
+      "id": 6,
+      "source_index": 5133,
+      "mode": "single",
+      "label": "Chandrakala",
+      "boxes": [
+        [
+          12.408912658691406,
+          -25.0062313079834,
+          436.9773254394531,
+          399.56219482421875
+        ]
+      ],
+      "n": 1,
+      "visual_category": "reasonable"
+    },
+    {
+      "id": 7,
+      "source_index": 7369,
+      "mode": "single",
+      "label": "Chaturam",
+      "boxes": [
+        [
+          102.98365020751953,
+          -19.50324058532715,
+          604.6961059570312,
+          482.2092590332031
+        ]
+      ],
+      "n": 1,
+      "visual_category": "oversized"
+    },
+    {
+      "id": 8,
+      "source_index": 7595,
+      "mode": "single",
+      "label": "Hamsapaksha",
+      "boxes": [
+        [
+          -10.64826774597168,
+          -203.5862579345703,
+          828.2633056640625,
+          635.3252563476562
+        ]
+      ],
+      "n": 1,
+      "visual_category": "oversized"
+    },
+    {
+      "id": 9,
+      "source_index": 8564,
+      "mode": "single",
+      "label": "Hamsasyam",
+      "boxes": [
+        [
+          35.250431060791016,
+          -114.43966674804688,
+          745.105712890625,
+          595.4156494140625
+        ]
+      ],
+      "n": 1,
+      "visual_category": "reasonable"
+    },
+    {
+      "id": 10,
+      "source_index": 8660,
+      "mode": "single",
+      "label": "Kangulam",
+      "boxes": [],
+      "n": 0,
+      "visual_category": "missing_or_incomplete"
+    },
+    {
+      "id": 11,
+      "source_index": 9252,
+      "mode": "single",
+      "label": "Kapith",
+      "boxes": [
+        [
+          180.88275146484375,
+          -38.323673248291016,
+          585.0944213867188,
+          365.8879699707031
+        ]
+      ],
+      "n": 1,
+      "visual_category": "reasonable"
+    },
+    {
+      "id": 12,
+      "source_index": 10040,
+      "mode": "single",
+      "label": "Katakamukha",
+      "boxes": [
+        [
+          -224.73538208007812,
+          -160.55479431152344,
+          618.4820556640625,
+          682.6626586914062
+        ]
+      ],
+      "n": 1,
+      "visual_category": "oversized"
+    },
+    {
+      "id": 13,
+      "source_index": 10516,
+      "mode": "single",
+      "label": "Katrimukha",
+      "boxes": [
+        [
+          129.00802612304688,
+          31.37802505493164,
+          580.2325439453125,
+          482.6025390625
+        ]
+      ],
+      "n": 1,
+      "visual_category": "oversized"
+    },
+    {
+      "id": 14,
+      "source_index": 11262,
+      "mode": "single",
+      "label": "Mayura",
+      "boxes": [
+        [
+          -38.49736404418945,
+          -160.47305297851562,
+          539.0745849609375,
+          417.098876953125
+        ]
+      ],
+      "n": 1,
+      "visual_category": "reasonable"
+    },
+    {
+      "id": 15,
+      "source_index": 11967,
+      "mode": "single",
+      "label": "Mrigasirsha",
+      "boxes": [
+        [
+          64.18584442138672,
+          11.791776657104492,
+          522.126220703125,
+          469.7321472167969
+        ]
+      ],
+      "n": 1,
+      "visual_category": "reasonable"
+    },
+    {
+      "id": 16,
+      "source_index": 12226,
+      "mode": "single",
+      "label": "Mukulam",
+      "boxes": [],
+      "n": 0,
+      "visual_category": "missing_or_incomplete"
+    },
+    {
+      "id": 17,
+      "source_index": 12655,
+      "mode": "single",
+      "label": "Mushti",
+      "boxes": [
+        [
+          103.9469223022461,
+          74.77914428710938,
+          396.8607482910156,
+          367.6929626464844
+        ]
+      ],
+      "n": 1,
+      "visual_category": "oversized"
+    },
+    {
+      "id": 18,
+      "source_index": 12793,
+      "mode": "single",
+      "label": "Pathaka",
+      "boxes": [],
+      "n": 0,
+      "visual_category": "missing_or_incomplete"
+    },
+    {
+      "id": 19,
+      "source_index": 13607,
+      "mode": "single",
+      "label": "Sikharam",
+      "boxes": [
+        [
+          54.34124755859375,
+          65.892333984375,
+          585.3999633789062,
+          596.9509887695312
+        ]
+      ],
+      "n": 1,
+      "visual_category": "reasonable"
+    },
+    {
+      "id": 20,
+      "source_index": 14061,
+      "mode": "single",
+      "label": "Simhamukham",
+      "boxes": [
+        [
+          -37.313392639160156,
+          -138.2633056640625,
+          750.1511840820312,
+          649.2012939453125
+        ]
+      ],
+      "n": 1,
+      "visual_category": "reasonable"
+    },
+    {
+      "id": 21,
+      "source_index": 16759,
+      "mode": "double",
+      "label": "Anjali",
+      "boxes": [
+        [
+          -31.26455307006836,
+          66.01250457763672,
+          476.98193359375,
+          574.2589721679688
+        ],
+        [
+          -80.18250274658203,
+          85.77286529541016,
+          392.2305603027344,
+          558.1859741210938
+        ]
+      ],
+      "n": 0,
+      "visual_category": "overlapping_two_hand_regions"
+    },
+    {
+      "id": 22,
+      "source_index": 17419,
+      "mode": "double",
+      "label": "Chakra",
+      "boxes": [
+        [
+          -145.32704162597656,
+          -206.73748779296875,
+          748.5867309570312,
+          687.17626953125
+        ]
+      ],
+      "n": 1,
+      "visual_category": "missing_or_incomplete"
+    },
+    {
+      "id": 23,
+      "source_index": 17876,
+      "mode": "double",
+      "label": "Garuda",
+      "boxes": [
+        [
+          148.8600311279297,
+          -57.82049560546875,
+          743.0310668945312,
+          536.3505249023438
+        ],
+        [
+          -74.7655029296875,
+          44.36134719848633,
+          371.0242614746094,
+          490.151123046875
+        ]
+      ],
+      "n": 2,
+      "visual_category": "reasonable"
+    },
+    {
+      "id": 24,
+      "source_index": 18648,
+      "mode": "double",
+      "label": "Kapotham",
+      "boxes": [
+        [
+          -59.76462173461914,
+          -80.04881286621094,
+          481.6127014160156,
+          461.3285217285156
+        ],
+        [
+          77.818359375,
+          -65.40498352050781,
+          601.0323486328125,
+          457.8089904785156
+        ]
+      ],
+      "n": 2,
+      "visual_category": "overlapping_two_hand_regions"
+    },
+    {
+      "id": 25,
+      "source_index": 19408,
+      "mode": "double",
+      "label": "Karkatta",
+      "boxes": [
+        [
+          -99.3249282836914,
+          -167.04666137695312,
+          648.6380615234375,
+          580.9163208007812
+        ]
+      ],
+      "n": 0,
+      "visual_category": "missing_or_incomplete"
+    },
+    {
+      "id": 26,
+      "source_index": 20154,
+      "mode": "double",
+      "label": "Kurma",
+      "boxes": [
+        [
+          -144.6192169189453,
+          -157.95721435546875,
+          657.1502685546875,
+          643.8123168945312
+        ]
+      ],
+      "n": 0,
+      "visual_category": "missing_or_incomplete"
+    },
+    {
+      "id": 27,
+      "source_index": 20489,
+      "mode": "double",
+      "label": "Nagabandha",
+      "boxes": [
+        [
+          90.56150817871094,
+          -78.7540054321289,
+          643.4165649414062,
+          474.10101318359375
+        ],
+        [
+          -45.639381408691406,
+          -65.2511215209961,
+          467.0996398925781,
+          447.4878845214844
+        ]
+      ],
+      "n": 2,
+      "visual_category": "overlapping_two_hand_regions"
+    },
+    {
+      "id": 28,
+      "source_index": 21273,
+      "mode": "double",
+      "label": "Pushpaputa",
+      "boxes": [],
+      "n": 0,
+      "visual_category": "missing_or_incomplete"
+    },
+    {
+      "id": 29,
+      "source_index": 21755,
+      "mode": "double",
+      "label": "Shanka",
+      "boxes": [
+        [
+          0.5123488306999207,
+          -128.81320190429688,
+          748.448974609375,
+          619.1234130859375
+        ],
+        [
+          225.8828125,
+          -10.126142501831055,
+          726.7838134765625,
+          490.77490234375
+        ]
+      ],
+      "n": 2,
+      "visual_category": "overlapping_two_hand_regions"
+    },
+    {
+      "id": 30,
+      "source_index": 22859,
+      "mode": "double",
+      "label": "Shivalinga",
+      "boxes": [
+        [
+          111.05168914794922,
+          -51.74576950073242,
+          748.35693359375,
+          585.5595092773438
+        ]
+      ],
+      "n": 1,
+      "visual_category": "missing_or_incomplete"
+    },
+    {
+      "id": 31,
+      "source_index": 16689,
+      "mode": "double",
+      "label": "Anjali",
+      "boxes": [
+        [
+          28.639719009399414,
+          82.58485412597656,
+          346.93804931640625,
+          400.8832092285156
+        ],
+        [
+          -7.258367538452148,
+          92.4606704711914,
+          287.3280029296875,
+          387.0470275878906
+        ]
+      ],
+      "n": 1,
+      "visual_category": "overlapping_two_hand_regions"
+    },
+    {
+      "id": 32,
+      "source_index": 17373,
+      "mode": "double",
+      "label": "Chakra",
+      "boxes": [
+        [
+          -62.492462158203125,
+          -66.3912582397461,
+          595.9849243164062,
+          592.0861206054688
+        ]
+      ],
+      "n": 1,
+      "visual_category": "missing_or_incomplete"
+    },
+    {
+      "id": 33,
+      "source_index": 17932,
+      "mode": "double",
+      "label": "Garuda",
+      "boxes": [
+        [
+          167.87893676757812,
+          -32.45501708984375,
+          736.803466796875,
+          536.469482421875
+        ]
+      ],
+      "n": 1,
+      "visual_category": "missing_or_incomplete"
+    },
+    {
+      "id": 34,
+      "source_index": 18835,
+      "mode": "double",
+      "label": "Kapotham",
+      "boxes": [
+        [
+          15.398134231567383,
+          93.23929595947266,
+          434.788330078125,
+          512.6294555664062
+        ],
+        [
+          162.69589233398438,
+          74.56634521484375,
+          589.2988891601562,
+          501.1693420410156
+        ]
+      ],
+      "n": 2,
+      "visual_category": "overlapping_two_hand_regions"
+    },
+    {
+      "id": 35,
+      "source_index": 19073,
+      "mode": "double",
+      "label": "Karkatta",
+      "boxes": [
+        [
+          -61.061527252197266,
+          -83.07518768310547,
+          620.4397583007812,
+          598.4261474609375
+        ]
+      ],
+      "n": 0,
+      "visual_category": "missing_or_incomplete"
+    },
+    {
+      "id": 36,
+      "source_index": 20205,
+      "mode": "double",
+      "label": "Kurma",
+      "boxes": [],
+      "n": 0,
+      "visual_category": "missing_or_incomplete"
+    },
+    {
+      "id": 37,
+      "source_index": 20519,
+      "mode": "double",
+      "label": "Nagabandha",
+      "boxes": [
+        [
+          -65.26959991455078,
+          -78.97073364257812,
+          557.2168579101562,
+          543.5156860351562
+        ]
+      ],
+      "n": 1,
+      "visual_category": "missing_or_incomplete"
+    },
+    {
+      "id": 38,
+      "source_index": 21564,
+      "mode": "double",
+      "label": "Pushpaputa",
+      "boxes": [
+        [
+          63.427650451660156,
+          92.8610610961914,
+          319.5665283203125,
+          348.99993896484375
+        ]
+      ],
+      "n": 0,
+      "visual_category": "missing_or_incomplete"
+    },
+    {
+      "id": 39,
+      "source_index": 22433,
+      "mode": "double",
+      "label": "Shanka",
+      "boxes": [
+        [
+          87.75923919677734,
+          33.25529098510742,
+          602.317626953125,
+          547.8136596679688
+        ]
+      ],
+      "n": 1,
+      "visual_category": "missing_or_incomplete"
+    },
+    {
+      "id": 40,
+      "source_index": 22684,
+      "mode": "double",
+      "label": "Shivalinga",
+      "boxes": [
+        [
+          103.95618438720703,
+          -3.5884242057800293,
+          637.4102172851562,
+          529.8656005859375
+        ]
+      ],
+      "n": 0,
+      "visual_category": "missing_or_incomplete"
+    }
+  ]
+}

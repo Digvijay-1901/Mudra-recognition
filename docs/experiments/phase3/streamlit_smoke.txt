@@ -1,0 +1,5 @@
+CONFIRMED Streamlit smoke version 1.60.0
+CONFIRMED Streamlit upload smoke: auto at 0.60; 0 warnings and 0 no-hand messages
+CONFIRMED Streamlit upload smoke: single at 0.95; 0 warnings and 0 no-hand messages
+CONFIRMED Streamlit upload smoke: double at 0.95; 1 warnings and 0 no-hand messages
+CONFIRMED Streamlit upload smoke: double at 0.30; 0 warnings and 0 no-hand messages

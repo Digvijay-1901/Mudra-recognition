@@ -1,0 +1,3338 @@
+{
+  "baseline": {
+    "n": 4465,
+    "correct": 4043,
+    "accuracy": 0.9054871220604703,
+    "coverage": 0.9323628219484883,
+    "wrong95": 39
+  },
+  "candidate": {
+    "n": 4465,
+    "correct": 4011,
+    "accuracy": 0.8983202687569989,
+    "coverage": 0.9323628219484883,
+    "wrong95": 74
+  },
+  "double_routes": 1304,
+  "rtmpose_proposals": 399,
+  "protected_class_regressions": [
+    {
+      "label": "Anjali",
+      "baseline": 0.9646017699115044,
+      "candidate": 0.9557522123893806
+    },
+    {
+      "label": "Chakra",
+      "baseline": 0.975609756097561,
+      "candidate": 0.9634146341463414
+    },
+    {
+      "label": "Garuda",
+      "baseline": 0.9767441860465116,
+      "candidate": 0.9612403100775194
+    },
+    {
+      "label": "Kapotham",
+      "baseline": 0.9858156028368794,
+      "candidate": 0.9645390070921985
+    },
+    {
+      "label": "Karkatta",
+      "baseline": 0.9631901840490797,
+      "candidate": 0.9386503067484663
+    },
+    {
+      "label": "Nagabandha",
+      "baseline": 1.0,
+      "candidate": 0.9752066115702479
+    },
+    {
+      "label": "Pushpaputa",
+      "baseline": 0.9615384615384616,
+      "candidate": 0.9038461538461539
+    },
+    {
+      "label": "Shanka",
+      "baseline": 0.9817073170731707,
+      "candidate": 0.9695121951219512
+    },
+    {
+      "label": "Shivalinga",
+      "baseline": 0.978021978021978,
+      "candidate": 0.967032967032967
+    }
+  ],
+  "per_class": {
+    "Alapadmam": {
+      "n": 122,
+      "baseline": 0.8114754098360656,
+      "candidate": 0.8114754098360656
+    },
+    "Anjali": {
+      "n": 113,
+      "baseline": 0.9646017699115044,
+      "candidate": 0.9557522123893806
+    },
+    "Aralam": {
+      "n": 342,
+      "baseline": 0.8596491228070176,
+      "candidate": 0.8596491228070176
+    },
+    "Ardhachandra": {
+      "n": 221,
+      "baseline": 0.8914027149321267,
+      "candidate": 0.8914027149321267
+    },
+    "Ardhapathaka": {
+      "n": 59,
+      "baseline": 0.7627118644067796,
+      "candidate": 0.7627118644067796
+    },
+    "Bramaram": {
+      "n": 116,
+      "baseline": 0.9396551724137931,
+      "candidate": 0.9396551724137931
+    },
+    "Chakra": {
+      "n": 82,
+      "baseline": 0.975609756097561,
+      "candidate": 0.9634146341463414
+    },
+    "Chandrakala": {
+      "n": 404,
+      "baseline": 0.9306930693069307,
+      "candidate": 0.9306930693069307
+    },
+    "Chaturam": {
+      "n": 84,
+      "baseline": 0.9523809523809523,
+      "candidate": 0.9523809523809523
+    },
+    "Garuda": {
+      "n": 129,
+      "baseline": 0.9767441860465116,
+      "candidate": 0.9612403100775194
+    },
+    "Hamsapaksha": {
+      "n": 113,
+      "baseline": 0.7079646017699115,
+      "candidate": 0.7079646017699115
+    },
+    "Hamsasyam": {
+      "n": 96,
+      "baseline": 0.9583333333333334,
+      "candidate": 0.9583333333333334
+    },
+    "Kangulam": {
+      "n": 101,
+      "baseline": 0.7623762376237624,
+      "candidate": 0.7623762376237624
+    },
+    "Kapith": {
+      "n": 89,
+      "baseline": 0.9662921348314607,
+      "candidate": 0.9662921348314607
+    },
+    "Kapotham": {
+      "n": 141,
+      "baseline": 0.9858156028368794,
+      "candidate": 0.9645390070921985
+    },
+    "Karkatta": {
+      "n": 163,
+      "baseline": 0.9631901840490797,
+      "candidate": 0.9386503067484663
+    },
+    "Katakamukha": {
+      "n": 108,
+      "baseline": 0.9166666666666666,
+      "candidate": 0.9166666666666666
+    },
+    "Katrimukha": {
+      "n": 116,
+      "baseline": 0.8879310344827587,
+      "candidate": 0.8879310344827587
+    },
+    "Kurma": {
+      "n": 112,
+      "baseline": 0.8125,
+      "candidate": 0.7857142857142857
+    },
+    "Mayura": {
+      "n": 129,
+      "baseline": 0.9922480620155039,
+      "candidate": 0.9922480620155039
+    },
+    "Mrigasirsha": {
+      "n": 125,
+      "baseline": 0.736,
+      "candidate": 0.736
+    },
+    "Mukulam": {
+      "n": 116,
+      "baseline": 0.7758620689655172,
+      "candidate": 0.7758620689655172
+    },
+    "Mushti": {
+      "n": 20,
+      "baseline": 0.8,
+      "candidate": 0.8
+    },
+    "Nagabandha": {
+      "n": 121,
+      "baseline": 1.0,
+      "candidate": 0.9752066115702479
+    },
+    "Pathaka": {
+      "n": 186,
+      "baseline": 0.8279569892473119,
+      "candidate": 0.8279569892473119
+    },
+    "Pushpaputa": {
+      "n": 208,
+      "baseline": 0.9615384615384616,
+      "candidate": 0.9038461538461539
+    },
+    "Shanka": {
+      "n": 164,
+      "baseline": 0.9817073170731707,
+      "candidate": 0.9695121951219512
+    },
+    "Shivalinga": {
+      "n": 91,
+      "baseline": 0.978021978021978,
+      "candidate": 0.967032967032967
+    },
+    "Sikharam": {
+      "n": 78,
+      "baseline": 0.9871794871794872,
+      "candidate": 0.9871794871794872
+    },
+    "Simhamukham": {
+      "n": 54,
+      "baseline": 0.8703703703703703,
+      "candidate": 0.8703703703703703
+    },
+    "Suchi": {
+      "n": 128,
+      "baseline": 0.953125,
+      "candidate": 0.953125
+    },
+    "Tamarachudam": {
+      "n": 98,
+      "baseline": 0.8877551020408163,
+      "candidate": 0.8877551020408163
+    },
+    "Tripathaka": {
+      "n": 110,
+      "baseline": 0.8818181818181818,
+      "candidate": 0.8818181818181818
+    },
+    "Trishulam": {
+      "n": 126,
+      "baseline": 0.9761904761904762,
+      "candidate": 0.9761904761904762
+    }
+  },
+  "pass_admission": false,
+  "reasons": [
+    "Overall accuracy below baseline",
+    "Wrong-at-95% exceeds 39",
+    "At-least-95% baseline classes regress"
+  ],
+  "runtime_checks": [
+    {
+      "source_index": 1890,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": null
+    },
+    {
+      "source_index": 13968,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": null
+    },
+    {
+      "source_index": 1825,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": null
+    },
+    {
+      "source_index": 6799,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": null
+    },
+    {
+      "source_index": 14944,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": null
+    },
+    {
+      "source_index": 7299,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": null
+    },
+    {
+      "source_index": 15125,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": null
+    },
+    {
+      "source_index": 6080,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": null
+    },
+    {
+      "source_index": 5151,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": null
+    },
+    {
+      "source_index": 8592,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": null
+    },
+    {
+      "source_index": 13938,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": null
+    },
+    {
+      "source_index": 9843,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": null
+    },
+    {
+      "source_index": 13594,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": null
+    },
+    {
+      "source_index": 12307,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": null
+    },
+    {
+      "source_index": 5166,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": null
+    },
+    {
+      "source_index": 2793,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": null
+    },
+    {
+      "source_index": 13929,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": null
+    },
+    {
+      "source_index": 5228,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": null
+    },
+    {
+      "source_index": 15171,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": null
+    },
+    {
+      "source_index": 13650,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": null
+    },
+    {
+      "source_index": 17387,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": "mediapipe_fallback"
+    },
+    {
+      "source_index": 21853,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": "mediapipe_fallback"
+    },
+    {
+      "source_index": 17365,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": "mediapipe_fallback"
+    },
+    {
+      "source_index": 19172,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": "mediapipe_fallback"
+    },
+    {
+      "source_index": 22228,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": "mediapipe_fallback"
+    },
+    {
+      "source_index": 19352,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": "mediapipe_fallback"
+    },
+    {
+      "source_index": 22915,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": "mediapipe_fallback"
+    },
+    {
+      "source_index": 18886,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": "mediapipe_fallback"
+    },
+    {
+      "source_index": 18434,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": "mediapipe_fallback"
+    },
+    {
+      "source_index": 19792,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": "mediapipe_fallback"
+    },
+    {
+      "source_index": 21849,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": "mediapipe_fallback"
+    },
+    {
+      "source_index": 20358,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": "rtmpose"
+    },
+    {
+      "source_index": 21749,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": "mediapipe_fallback"
+    },
+    {
+      "source_index": 21283,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": "mediapipe_fallback"
+    },
+    {
+      "source_index": 18450,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": "mediapipe_fallback"
+    },
+    {
+      "source_index": 17661,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": "rtmpose"
+    },
+    {
+      "source_index": 22930,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": "mediapipe_fallback"
+    },
+    {
+      "source_index": 18489,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": "mediapipe_fallback"
+    },
+    {
+      "source_index": 22283,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": "rtmpose"
+    },
+    {
+      "source_index": 21763,
+      "candidate_match": true,
+      "baseline_match": true,
+      "candidate_source": "mediapipe_fallback"
+    }
+  ],
+  "runtime_mismatches": 0,
+  "latency": {
+    "baseline": {
+      "mean_ms": 195.08884999813745,
+      "median_ms": 196.2307499779854,
+      "p95_ms": 325.348344995291
+    },
+    "candidate": {
+      "mean_ms": 276.8170575000113,
+      "median_ms": 261.95394998649135,
+      "p95_ms": 397.68309001519805
+    }
+  },
+  "proposal_changes": [
+    {
+      "source_index": 16612,
+      "true": "Anjali",
+      "old": "Anjali",
+      "new": "Anjali",
+      "confidence": 0.999996679761535
+    },
+    {
+      "source_index": 16629,
+      "true": "Anjali",
+      "old": "Anjali",
+      "new": "Kapotham",
+      "confidence": 0.9525406091450265
+    },
+    {
+      "source_index": 16631,
+      "true": "Anjali",
+      "old": "Anjali",
+      "new": "Anjali",
+      "confidence": 0.9833344274798251
+    },
+    {
+      "source_index": 16806,
+      "true": "Anjali",
+      "old": "Anjali",
+      "new": "Anjali",
+      "confidence": 0.9999938322545356
+    },
+    {
+      "source_index": 16837,
+      "true": "Anjali",
+      "old": "Anjali",
+      "new": "Anjali",
+      "confidence": 0.999954902078407
+    },
+    {
+      "source_index": 16853,
+      "true": "Anjali",
+      "old": "Anjali",
+      "new": "Anjali",
+      "confidence": 0.9999985412841048
+    },
+    {
+      "source_index": 16892,
+      "true": "Anjali",
+      "old": "Anjali",
+      "new": "Anjali",
+      "confidence": 0.9992896837428707
+    },
+    {
+      "source_index": 16920,
+      "true": "Anjali",
+      "old": "Anjali",
+      "new": "Anjali",
+      "confidence": 0.9968205795191396
+    },
+    {
+      "source_index": 16934,
+      "true": "Anjali",
+      "old": "Anjali",
+      "new": "Anjali",
+      "confidence": 0.9980789386428967
+    },
+    {
+      "source_index": 17037,
+      "true": "Anjali",
+      "old": "Anjali",
+      "new": "Anjali",
+      "confidence": 0.9999074679143098
+    },
+    {
+      "source_index": 17052,
+      "true": "Anjali",
+      "old": "Anjali",
+      "new": "Anjali",
+      "confidence": 0.998856704829646
+    },
+    {
+      "source_index": 17100,
+      "true": "Anjali",
+      "old": "Anjali",
+      "new": "Anjali",
+      "confidence": 0.9885401971451871
+    },
+    {
+      "source_index": 17243,
+      "true": "Anjali",
+      "old": "Anjali",
+      "new": "Anjali",
+      "confidence": 0.9999731712499305
+    },
+    {
+      "source_index": 17456,
+      "true": "Chakra",
+      "old": "Chakra",
+      "new": "Garuda",
+      "confidence": 0.999052059719493
+    },
+    {
+      "source_index": 17554,
+      "true": "Chakra",
+      "old": "Chakra",
+      "new": "Garuda",
+      "confidence": 0.9993560710173601
+    },
+    {
+      "source_index": 17602,
+      "true": "Chakra",
+      "old": "Karkatta",
+      "new": "Chakra",
+      "confidence": 0.999902172847957
+    },
+    {
+      "source_index": 17611,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999999998044
+    },
+    {
+      "source_index": 17619,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999999994942
+    },
+    {
+      "source_index": 17625,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999997457993
+    },
+    {
+      "source_index": 17634,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999995493287
+    },
+    {
+      "source_index": 17637,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999989616175
+    },
+    {
+      "source_index": 17644,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9998676377452094
+    },
+    {
+      "source_index": 17653,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999999987059
+    },
+    {
+      "source_index": 17654,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999857215094
+    },
+    {
+      "source_index": 17661,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Pushpaputa",
+      "confidence": 0.9936883711477762
+    },
+    {
+      "source_index": 17664,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999949619629
+    },
+    {
+      "source_index": 17669,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.999889205235821
+    },
+    {
+      "source_index": 17678,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.99999013181332
+    },
+    {
+      "source_index": 17683,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999031212982
+    },
+    {
+      "source_index": 17684,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999792348115
+    },
+    {
+      "source_index": 17691,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.999990445201938
+    },
+    {
+      "source_index": 17693,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.999999986419555
+    },
+    {
+      "source_index": 17714,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999937381991
+    },
+    {
+      "source_index": 17731,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999999965905
+    },
+    {
+      "source_index": 17738,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999878863105
+    },
+    {
+      "source_index": 17740,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999999999638
+    },
+    {
+      "source_index": 17742,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999999998208
+    },
+    {
+      "source_index": 17750,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999385088707
+    },
+    {
+      "source_index": 17751,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999999998188
+    },
+    {
+      "source_index": 17761,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999997267526654
+    },
+    {
+      "source_index": 17771,
+      "true": "Garuda",
+      "old": "Karkatta",
+      "new": "Garuda",
+      "confidence": 0.9994977515957391
+    },
+    {
+      "source_index": 17776,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999432833059
+    },
+    {
+      "source_index": 17788,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999999997178
+    },
+    {
+      "source_index": 17794,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999999771862
+    },
+    {
+      "source_index": 17795,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999998194630171
+    },
+    {
+      "source_index": 17804,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999996374154652
+    },
+    {
+      "source_index": 17808,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999873101284252
+    },
+    {
+      "source_index": 17811,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999108353241
+    },
+    {
+      "source_index": 17816,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.999998559859106
+    },
+    {
+      "source_index": 17819,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.999999918604505
+    },
+    {
+      "source_index": 17825,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999999513836
+    },
+    {
+      "source_index": 17833,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999999995466
+    },
+    {
+      "source_index": 17835,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999171138685
+    },
+    {
+      "source_index": 17840,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999976521459477
+    },
+    {
+      "source_index": 17856,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999999999658
+    },
+    {
+      "source_index": 17872,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999990010093
+    },
+    {
+      "source_index": 17887,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999984253957308
+    },
+    {
+      "source_index": 17897,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.999999997060327
+    },
+    {
+      "source_index": 17902,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999999996287
+    },
+    {
+      "source_index": 17903,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999821675715
+    },
+    {
+      "source_index": 17906,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9623464424716845
+    },
+    {
+      "source_index": 17907,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999986534319629
+    },
+    {
+      "source_index": 17913,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999998993428182
+    },
+    {
+      "source_index": 17914,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.999999910319777
+    },
+    {
+      "source_index": 17919,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999552338013
+    },
+    {
+      "source_index": 17935,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999999769555
+    },
+    {
+      "source_index": 17939,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999976756535
+    },
+    {
+      "source_index": 17941,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999965108026
+    },
+    {
+      "source_index": 17942,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999998852264974
+    },
+    {
+      "source_index": 17943,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999998837556905
+    },
+    {
+      "source_index": 17944,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999995954889258
+    },
+    {
+      "source_index": 17945,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999975211495903
+    },
+    {
+      "source_index": 17946,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.999999998279999
+    },
+    {
+      "source_index": 17948,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999283834223024
+    },
+    {
+      "source_index": 17953,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.99999999768113
+    },
+    {
+      "source_index": 17962,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999997491706
+    },
+    {
+      "source_index": 17980,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.991109951706568
+    },
+    {
+      "source_index": 17989,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999999998865
+    },
+    {
+      "source_index": 17992,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999669573329872
+    },
+    {
+      "source_index": 17993,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Pushpaputa",
+      "confidence": 0.985621843407071
+    },
+    {
+      "source_index": 18012,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999879843905
+    },
+    {
+      "source_index": 18014,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999995124598128
+    },
+    {
+      "source_index": 18017,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999989278967832
+    },
+    {
+      "source_index": 18018,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999715542843
+    },
+    {
+      "source_index": 18024,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999968301303
+    },
+    {
+      "source_index": 18025,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999990458419
+    },
+    {
+      "source_index": 18029,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.999999999999968
+    },
+    {
+      "source_index": 18034,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999939911803
+    },
+    {
+      "source_index": 18035,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999963318345
+    },
+    {
+      "source_index": 18039,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999999390321
+    },
+    {
+      "source_index": 18042,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999988441453
+    },
+    {
+      "source_index": 18050,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999926341165
+    },
+    {
+      "source_index": 18052,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.999991258599552
+    },
+    {
+      "source_index": 18053,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999328053157562
+    },
+    {
+      "source_index": 18055,
+      "true": "Garuda",
+      "old": "Shanka",
+      "new": "Garuda",
+      "confidence": 0.9999999994782129
+    },
+    {
+      "source_index": 18061,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999942599151
+    },
+    {
+      "source_index": 18068,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999999883455
+    },
+    {
+      "source_index": 18070,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999918430176576
+    },
+    {
+      "source_index": 18074,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.999999912133436
+    },
+    {
+      "source_index": 18076,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999838118192
+    },
+    {
+      "source_index": 18083,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9997296079599732
+    },
+    {
+      "source_index": 18090,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999881871032057
+    },
+    {
+      "source_index": 18092,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9996399414187628
+    },
+    {
+      "source_index": 18096,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.999999973965888
+    },
+    {
+      "source_index": 18098,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999999998501
+    },
+    {
+      "source_index": 18101,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999781771397102
+    },
+    {
+      "source_index": 18102,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9996397508122472
+    },
+    {
+      "source_index": 18111,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.999966162883593
+    },
+    {
+      "source_index": 18116,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999999999658
+    },
+    {
+      "source_index": 18117,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999978274156544
+    },
+    {
+      "source_index": 18121,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999997457882
+    },
+    {
+      "source_index": 18123,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999870357422033
+    },
+    {
+      "source_index": 18128,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999733701911262
+    },
+    {
+      "source_index": 18132,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.999997098842688
+    },
+    {
+      "source_index": 18134,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999997542319863
+    },
+    {
+      "source_index": 18137,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999999994769
+    },
+    {
+      "source_index": 18152,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Pushpaputa",
+      "confidence": 0.9875052414553626
+    },
+    {
+      "source_index": 18155,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999206116861565
+    },
+    {
+      "source_index": 18157,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999926507945
+    },
+    {
+      "source_index": 18170,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999963583377
+    },
+    {
+      "source_index": 18182,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999999999021
+    },
+    {
+      "source_index": 18188,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999990092517138
+    },
+    {
+      "source_index": 18189,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Pushpaputa",
+      "confidence": 0.9657031633323884
+    },
+    {
+      "source_index": 18190,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.999999974647281
+    },
+    {
+      "source_index": 18192,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.999999419147836
+    },
+    {
+      "source_index": 18204,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999999999725
+    },
+    {
+      "source_index": 18212,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999999866895
+    },
+    {
+      "source_index": 18226,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999740647729
+    },
+    {
+      "source_index": 18228,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999989663777041
+    },
+    {
+      "source_index": 18234,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999999997289
+    },
+    {
+      "source_index": 18240,
+      "true": "Garuda",
+      "old": "Garuda",
+      "new": "Garuda",
+      "confidence": 0.9999999999999143
+    },
+    {
+      "source_index": 18270,
+      "true": "Kapotham",
+      "old": "Kapotham",
+      "new": "Kapotham",
+      "confidence": 0.9999067157414678
+    },
+    {
+      "source_index": 18308,
+      "true": "Kapotham",
+      "old": "Kapotham",
+      "new": "Kapotham",
+      "confidence": 0.9999994802629192
+    },
+    {
+      "source_index": 18392,
+      "true": "Kapotham",
+      "old": "Kapotham",
+      "new": "Kapotham",
+      "confidence": 0.9999997642847935
+    },
+    {
+      "source_index": 18425,
+      "true": "Kapotham",
+      "old": "Kapotham",
+      "new": "Kapotham",
+      "confidence": 0.9831498536817965
+    },
+    {
+      "source_index": 18437,
+      "true": "Kapotham",
+      "old": "Kapotham",
+      "new": "Kapotham",
+      "confidence": 0.9998100570904023
+    },
+    {
+      "source_index": 18516,
+      "true": "Kapotham",
+      "old": "Kapotham",
+      "new": "Kapotham",
+      "confidence": 0.9883763634193284
+    },
+    {
+      "source_index": 18525,
+      "true": "Kapotham",
+      "old": "Kapotham",
+      "new": "Kapotham",
+      "confidence": 0.9998569639350589
+    },
+    {
+      "source_index": 18532,
+      "true": "Kapotham",
+      "old": "Kapotham",
+      "new": "Kapotham",
+      "confidence": 0.9965976834433221
+    },
+    {
+      "source_index": 18550,
+      "true": "Kapotham",
+      "old": "Kapotham",
+      "new": "Kapotham",
+      "confidence": 0.9990403827260615
+    },
+    {
+      "source_index": 18580,
+      "true": "Kapotham",
+      "old": "Kapotham",
+      "new": "Kapotham",
+      "confidence": 0.9892934714676008
+    },
+    {
+      "source_index": 18596,
+      "true": "Kapotham",
+      "old": "Kapotham",
+      "new": "Nagabandha",
+      "confidence": 0.9998444345538544
+    },
+    {
+      "source_index": 18613,
+      "true": "Kapotham",
+      "old": "Kapotham",
+      "new": "Kapotham",
+      "confidence": 0.9998481116432143
+    },
+    {
+      "source_index": 18617,
+      "true": "Kapotham",
+      "old": "Kapotham",
+      "new": "Kapotham",
+      "confidence": 0.9757644198023019
+    },
+    {
+      "source_index": 18674,
+      "true": "Kapotham",
+      "old": "Kapotham",
+      "new": "Kapotham",
+      "confidence": 0.9999999876023148
+    },
+    {
+      "source_index": 18727,
+      "true": "Kapotham",
+      "old": "Kapotham",
+      "new": "Nagabandha",
+      "confidence": 0.9797615325688118
+    },
+    {
+      "source_index": 18737,
+      "true": "Kapotham",
+      "old": "Kapotham",
+      "new": "Kapotham",
+      "confidence": 0.9973373207122835
+    },
+    {
+      "source_index": 18788,
+      "true": "Kapotham",
+      "old": "Kapotham",
+      "new": "Kapotham",
+      "confidence": 0.9956161525380818
+    },
+    {
+      "source_index": 18813,
+      "true": "Kapotham",
+      "old": "Kapotham",
+      "new": "Kapotham",
+      "confidence": 0.9999999979261005
+    },
+    {
+      "source_index": 18896,
+      "true": "Kapotham",
+      "old": "Kapotham",
+      "new": "Anjali",
+      "confidence": 0.9859202380921148
+    },
+    {
+      "source_index": 18906,
+      "true": "Kapotham",
+      "old": "Kapotham",
+      "new": "Kapotham",
+      "confidence": 0.9999677484429216
+    },
+    {
+      "source_index": 18937,
+      "true": "Karkatta",
+      "old": "Karkatta",
+      "new": "Karkatta",
+      "confidence": 0.9999854394026978
+    },
+    {
+      "source_index": 18938,
+      "true": "Karkatta",
+      "old": "Karkatta",
+      "new": "Shivalinga",
+      "confidence": 0.9997749407158264
+    },
+    {
+      "source_index": 18941,
+      "true": "Karkatta",
+      "old": "Karkatta",
+      "new": "Chakra",
+      "confidence": 0.9935085268821027
+    },
+    {
+      "source_index": 18959,
+      "true": "Karkatta",
+      "old": "Karkatta",
+      "new": "Karkatta",
+      "confidence": 0.999999813293249
+    },
+    {
+      "source_index": 19022,
+      "true": "Karkatta",
+      "old": "Karkatta",
+      "new": "Karkatta",
+      "confidence": 0.9999998283674706
+    },
+    {
+      "source_index": 19051,
+      "true": "Karkatta",
+      "old": "Karkatta",
+      "new": "Karkatta",
+      "confidence": 0.9999994208004916
+    },
+    {
+      "source_index": 19066,
+      "true": "Karkatta",
+      "old": "Karkatta",
+      "new": "Karkatta",
+      "confidence": 0.999999994498713
+    },
+    {
+      "source_index": 19067,
+      "true": "Karkatta",
+      "old": "Karkatta",
+      "new": "Karkatta",
+      "confidence": 0.9999999775139096
+    },
+    {
+      "source_index": 19075,
+      "true": "Karkatta",
+      "old": "Karkatta",
+      "new": "Karkatta",
+      "confidence": 0.9999425705741173
+    },
+    {
+      "source_index": 19120,
+      "true": "Karkatta",
+      "old": "Karkatta",
+      "new": "Nagabandha",
+      "confidence": 0.9999999614674943
+    },
+    {
+      "source_index": 19151,
+      "true": "Karkatta",
+      "old": "Karkatta",
+      "new": "Karkatta",
+      "confidence": 0.9999991618154218
+    },
+    {
+      "source_index": 19155,
+      "true": "Karkatta",
+      "old": "Karkatta",
+      "new": "Karkatta",
+      "confidence": 0.991987289244192
+    },
+    {
+      "source_index": 19184,
+      "true": "Karkatta",
+      "old": "Karkatta",
+      "new": "Karkatta",
+      "confidence": 0.9831246439307313
+    },
+    {
+      "source_index": 19203,
+      "true": "Karkatta",
+      "old": "Karkatta",
+      "new": "Karkatta",
+      "confidence": 0.9999837300360905
+    },
+    {
+      "source_index": 19209,
+      "true": "Karkatta",
+      "old": "Karkatta",
+      "new": "Karkatta",
+      "confidence": 0.9999859697530405
+    },
+    {
+      "source_index": 19212,
+      "true": "Karkatta",
+      "old": "Karkatta",
+      "new": "Karkatta",
+      "confidence": 0.999999947351711
+    },
+    {
+      "source_index": 19231,
+      "true": "Karkatta",
+      "old": "Karkatta",
+      "new": "Karkatta",
+      "confidence": 0.9999999771729721
+    },
+    {
+      "source_index": 19292,
+      "true": "Karkatta",
+      "old": "Karkatta",
+      "new": "Karkatta",
+      "confidence": 0.998619326147531
+    },
+    {
+      "source_index": 19358,
+      "true": "Karkatta",
+      "old": "Karkatta",
+      "new": "Karkatta",
+      "confidence": 0.9999967483436629
+    },
+    {
+      "source_index": 19363,
+      "true": "Karkatta",
+      "old": "Karkatta",
+      "new": "Karkatta",
+      "confidence": 0.9999999168061984
+    },
+    {
+      "source_index": 19366,
+      "true": "Karkatta",
+      "old": "Karkatta",
+      "new": "Karkatta",
+      "confidence": 0.9999980416403043
+    },
+    {
+      "source_index": 19399,
+      "true": "Karkatta",
+      "old": "Karkatta",
+      "new": "Karkatta",
+      "confidence": 0.9972081470527033
+    },
+    {
+      "source_index": 19490,
+      "true": "Karkatta",
+      "old": "Karkatta",
+      "new": "Nagabandha",
+      "confidence": 0.9834584779793457
+    },
+    {
+      "source_index": 19614,
+      "true": "Karkatta",
+      "old": "Karkatta",
+      "new": "Karkatta",
+      "confidence": 0.9999973691722263
+    },
+    {
+      "source_index": 19616,
+      "true": "Karkatta",
+      "old": "Karkatta",
+      "new": "Karkatta",
+      "confidence": 0.9968125082267398
+    },
+    {
+      "source_index": 19617,
+      "true": "Karkatta",
+      "old": "Karkatta",
+      "new": "Karkatta",
+      "confidence": 0.9776136960744973
+    },
+    {
+      "source_index": 19848,
+      "true": "Kurma",
+      "old": "Kurma",
+      "new": "Karkatta",
+      "confidence": 0.95882089721513
+    },
+    {
+      "source_index": 20021,
+      "true": "Kurma",
+      "old": "Kurma",
+      "new": "Garuda",
+      "confidence": 0.9960849812192877
+    },
+    {
+      "source_index": 20157,
+      "true": "Kurma",
+      "old": "Kurma",
+      "new": "Nagabandha",
+      "confidence": 0.999617952454977
+    },
+    {
+      "source_index": 20231,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.999997564747111
+    },
+    {
+      "source_index": 20252,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999926876
+    },
+    {
+      "source_index": 20254,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999969851221103
+    },
+    {
+      "source_index": 20258,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Anjali",
+      "confidence": 0.9689327750478278
+    },
+    {
+      "source_index": 20259,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999998794
+    },
+    {
+      "source_index": 20260,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999999987
+    },
+    {
+      "source_index": 20261,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999996649
+    },
+    {
+      "source_index": 20266,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999967064801
+    },
+    {
+      "source_index": 20267,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999997735
+    },
+    {
+      "source_index": 20268,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9836161835616662
+    },
+    {
+      "source_index": 20273,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999929345
+    },
+    {
+      "source_index": 20284,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.999999999999974
+    },
+    {
+      "source_index": 20285,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999943204392548
+    },
+    {
+      "source_index": 20289,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999993139
+    },
+    {
+      "source_index": 20300,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999999469
+    },
+    {
+      "source_index": 20301,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999116224192
+    },
+    {
+      "source_index": 20310,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999953535663
+    },
+    {
+      "source_index": 20322,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9993168205068443
+    },
+    {
+      "source_index": 20332,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999999665
+    },
+    {
+      "source_index": 20349,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999263881973935
+    },
+    {
+      "source_index": 20350,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999734106
+    },
+    {
+      "source_index": 20355,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999989182
+    },
+    {
+      "source_index": 20358,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9986183193086438
+    },
+    {
+      "source_index": 20360,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999971407
+    },
+    {
+      "source_index": 20384,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999999956
+    },
+    {
+      "source_index": 20385,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999989030288
+    },
+    {
+      "source_index": 20394,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Kapotham",
+      "confidence": 0.9995640888627653
+    },
+    {
+      "source_index": 20396,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.999993026228379
+    },
+    {
+      "source_index": 20405,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999895102
+    },
+    {
+      "source_index": 20410,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.999999999999861
+    },
+    {
+      "source_index": 20423,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Anjali",
+      "confidence": 0.9720677296764055
+    },
+    {
+      "source_index": 20427,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999824960949928
+    },
+    {
+      "source_index": 20431,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999947901296332
+    },
+    {
+      "source_index": 20432,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999855059553
+    },
+    {
+      "source_index": 20436,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.999999999884928
+    },
+    {
+      "source_index": 20440,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.999937149951557
+    },
+    {
+      "source_index": 20443,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999994116960998
+    },
+    {
+      "source_index": 20451,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999891890488831
+    },
+    {
+      "source_index": 20454,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999999911
+    },
+    {
+      "source_index": 20460,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.999999999999869
+    },
+    {
+      "source_index": 20461,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999997868
+    },
+    {
+      "source_index": 20466,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999955576444717
+    },
+    {
+      "source_index": 20470,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.999999999997208
+    },
+    {
+      "source_index": 20474,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9998965329273423
+    },
+    {
+      "source_index": 20485,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999998625941
+    },
+    {
+      "source_index": 20486,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999964322
+    },
+    {
+      "source_index": 20490,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9984885905212619
+    },
+    {
+      "source_index": 20496,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9998881982824873
+    },
+    {
+      "source_index": 20502,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999997142
+    },
+    {
+      "source_index": 20504,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999603849093558
+    },
+    {
+      "source_index": 20518,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999997693
+    },
+    {
+      "source_index": 20519,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999987643736987
+    },
+    {
+      "source_index": 20520,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9942753602095047
+    },
+    {
+      "source_index": 20524,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999999976
+    },
+    {
+      "source_index": 20540,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999890112904252
+    },
+    {
+      "source_index": 20547,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999953690837826
+    },
+    {
+      "source_index": 20549,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999998164
+    },
+    {
+      "source_index": 20554,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999996299
+    },
+    {
+      "source_index": 20559,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999994939633957
+    },
+    {
+      "source_index": 20565,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999995937037
+    },
+    {
+      "source_index": 20567,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999989253
+    },
+    {
+      "source_index": 20569,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.999996800686437
+    },
+    {
+      "source_index": 20571,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999926923302
+    },
+    {
+      "source_index": 20579,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999934328374
+    },
+    {
+      "source_index": 20590,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999999944
+    },
+    {
+      "source_index": 20592,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999996165
+    },
+    {
+      "source_index": 20593,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.999999999982133
+    },
+    {
+      "source_index": 20595,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9870434937767677
+    },
+    {
+      "source_index": 20607,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999999594
+    },
+    {
+      "source_index": 20621,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999998129927
+    },
+    {
+      "source_index": 20626,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9998120552725073
+    },
+    {
+      "source_index": 20632,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999956865459381
+    },
+    {
+      "source_index": 20633,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999948792
+    },
+    {
+      "source_index": 20636,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999992656505364
+    },
+    {
+      "source_index": 20637,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999998843
+    },
+    {
+      "source_index": 20639,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999975655
+    },
+    {
+      "source_index": 20641,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.975886044860924
+    },
+    {
+      "source_index": 20644,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999999905
+    },
+    {
+      "source_index": 20647,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999995275419481
+    },
+    {
+      "source_index": 20649,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9995837220218452
+    },
+    {
+      "source_index": 20669,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999991678
+    },
+    {
+      "source_index": 20672,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9994791140514172
+    },
+    {
+      "source_index": 20674,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999994607
+    },
+    {
+      "source_index": 20677,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999993436
+    },
+    {
+      "source_index": 20682,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999999838
+    },
+    {
+      "source_index": 20685,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999978479
+    },
+    {
+      "source_index": 20687,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9995404868805238
+    },
+    {
+      "source_index": 20688,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999765138502
+    },
+    {
+      "source_index": 20693,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999718564602
+    },
+    {
+      "source_index": 20697,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999998843
+    },
+    {
+      "source_index": 20705,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999402351306088
+    },
+    {
+      "source_index": 20708,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999998050334642
+    },
+    {
+      "source_index": 20710,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999827771
+    },
+    {
+      "source_index": 20715,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999616432142203
+    },
+    {
+      "source_index": 20724,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999973266609
+    },
+    {
+      "source_index": 20734,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999988924
+    },
+    {
+      "source_index": 20737,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999938730468
+    },
+    {
+      "source_index": 20738,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999999225
+    },
+    {
+      "source_index": 20739,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999068363894613
+    },
+    {
+      "source_index": 20746,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9984632297657728
+    },
+    {
+      "source_index": 20748,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9995876011003606
+    },
+    {
+      "source_index": 20761,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999182746072778
+    },
+    {
+      "source_index": 20763,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.999999999999998
+    },
+    {
+      "source_index": 20764,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.99999999999996
+    },
+    {
+      "source_index": 20766,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.999999999999811
+    },
+    {
+      "source_index": 20774,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999670712
+    },
+    {
+      "source_index": 20782,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999035034
+    },
+    {
+      "source_index": 20783,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999999998
+    },
+    {
+      "source_index": 20784,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999913910572
+    },
+    {
+      "source_index": 20789,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999992504395155
+    },
+    {
+      "source_index": 20798,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.999999999999899
+    },
+    {
+      "source_index": 20803,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999979805
+    },
+    {
+      "source_index": 20805,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999987992
+    },
+    {
+      "source_index": 20806,
+      "true": "Nagabandha",
+      "old": "Nagabandha",
+      "new": "Nagabandha",
+      "confidence": 0.9999999999724818
+    },
+    {
+      "source_index": 20815,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Pushpaputa",
+      "confidence": 0.9976655476288504
+    },
+    {
+      "source_index": 20818,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Pushpaputa",
+      "confidence": 0.9999999999056366
+    },
+    {
+      "source_index": 20839,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Pushpaputa",
+      "confidence": 0.9979282168705018
+    },
+    {
+      "source_index": 20854,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Garuda",
+      "confidence": 0.9914027827572424
+    },
+    {
+      "source_index": 20874,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Pushpaputa",
+      "confidence": 0.9999999999997657
+    },
+    {
+      "source_index": 20888,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Pushpaputa",
+      "confidence": 0.9998525434405341
+    },
+    {
+      "source_index": 20909,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Pushpaputa",
+      "confidence": 0.9999434746258472
+    },
+    {
+      "source_index": 20928,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Pushpaputa",
+      "confidence": 0.9999999999984976
+    },
+    {
+      "source_index": 20974,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Pushpaputa",
+      "confidence": 0.9999155788817623
+    },
+    {
+      "source_index": 20995,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Nagabandha",
+      "confidence": 0.9975771921553149
+    },
+    {
+      "source_index": 21021,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Pushpaputa",
+      "confidence": 0.999990932134833
+    },
+    {
+      "source_index": 21089,
+      "true": "Pushpaputa",
+      "old": "Kurma",
+      "new": "Pushpaputa",
+      "confidence": 0.9999993254018827
+    },
+    {
+      "source_index": 21167,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Nagabandha",
+      "confidence": 0.9729589299441969
+    },
+    {
+      "source_index": 21169,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Shivalinga",
+      "confidence": 0.998947812728143
+    },
+    {
+      "source_index": 21193,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Nagabandha",
+      "confidence": 0.9999964551685839
+    },
+    {
+      "source_index": 21221,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Pushpaputa",
+      "confidence": 0.9999999999917333
+    },
+    {
+      "source_index": 21223,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Pushpaputa",
+      "confidence": 0.9999980270552163
+    },
+    {
+      "source_index": 21230,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Pushpaputa",
+      "confidence": 0.9986077070277052
+    },
+    {
+      "source_index": 21265,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Shivalinga",
+      "confidence": 0.9572356891047011
+    },
+    {
+      "source_index": 21316,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Pushpaputa",
+      "confidence": 0.9968761410520195
+    },
+    {
+      "source_index": 21344,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Shivalinga",
+      "confidence": 0.9964128046350111
+    },
+    {
+      "source_index": 21348,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Pushpaputa",
+      "confidence": 0.9750303951292416
+    },
+    {
+      "source_index": 21444,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Shivalinga",
+      "confidence": 0.9980701514046593
+    },
+    {
+      "source_index": 21447,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Kapotham",
+      "confidence": 0.9948978563911585
+    },
+    {
+      "source_index": 21491,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Nagabandha",
+      "confidence": 0.9971566378664735
+    },
+    {
+      "source_index": 21505,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Nagabandha",
+      "confidence": 0.9842781979020095
+    },
+    {
+      "source_index": 21514,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Karkatta",
+      "confidence": 0.9877482662365149
+    },
+    {
+      "source_index": 21573,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Pushpaputa",
+      "confidence": 0.9999497143612593
+    },
+    {
+      "source_index": 21624,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Pushpaputa",
+      "confidence": 0.9999999710003085
+    },
+    {
+      "source_index": 21655,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Nagabandha",
+      "confidence": 0.9998768675664963
+    },
+    {
+      "source_index": 21672,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Pushpaputa",
+      "confidence": 0.9984756721675521
+    },
+    {
+      "source_index": 21673,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Pushpaputa",
+      "confidence": 0.9997362817806236
+    },
+    {
+      "source_index": 21674,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Pushpaputa",
+      "confidence": 0.9971173419592178
+    },
+    {
+      "source_index": 21675,
+      "true": "Pushpaputa",
+      "old": "Pushpaputa",
+      "new": "Pushpaputa",
+      "confidence": 0.9987089670707481
+    },
+    {
+      "source_index": 21757,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9999999687510693
+    },
+    {
+      "source_index": 21786,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9993580148364242
+    },
+    {
+      "source_index": 21788,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9995148446080174
+    },
+    {
+      "source_index": 21792,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9999999955002632
+    },
+    {
+      "source_index": 21799,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9975884992183671
+    },
+    {
+      "source_index": 21820,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9999999999374489
+    },
+    {
+      "source_index": 21838,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9999938161384051
+    },
+    {
+      "source_index": 21890,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9999999988647172
+    },
+    {
+      "source_index": 21893,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.999999585697499
+    },
+    {
+      "source_index": 21894,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9999997461639816
+    },
+    {
+      "source_index": 21907,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9999999986286665
+    },
+    {
+      "source_index": 21991,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.999999973440393
+    },
+    {
+      "source_index": 22036,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.999973238217231
+    },
+    {
+      "source_index": 22064,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9999999890709285
+    },
+    {
+      "source_index": 22093,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9999941168478492
+    },
+    {
+      "source_index": 22095,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Karkatta",
+      "confidence": 0.9967752212376193
+    },
+    {
+      "source_index": 22099,
+      "true": "Shanka",
+      "old": "Karkatta",
+      "new": "Shanka",
+      "confidence": 0.9999960606455779
+    },
+    {
+      "source_index": 22122,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.999889662819676
+    },
+    {
+      "source_index": 22126,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9836936770048992
+    },
+    {
+      "source_index": 22127,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9999788252167521
+    },
+    {
+      "source_index": 22139,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9999999999996683
+    },
+    {
+      "source_index": 22164,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Anjali",
+      "confidence": 0.9999918262422839
+    },
+    {
+      "source_index": 22175,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9999999988545263
+    },
+    {
+      "source_index": 22179,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9999667579697803
+    },
+    {
+      "source_index": 22200,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9999999999060296
+    },
+    {
+      "source_index": 22212,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9998576789445184
+    },
+    {
+      "source_index": 22216,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9999993157975203
+    },
+    {
+      "source_index": 22236,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9999843435491803
+    },
+    {
+      "source_index": 22249,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9998178932873251
+    },
+    {
+      "source_index": 22283,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9999939480560178
+    },
+    {
+      "source_index": 22285,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9894495345724902
+    },
+    {
+      "source_index": 22304,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.996995671332911
+    },
+    {
+      "source_index": 22357,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9987421575126845
+    },
+    {
+      "source_index": 22368,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9999997401132386
+    },
+    {
+      "source_index": 22385,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9999564532529436
+    },
+    {
+      "source_index": 22395,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9999999997177096
+    },
+    {
+      "source_index": 22415,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9982131800995437
+    },
+    {
+      "source_index": 22430,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9999999644195084
+    },
+    {
+      "source_index": 22446,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Shanka",
+      "confidence": 0.9940133927910022
+    },
+    {
+      "source_index": 22451,
+      "true": "Shanka",
+      "old": "Shanka",
+      "new": "Kapotham",
+      "confidence": 0.9995805235481715
+    },
+    {
+      "source_index": 22473,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9793747557175777
+    },
+    {
+      "source_index": 22498,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9999980961695899
+    },
+    {
+      "source_index": 22499,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9997251026239055
+    },
+    {
+      "source_index": 22539,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9997874717068915
+    },
+    {
+      "source_index": 22579,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9999743619005516
+    },
+    {
+      "source_index": 22593,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9999197592883472
+    },
+    {
+      "source_index": 22619,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.999901513128991
+    },
+    {
+      "source_index": 22626,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9856627361323985
+    },
+    {
+      "source_index": 22640,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9998514112169997
+    },
+    {
+      "source_index": 22644,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9999880553620124
+    },
+    {
+      "source_index": 22653,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9999998421121082
+    },
+    {
+      "source_index": 22674,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9999901858268812
+    },
+    {
+      "source_index": 22677,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9996436818064903
+    },
+    {
+      "source_index": 22689,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9986925977435867
+    },
+    {
+      "source_index": 22699,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9999881297276039
+    },
+    {
+      "source_index": 22704,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9970708394033652
+    },
+    {
+      "source_index": 22713,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9999979710000263
+    },
+    {
+      "source_index": 22729,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9999991687641394
+    },
+    {
+      "source_index": 22775,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9999843846773382
+    },
+    {
+      "source_index": 22788,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Karkatta",
+      "confidence": 0.9991377822870798
+    },
+    {
+      "source_index": 22851,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9996782473297222
+    },
+    {
+      "source_index": 22865,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9999743083784957
+    },
+    {
+      "source_index": 22869,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9945839848495448
+    },
+    {
+      "source_index": 22872,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9977755633885685
+    },
+    {
+      "source_index": 22875,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9996044082907932
+    },
+    {
+      "source_index": 22881,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.999431623771277
+    },
+    {
+      "source_index": 22898,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9999340062919215
+    },
+    {
+      "source_index": 22905,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9999989872738342
+    },
+    {
+      "source_index": 22936,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9999948819286302
+    },
+    {
+      "source_index": 22937,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9897808140936208
+    },
+    {
+      "source_index": 22949,
+      "true": "Shivalinga",
+      "old": "Shivalinga",
+      "new": "Shivalinga",
+      "confidence": 0.9999970108649411
+    }
+  ],
+  "policy": {
+    "threshold": 0.15,
+    "padding": false,
+    "classifier_min_confidence": 0.95,
+    "objective": "Max balanced two-hand recall/single-hand specificity; ties fewer false twos then higher threshold",
+    "padding_rule": "Keep only if balanced score improves with no increase in single false-two rate",
+    "cohort": "400 fixed training-only photos: 200 double, 200 single",
+    "seed": 20261109
+  },
+  "promoted": false,
+  "methodology": "Same 4465 clean validation sources; reuse unchanged baseline decisions, fresh RTMPose on every double route; matched 40-image integrated live checks",
+  "input_hashes": {
+    "brain.py": "088340d029f58a23ef11df880969346c57507b9f45489378c5cff1694ea300f6",
+    "detector.py": "7283cda879a4319dca6258ae4521c5644a5d45dd2d39d7268c98f27fcd88d9b2",
+    "gate.py": "49026746065820aa0aedcf03ff11afdf36691d0c7b8da695d99e9412aa2e7b6c",
+    "feature_extraction.py": "61b4081a6fcb45e14b2870196b624383d09b117b34fa8f879757ea3e7fa711b3",
+    "feature_extraction_double.py": "b24eda16dd577b911ce60c4feeb034a61615629e9b1241bd8e2c070d2da6be06",
+    "gate/gate.joblib": "892e8c7dcc027d4e7cb57372adb829a4685665e4478dfe4ba428ab0058aa1788",
+    "model_trials_20261107/capped_thresholds/cutoffs.json": "deb8da9a30d44b14ab0289f61d4023fcb9209d1fba0ee8f91a4bcd72c6cd41b6",
+    "tracker_v2/adapter.py": "54a26bc58983590470aed788434ffdfc2038355b542362a617da96e7b93240ad",
+    "tracker_v2/geometry.py": "52a054a491700b73ba9abfb0df7a7b5eff0a517a20cef7f89fdb1ce4bb7a8dee",
+    "tracker_v2/assets/rtmdet_hand.onnx": "568d3ea97a5b142488366b67e036b6a5cb0a1fef9087a710cb8e66b6979fbac2",
+    "tracker_v2/assets/rtmpose_hand5.onnx": "39e858936bca0f94c09847d4e70b68a51d6c0adac61f36b457fcadb54621cd29",
+    "tracker_v2/model_single/raw/bundle.joblib": "c2e4852fbc50946a82ccd128124cd886d19a3dfef49d6762a736c4479c4af3bf",
+    "tracker_v2/model_single/bundle.joblib": "459c31486eae6dfeb905d4a032bfb8462ed2592e520b8f99f642956983bb3876",
+    "model_double_v3_norm/mlp_mudra_classifier.joblib": "20069dd6cc16ba50eaeff96e256b8c25df46065cb6ad4767fb8e33974c7afb8c",
+    "model_double_v3_norm/feature_scaler.joblib": "510196b20869bad6917fbcec8465fb1bb1d33df10284936e7ebd66c5097f6518",
+    "model_double_v3_norm/label_encoder.joblib": "2cc5211eacbe361f8053fe65a78b8837a96dcdef8e10765d2b2e6c6dcff827cd"
+  },
+  "code_hashes": {
+    "evaluate_ensemble.py": "0068712a3a1197e69b9034c277810ffcedd922c1fd274b7751c441ab0b40cd13",
+    "double_path.py": "8a3e4b1e11af2fb9b9066bcf915a7d97e1c021a9d545b4571cd494053b628d5e",
+    "candidate.py": "9ae67ab50fae96992e9cbebf77525835f60c87bf33cfce7cd5d477867c92f3d1"
+  },
+  "transition_summary": {
+    "rescues": 5,
+    "losses": 37,
+    "new_wrong95": 37,
+    "removed_wrong95": 2
+  },
+  "candidate_asset_sha256": {
+    "tracker_v2/model_double/bundle.joblib": "d61e2edc402e1644a6c040872dc1722e26e82ff6c9d0eab6bea52b51582e2ead",
+    "tracker_v2/training_manifest.json": "48981a7e5fe59758a30b62225eb11e1a121eed289b7a36cbb3f6f32e287fe214",
+    "tracker_v2/hybrid_candidate/double_ensemble/policy.json": "c4fd31d9bb4e91be7e4535950eeb2d084f8705149fe679b1ab95134192f73f7a"
+  }
+}
